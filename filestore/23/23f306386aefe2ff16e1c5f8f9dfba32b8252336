@@ -1,0 +1,30 @@
+
+        
+            
+            
+            
+            
+            .o_company_1_layout {
+                font-family: 'Montserrat';
+
+            
+                &.o_report_layout_standard {
+                    h2 {
+                        color: #222e5e;
+                    }
+                    #informations strong {
+                        color: #7589af;
+                    }
+                    #total strong{
+                        color: #222e5e;
+                    }
+                    table {
+                        thead {
+                            color: #7589af;
+                        }
+                    }
+                }
+            
+            }
+        
+    

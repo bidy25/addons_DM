@@ -1,0 +1,318 @@
+Return-Path: <raphael@nielsenconcept.com>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 27 Apr 2022 07:34:37 +0200
+Received: from unknown (HELO output33.mail.ovh.net) (10.108.106.120)
+  by mail673.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 27 Apr 2022 07:34:37 +0200
+Received: from vr33.mail.ovh.net (unknown [10.101.8.33])
+	by out33.mail.ovh.net (Postfix) with ESMTP id 4Kp6rY1RsqzMMDRTH
+	for <notification@kentia-domiciliation.com>; Wed, 27 Apr 2022 05:34:37 +0000 (UTC)
+Received: from in29.mail.ovh.net (unknown [10.101.4.29])
+	by vr33.mail.ovh.net (Postfix) with ESMTP id 4Kp6rX6Vs8z2RGf2s
+	for <notification@kentia-domiciliation.com>; Wed, 27 Apr 2022 05:34:36 +0000 (UTC)
+Received-SPF: Neutral (mailfrom) identity=mailfrom; client-ip=209.85.160.47; helo=mail-oa1-f47.google.com; envelope-from=raphael@nielsenconcept.com; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in29.mail.ovh.net;
+	dkim=pass (2048-bit key; unprotected) header.d=nielsenconcept-com.20210112.gappssmtp.com header.i=@nielsenconcept-com.20210112.gappssmtp.com header.b="NnSRYKsf";
+	dkim-atps=neutral
+Received: from mail-oa1-f47.google.com (mail-oa1-f47.google.com [209.85.160.47])
+	by in29.mail.ovh.net (Postfix) with ESMTPS id 4Kp6rX3JBsz1ZRNMK
+	for <notification@kentia-domiciliation.com>; Wed, 27 Apr 2022 05:34:36 +0000 (UTC)
+Received: by mail-oa1-f47.google.com with SMTP id 586e51a60fabf-e67799d278so865311fac.11
+        for <notification@kentia-domiciliation.com>; Tue, 26 Apr 2022 22:34:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=nielsenconcept-com.20210112.gappssmtp.com; s=20210112;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=Q47OJ5M8XM8uLXqzKtzB1g7QegT42cpmsjEZGyJtZXE=;
+        b=NnSRYKsfPkHTr8E/6wmQQTt4aimaTDE0WtuGjS9Y2QIiAj/51QFFNCK36H7fJtbLyE
+         qtB2ekODnUPacO5qIoRk5ldhCoU0+YZaLUQftz11ZS0nnXwBh87gb1McxmRJ/kq11QKx
+         n+ezlgyEEM8nEI9Voej33O5qpVUZAIrrxNzQGbKLEXr13OkLuCjFe50bq2h2+bmeDAcc
+         g+dzYdH0QoLVTWMkYVXZUV0+oSGngtHpE65hFIo9XO2q1dseE3Ammq/28fN9siabI5rI
+         MBYrS350MQsAbkQdxnU0UUyPHX6gIDjMwM+YHeMltQ+2WUZgoWbPZCKplZh8R6TtU5Pi
+         AjpQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=Q47OJ5M8XM8uLXqzKtzB1g7QegT42cpmsjEZGyJtZXE=;
+        b=neLqusokPHUy9w165TYp6tgYEtzNwlqhbeq9/CmN7gWuWlotxWOL38zQ3kCgB57cwe
+         9zSH99pfjAOjuvkQwRV/O2IBA1Mw09B1cqIoDZYFAkeJRcDwz/ksSWnKaQoUwT8/H3Tu
+         LAwJ7noJPsKL+sHMtaVeR+5Jc2jVb4Rnz4Y03sKy13zPMpiQrOpfRwNt5W0WzjxK0clH
+         7XfBtmK6QzIr2Kq2VUIoD/d9u7utng9XNBX+WzKIRASQE4RNdgq96RrNDLrNTz3kkxT3
+         CYy9dKqwpju/Wrza0f4ZHDl5+8V79IyXEPRaplPWw4wyJMlO160N+BqTIVA8X7Fw1n0v
+         1Z2Q==
+X-Gm-Message-State: AOAM532celGjJiZrbS3m3VlKgh6yyEsyuJ3qufExwyBNQ0g87/kDMNED
+	g4q7ogjetz15YoUCvdSmlAYzAdJ+i6kXDA38xCxDD45Q55yVL+bK4ILsEo9gpCxztAL2RGxBEiB
+	1KdLpTkTRIl763GltPuImFkoZMsvSMYkyu2Lhd++U2Nujd0T9g/eAUgTHwe0QBPjxcRsUGc6xod
+	G1excaWPrb7qSQ1sOJI6bcdpC0OGY=
+X-Google-Smtp-Source: ABdhPJz2X3a59gWVFo/A5L5Jsl2rd9DctPOC1MUWiMZM4TWa9JXbkaOgFveOr189YFI9nNHuXtbkc7IiR5mgZDHN3Jg=
+X-Received: by 2002:a05:6870:15c2:b0:e8:1f87:155b with SMTP id
+ k2-20020a05687015c200b000e81f87155bmr10597453oad.27.1651037674989; Tue, 26
+ Apr 2022 22:34:34 -0700 (PDT)
+MIME-Version: 1.0
+References: <429235651331383.1651036879.516547679901123-openerp-2287-account.move@kentia-domiciliation-1>
+ <592281892788921.1651036948.075316190719604-openerp-2287-account.move@kentia-domiciliation-1>
+In-Reply-To: <592281892788921.1651036948.075316190719604-openerp-2287-account.move@kentia-domiciliation-1>
+From: Raphael DUBOIS <raphael@nielsenconcept.com>
+Date: Wed, 27 Apr 2022 08:38:01 +0300
+Message-ID: <CAP0HvNp1pXH=DnH-2MrGXnbEHfNv+gDgAfasjOSuSaFZihsteQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Facture_N=C2=B00303=2F2022=2FKD_=7C_mystartupstudio_=2D_KENT?=
+	=?UTF-8?Q?IA=2DDOMICILIATION_sarl?=
+To: notification@kentia-domiciliation.com, team@kentia-domiciliation.com
+Cc: Cindy Perez <cindy@nielsenconcept.com>
+Content-Type: multipart/alternative; boundary="00000000000020fa8b05dd9c2a43"
+X-OVH-Remote: 209.85.160.47 (mail-oa1-f47.google.com)
+X-Ovh-Tracer-Id: 15414695625308270448
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: -51
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvfedrudeggdelgecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfqggfjpdevjffgvefmvefgnecuuegrihhlohhuthemucehtddtnecusecvtfgvtghiphhivghnthhsucdlqddutddtmdenogfuuhhsphgvtghtffhomhgrihhnucdlgeelmdenucfjughrpeggfhgjhfffkffuvfevtgesrgdtreertddtjeenucfhrhhomheptfgrphhhrggvlhcuffgfuefqkffuuceorhgrphhhrggvlhesnhhivghlshgvnhgtohhntggvphhtrdgtohhmqeenucggtffrrghtthgvrhhnpeffieejtedvheelgfdutdfgfeeuvdehudelkedvteeikefhtdfhkefgtefgveffjeenucffohhmrghinhepohguohhordgtohhmnecukfhppedvtdelrdekhedrudeitddrgeejnecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehmohguvgepshhmthhppdhhvghlohepihhnvdelrdhmrghilhdrohhvhhdrnhgvthdpihhnvghtpedvtdelrdekhedrudeitddrgeejpdhmrghilhhfrhhomheprhgrphhhrggvlhesnhhivghlshgvnhgtohhntggvphhtrdgtohhmpdhnsggprhgtphhtthhopedupdhrtghpthhtohepnhhothhifhhitggrthhiohhnsehkvghnthhirgdqughomhhitghilhhirghtihhonhdrtghomh
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+--00000000000020fa8b05dd9c2a43
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour M. Razakarivony.
+
+Veuillez v=C3=A9rifier  les factures que vous nous envoyez puisque hier  26
+avril 2022, vous nous aviez d=C3=A9j=C3=A0 envoy=C3=A9 une facture de domic=
+iliation
+n=C2=B0299/2022/KD relative =C3=A0 la domiciliation du mois de mai pour un =
+montant de
+MGA 118.800.
+Donc ici, c'est une deuxi=C3=A8me facture pour le m=C3=AAme mois. De plus l=
+e montant
+ne correspond pas au montant dans le contrat de domiciliation.
+
+Merci de votre retour.
+
+Bien =C3=A0 vous.
+
+Le mer. 27 avr. 2022 =C3=A0 08:22, Faniry R. <office@kentia-domiciliation.c=
+om> a
+=C3=A9crit :
+
+> Monsieur Raphael,
+>
+> Nous vous prions de trouver ci-joint votre facture N=C2=B00303/2022/KD de
+> domiciliation pour le mois de Mai 2022 au nom de la soci=C3=A9t=C3=A9
+> mystartupstudio pour un montant de 478 800,00 Ar Ar TTC.
+>
+> Vous aurez 10 jours apr=C3=A8s la date d'=C3=A9dition de cette facture po=
+ur
+> proc=C3=A9der au r=C3=A8glement sans p=C3=A9nalit=C3=A9, c'est =C3=A0 dir=
+e jusqu'au *11/05/2022*.
+>
+>
+> Nous vous invitons =C3=A0 privil=C3=A9gier les modalit=C3=A9s de paiement=
+ sans contact
+> afin de limiter la propagation du COVID-19. Ainsi, vous pri=C3=A9s d=E2=
+=80=99effectuer
+> vos paiements par :
+>
+> - virement bancaire : 00008 00005 05003011573 19 SG ANTANINARENINA, au no=
+m
+> de KENTIA-DOMICILIATION sarl
+>
+> - par mobile banking : Mvola 034 92 210 35 nom de KENTIA-DOMICILIATION sa=
+rl
+>
+> Nous vous rappelons que l=E2=80=99acc=C3=A8s dans nos locaux est actuelle=
+ment tr=C3=A8s
+> limit=C3=A9, d=E2=80=99autant plus qu=E2=80=99une majeure partie de l=E2=
+=80=99=C3=A9quipe est partie en
+> t=C3=A9l=C3=A9travail, ainsi vous =C3=AAtes pri=C3=A9s d=E2=80=99appeler =
+avant de venir si le
+> d=C3=A9placement est vraiment n=C3=A9cessaire.
+>
+>
+> Veuillez nous envoyer une copie de la pi=C3=A8ce justificative du paiemen=
+t s=E2=80=99il
+> vous pla=C3=AEt.
+>
+> Bien cordialement,
+>
+> Faniry Fy Tia Jonah RAZAKARIVONY
+>
+> Assistant en cr=C3=A9ation et Domiciliation d'entreprises
+>
+> +261 32 05 357 42
+>
+> KENTIA-DOMICILIATION SARL
+>
+> Envoy=C3=A9 par KENTIA-DOMICILIATION sarl utilisant Odoo
+> <https://www.odoo.com?utm_source=3Ddb&utm_medium=3Demail>.
+>
+
+
+--=20
+
+RAPHAEL DUBOIS / Responsable financier
+
+Je facilite vos mobilit=C3=A9s urbaines du quotidien gr=C3=A2ce =C3=A0 des =
+abris v=C3=A9los
+s=C3=A9curis=C3=A9s, des v=C3=A9los individuels et collectifs.
+
+
+Tel : *01 84 25 55 06*
+
+Mail : raphael@nielsenconcept.com
+
+--00000000000020fa8b05dd9c2a43
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Bonjour M. Razakarivony.<div><br></div><div>Veuillez v=C3=
+=A9rifier =C2=A0les factures que vous nous envoyez puisque hier =C2=A026 av=
+ril 2022, vous nous aviez d=C3=A9j=C3=A0 envoy=C3=A9 une facture de domicil=
+iation n=C2=B0299/2022/KD relative =C3=A0 la domiciliation du mois de mai p=
+our un montant de MGA 118.800.=C2=A0</div><div>Donc ici, c&#39;est une deux=
+i=C3=A8me facture=C2=A0pour le m=C3=AAme mois. De plus le montant ne corres=
+pond pas au montant dans le contrat de domiciliation.</div><div><br></div><=
+div>Merci de votre retour.</div><div><br></div><div>Bien =C3=A0 vous.</div>=
+<br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">Le=C2=
+=A0mer. 27 avr. 2022 =C3=A0=C2=A008:22, Faniry R. &lt;<a href=3D"mailto:off=
+ice@kentia-domiciliation.com" target=3D"_blank">office@kentia-domiciliation=
+.com</a>&gt; a =C3=A9crit=C2=A0:<br></div><blockquote class=3D"gmail_quote"=
+ style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-style:=
+solid;border-left-color:rgb(204,204,204);padding-left:1ex">
+<div>
+
+
+<div><div style=3D"font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,=
+Arial,sans-serif;font-size:13px;margin:0px;padding:0px">
+    <p class=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lucida=
+ Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px"><span lang=3D"=
+FR">Monsieur Raphael,</span><br><br><span lang=3D"FR"></span></p><p style=
+=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helveti=
+ca,Verdana,Arial,sans-serif"></p><p style=3D"margin:0px;font-size:13px;font=
+-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><=
+p class=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lucida Gran=
+de&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px"><span lang=3D"FR">N=
+ous vous prions de trouver ci-joint votre facture=C2=A0<span style=3D"font-=
+weight:bolder">N=C2=B00303/2022/KD</span>=C2=A0de domiciliation pour le moi=
+s de Mai 2022 au nom de la soci=C3=A9t=C3=A9=C2=A0<span style=3D"font-weigh=
+t:bolder">mystartupstudio=C2=A0</span>pour un montant de=C2=A0<span style=
+=3D"font-weight:bolder">478=C2=A0800,00=C2=A0Ar=C2=A0</span>Ar TTC.</span><=
+/p><p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&qu=
+ot;,Helvetica,Verdana,Arial,sans-serif"></p><p style=3D"margin:0px;font-siz=
+e:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-s=
+erif"></p><p class=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;=
+Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px"><span la=
+ng=3D"FR">Vous aurez=C2=A0<span style=3D"font-weight:bolder">10 jours</span=
+>=C2=A0apr=C3=A8s la date d&#39;=C3=A9dition de cette facture pour proc=C3=
+=A9der au r=C3=A8glement sans p=C3=A9nalit=C3=A9, c&#39;est =C3=A0 dire jus=
+qu&#39;au=C2=A0</span><span style=3D"text-align:inherit"><b style=3D"font-w=
+eight:bolder">11/05/2022</b></span><span style=3D"color:rgb(0,0,0);font-wei=
+ght:inherit;text-align:inherit">.</span></p><p class=3D"MsoNormal" style=3D=
+"font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Ari=
+al,sans-serif;margin:0px"><br><span lang=3D"FR"></span></p><p style=3D"marg=
+in:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verda=
+na,Arial,sans-serif"></p><p style=3D"margin:0px;font-size:13px;font-family:=
+&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p class=
+=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lucida Grande&quot=
+;,Helvetica,Verdana,Arial,sans-serif;margin:0px"><span lang=3D"FR">Nous vou=
+s invitons =C3=A0 privil=C3=A9gier les modalit=C3=A9s de paiement sans cont=
+act afin de limiter la propagation du COVID-19. Ainsi, vous pri=C3=A9s d=E2=
+=80=99effectuer vos paiements par :</span></p><p style=3D"margin:0px;font-s=
+ize:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans=
+-serif"></p><p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida =
+Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p class=3D"MsoNormal"=
+ style=3D"margin:0px 0px 0px 35.4pt;font-family:&quot;Lucida Grande&quot;,H=
+elvetica,Verdana,Arial,sans-serif;font-size:13px"><span lang=3D"FR">- virem=
+ent bancaire : 00008 00005 05003011573 19 SG ANTANINARENINA, au nom de KENT=
+IA-DOMICILIATION sarl</span></p><p style=3D"margin:0px;font-size:13px;font-=
+family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p=
+ style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,H=
+elvetica,Verdana,Arial,sans-serif"></p><p class=3D"MsoNormal" style=3D"marg=
+in:0px 0px 0px 35.4pt;font-family:&quot;Lucida Grande&quot;,Helvetica,Verda=
+na,Arial,sans-serif;font-size:13px"><span lang=3D"FR">- par mobile banking =
+: Mvola 034 92 210 35 nom de KENTIA-DOMICILIATION sarl</span><br><br><span =
+lang=3D"FR"></span></p><p style=3D"margin:0px;font-size:13px;font-family:&q=
+uot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p style=3D=
+"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,=
+Verdana,Arial,sans-serif"></p><p style=3D"font-size:13px;font-family:&quot;=
+Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px;line-heig=
+ht:normal">Nous vous rappelons que l=E2=80=99acc=C3=A8s dans nos locaux est=
+ actuellement tr=C3=A8s limit=C3=A9, d=E2=80=99autant plus qu=E2=80=99une m=
+ajeure partie de l=E2=80=99=C3=A9quipe est partie en t=C3=A9l=C3=A9travail,=
+ ainsi vous =C3=AAtes pri=C3=A9s d=E2=80=99appeler avant de venir si le d=
+=C3=A9placement est vraiment n=C3=A9cessaire.</p><p style=3D"font-size:13px=
+;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;m=
+argin:0px;line-height:normal"><br></p><p class=3D"MsoNormal" style=3D"font-=
+size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,san=
+s-serif;margin:0px"><span lang=3D"FR">Veuillez nous envoyer une copie de la=
+ pi=C3=A8ce justificative du paiement s=E2=80=99il vous pla=C3=AEt.</span><=
+br><br><span lang=3D"FR">Bien cordialement,</span><br><br></p></div>
+           =20
+<p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;=
+,Helvetica,Verdana,Arial,sans-serif">Faniry Fy Tia Jonah RAZAKARIVONY</p><p=
+ style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,H=
+elvetica,Verdana,Arial,sans-serif">Assistant en cr=C3=A9ation et Domiciliat=
+ion d&#39;entreprises</p><p style=3D"margin:0px;font-size:13px;font-family:=
+&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif">+261 32 05 35=
+7 42</p><p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Gran=
+de&quot;,Helvetica,Verdana,Arial,sans-serif">KENTIA-DOMICILIATION SARL</p>
+</div>
+
+
+<p style=3D"color:rgb(85,85,85);margin-top:32px">
+    Envoy=C3=A9
+    <span>
+    par
+   =20
+    <span>KENTIA-DOMICILIATION sarl</span>
+    </span>
+    utilisant
+    <a href=3D"https://www.odoo.com?utm_source=3Ddb&amp;utm_medium=3Demail"=
+ style=3D"text-decoration:none;color:rgb(135,90,123)" target=3D"_blank">Odo=
+o</a>.
+</p>
+</div>
+        </blockquote></div><br clear=3D"all"><div><br></div>-- <br><div dir=
+=3D"ltr"><div dir=3D"ltr"><div><div style=3D"color:rgb(29,34,40);font-famil=
+y:&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"><p =
+dir=3D"ltr" style=3D"color:rgb(80,0,80);font-family:Roboto,RobotoDraft,Helv=
+etica,Arial,sans-serif;line-height:1.2;margin-top:0pt;margin-bottom:0pt"><s=
+pan style=3D"font-size:11pt;font-family:Arial;color:rgb(0,0,0);font-weight:=
+700;vertical-align:baseline;white-space:pre-wrap">RAPHAEL DUBOIS</span><spa=
+n style=3D"font-size:11pt;font-family:Arial;color:rgb(0,0,0);vertical-align=
+:baseline;white-space:pre-wrap"> </span><span style=3D"font-size:9pt;font-f=
+amily:Arial;color:rgb(0,0,0);vertical-align:baseline;white-space:pre-wrap">=
+/ </span><span style=3D"font-size:10pt;font-family:Arial;color:rgb(0,0,0);v=
+ertical-align:baseline;white-space:pre-wrap">Responsable financier</span></=
+p><br style=3D"color:rgb(80,0,80);font-family:Roboto,RobotoDraft,Helvetica,=
+Arial,sans-serif"><p dir=3D"ltr" style=3D"color:rgb(80,0,80);font-family:Ro=
+boto,RobotoDraft,Helvetica,Arial,sans-serif;line-height:1.2;margin-top:0pt;=
+margin-bottom:0pt"><span style=3D"font-size:10pt;font-family:Arial;color:rg=
+b(0,0,0);font-style:italic;vertical-align:baseline;white-space:pre-wrap">Je=
+ facilite vos mobilit=C3=A9s urbaines du quotidien gr=C3=A2ce =C3=A0 des ab=
+ris v=C3=A9los s=C3=A9curis=C3=A9s, des v=C3=A9los individuels et collectif=
+s.</span></p><p dir=3D"ltr" style=3D"color:rgb(80,0,80);font-family:Roboto,=
+RobotoDraft,Helvetica,Arial,sans-serif;line-height:1.2;margin-top:0pt;margi=
+n-bottom:0pt"><span style=3D"font-size:10pt;font-family:Arial;color:rgb(0,0=
+,0);font-style:italic;vertical-align:baseline;white-space:pre-wrap"><br></s=
+pan></p><p style=3D"color:rgb(80,0,80);font-family:Roboto,RobotoDraft,Helve=
+tica,Arial,sans-serif;line-height:1.2;margin-top:0pt;margin-bottom:0pt"><sp=
+an style=3D"color:rgb(0,0,0);font-family:Arial;font-size:13.333333015441895=
+px;white-space:pre-wrap">Tel</span><b>=C2=A0</b>:=C2=A0<span style=3D"color=
+:rgb(34,34,34);font-family:Arial,Helvetica,sans-serif;font-size:small"><b>0=
+1 84 25 55 06</b></span></p><p dir=3D"ltr" style=3D"color:rgb(80,0,80);font=
+-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;line-height:1.2;margi=
+n-top:0pt;margin-bottom:0pt"><span style=3D"font-size:10pt;font-family:Aria=
+l;color:rgb(0,0,0);vertical-align:baseline;white-space:pre-wrap">Mail : </s=
+pan><a rel=3D"nofollow noopener noreferrer" href=3D"mailto:raphael@nielsenc=
+oncept.com" style=3D"color:rgb(17,85,204)" target=3D"_blank"><span style=3D=
+"font-size:10pt;font-family:Arial;color:rgb(0,0,0);vertical-align:baseline;=
+white-space:pre-wrap">raphael@nielsenconcept.com</span></a><span style=3D"f=
+ont-size:10pt;font-family:Arial;color:rgb(0,0,0);vertical-align:baseline;wh=
+ite-space:pre-wrap">=C2=A0</span></p></div><br style=3D"color:rgb(0,0,0)"><=
+/div><img src=3D"https://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fdriv=
+e.google.com%2Fuc%3Fid%3D1NKqnghEJWRz9WzbCM0VeDuzLnW0pPk27%26export%3Ddownl=
+oad&amp;t=3D1647237395&amp;ymreqid=3Dcb61afaa-a7a6-6f3c-1c71-540005013f00&a=
+mp;sig=3D9P1uRQaVI73U8amrvLzBuQ--~D" style=3D"color:rgb(0,0,0)"><br></div><=
+/div></div>
+
+--00000000000020fa8b05dd9c2a43--

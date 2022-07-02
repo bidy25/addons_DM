@@ -1,0 +1,238 @@
+Return-Path: <jules.ndisanze@envioo.co>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 2 Mar 2022 10:47:36 +0200
+Received: from unknown (HELO output55.mail.ovh.net) (10.108.117.27)
+  by mail745.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 2 Mar 2022 10:47:36 +0200
+Received: from vr36.mail.ovh.net (unknown [10.101.8.36])
+	by out55.mail.ovh.net (Postfix) with ESMTP id 4K7nn44RjLzL3yXpr
+	for <notification@kentia-domiciliation.com>; Wed,  2 Mar 2022 08:47:36 +0000 (UTC)
+Received: from in69.mail.ovh.net (unknown [10.101.4.69])
+	by vr36.mail.ovh.net (Postfix) with ESMTP id 4K7nn42cdFz2FX3l6
+	for <notification@kentia-domiciliation.com>; Wed,  2 Mar 2022 08:47:36 +0000 (UTC)
+Received-SPF: None (mailfrom) identity=mailfrom; client-ip=209.85.217.43; helo=mail-vs1-f43.google.com; envelope-from=jules.ndisanze@envioo.co; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in69.mail.ovh.net;
+	dkim=pass (2048-bit key; unprotected) header.d=envioo-co.20210112.gappssmtp.com header.i=@envioo-co.20210112.gappssmtp.com header.b="ugwNgRiy";
+	dkim-atps=neutral
+Received: from mail-vs1-f43.google.com (mail-vs1-f43.google.com [209.85.217.43])
+	by in69.mail.ovh.net (Postfix) with ESMTPS id 4K7nn40Y71z1Y0pqv
+	for <notification@kentia-domiciliation.com>; Wed,  2 Mar 2022 08:47:35 +0000 (UTC)
+Received: by mail-vs1-f43.google.com with SMTP id w4so1083067vsq.1
+        for <notification@kentia-domiciliation.com>; Wed, 02 Mar 2022 00:47:35 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=envioo-co.20210112.gappssmtp.com; s=20210112;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=k6HRAiqDNDktVFEnrOLy8+XOM2hg2YOtP/FEuSgMeq4=;
+        b=ugwNgRiyk66Y+23HJBkV6us6OaJU20tpmPRyzwFkAp5CKRcumOmJwj52ONFJkAlRdL
+         IXzYUAVR6vsetsjm8eo7xH2EqYW8XV1euuzEZy6q1YVI4hGcHBOkU1MWHXKXXwnNV9bU
+         x/YwnQEyE2UZefxOm6A7Xua9T9M7yZW1sfiL0Tpe07t2DZfc3MDHvnq+NuyCa9yRSkWB
+         LHKIRoqmYsM6+ro7vh604zsEma9gYq56F9d+C3EvLplh1Mm52KYG2WQUZyogwgk9+H1u
+         LjCrGPus0MPsKvh79Dx287WJilJ5bqwb7DlI+PxgbZWg9zFwEtawO6RZvAe0q4rDhQvC
+         eHow==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=k6HRAiqDNDktVFEnrOLy8+XOM2hg2YOtP/FEuSgMeq4=;
+        b=hgfDJbTcSFftDmD1YojKhcf+8DHSQl3xqmiVRC10LwDoq4hJ8mfnSfaljsEPrtFjDu
+         K5Fep+eUbjWYYoSZ0Iao+Uadf4vrTtoHpDTDOl3k2OOw6Hme9hcelNhT+9eSKXLWiOth
+         xLPsNN6dx/XbFiGOzwlNPPk4dfod3eU1d0nBRQ1wApFCe5MqpkLZv1PHVbjvVfwBxA1z
+         OHNyfLHTJ1V4TK0ny6JnH8plENrG+xSf+swy0ZV95e5WuoEjbBpL3Hon0V+T8nhKqq5B
+         XMSHhUcLgFnFRBFpQJlsrk8P21965EN5txSU+C2ckxi6OgHinzylF69AuOgi62G6iwiz
+         /jlQ==
+X-Gm-Message-State: AOAM532yBXnnBcvsGBs0937Y/4gsTI+RBb//KMJ1AWKBJBx8O0V5Q6AV
+	EguojjQo7wTbMJWymwmpZDACHAzHYfyXMnEDqlNbsTzlsSYsz0BgyVhlTA==
+X-Google-Smtp-Source: ABdhPJydog8PFA5UhlmW5KEnwl1T07q0le2oYixnWmnSRICqfmcGIEZMZBgRNQuMRmb//yshtlfBEaAOPpZ4IjQ04wQ=
+X-Received: by 2002:a05:6102:1348:b0:31b:fa45:64da with SMTP id
+ j8-20020a056102134800b0031bfa4564damr12724893vsl.20.1646210854663; Wed, 02
+ Mar 2022 00:47:34 -0800 (PST)
+MIME-Version: 1.0
+References: <815730591317203.1641457291.150592565536499-openerp-1555-account.move@kentia-domiciliation-1>
+ <162677400088999.1645521203.358996629714966-openerp-1555-account.move@kentia-domiciliation-1>
+In-Reply-To: <162677400088999.1645521203.358996629714966-openerp-1555-account.move@kentia-domiciliation-1>
+From: Jules Ndisanze <jules.ndisanze@envioo.co>
+Date: Wed, 2 Mar 2022 11:47:07 +0300
+Message-ID: <CACMc2fqN9CRdrT0JLDCk4GVxFX1zA29OGosDw2NiV7qvKWxh5Q@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Facture_N=C2=B00050=2F2022=2FKD_=7C_ENVIOO_Madagascar_=2D_KE?=
+	=?UTF-8?Q?NTIA=2DDOMICILIATION_sarl?=
+To: notification@kentia-domiciliation.com, team@kentia-domiciliation.com
+Content-Type: multipart/alternative; boundary="00000000000037cfdf05d9385589"
+X-OVH-Remote: 209.85.217.43 (mail-vs1-f43.google.com)
+X-Ovh-Tracer-Id: 3397965922473198192
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 49
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvvddruddtfedgudduiecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfqggfjpdevjffgvefmvefgnecuuegrihhlohhuthemucehtddtnecuogfuuhhsphgvtghtffhomhgrihhnucdlgeelmdenucfjughrpeggfhgjhfffkffuvfgtsegrtderredttdejnecuhfhrohhmpefluhhlvghsucfpughishgrnhiivgcuoehjuhhlvghsrdhnughishgrnhiivgesvghnvhhiohhordgtoheqnecuggftrfgrthhtvghrnhepfeethfettedttefhjeekheetgfekuddutdehteehgffgffelvdehffeuudekheefnecuffhomhgrihhnpehoughoohdrtghomhenucfkphepvddtledrkeehrddvudejrdegfeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepmhhouggvpehsmhhtphdphhgvlhhopehinheiledrmhgrihhlrdhovhhhrdhnvghtpdhinhgvthepvddtledrkeehrddvudejrdegfedpmhgrihhlfhhrohhmpehjuhhlvghsrdhnughishgrnhiivgesvghnvhhiohhordgtohdpnhgspghrtghpthhtohepuddprhgtphhtthhopehnohhtihhfihgtrghtihhonheskhgvnhhtihgrqdguohhmihgtihhlihgrthhiohhnrdgtohhm
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+--00000000000037cfdf05d9385589
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour,
+
+Par rapport =C3=A0 ceci, je pense qu'il y a un soucis:
+"Nous allons proc=C3=A9der aux remises par rapport =C3=A0 la domiciliation =
+Janvier et
+D=C3=A9cembre pour les deux prochains mois."
+
+=C3=87a veut dire qu'il y aura toujours 2 mois de retard d'application de l=
+a
+remise. Car les 2 prochaines factures vont =C3=AAtre pay=C3=A9es avant le 5=
+, donc une
+remise sera d=C3=A9j=C3=A0 d=C3=BB sur ces factures l=C3=A0, ind=C3=A9penda=
+mment des remises dues
+sur les factures pr=C3=A9c=C3=A9dentes de d=C3=A9cembre et janvier.
+
+A moins que l=C3=A0 maintenant, pour la facture de Mars, je fasse un vireme=
+nt
+comprenant les remises de d=C3=A9cembre (8.316,00 Ar), janvier (8.316,00 Ar=
+) et
+de mars aussi donc car je vais payer avant le 5 mars (8.316,00 Ar).
+Au total =C3=A7a fait:
+118.800,00 (Loyer) - 8.316,00 (remise d=C3=A9cembre) - 8.316,00 (remise jan=
+vier)
+- 8.316,00 (remise mars) =3D 93.852,00 Ar
+
+
+Cordialement,
+*Jules Ndisanze*
+*Skype ID : njules5 | T=C3=A9l: +261 (0) 34 84 637 40*
+
+
+On Tue, Feb 22, 2022 at 12:13 PM Tahiry <accountant3@kentia-services.com>
+wrote:
+
+> Bonjour monsieur Jules,
+>
+> Nous vous prions de trouver ci-joint votre facture N=C2=B00050/2022/KD de
+> domiciliation pour le mois de Janvier 2022 au nom de la soci=C3=A9t=C3=A9=
+ ENVIOO
+> Madagascar pour un montant de 118 800,00 Ar Ar TTC.
+>
+>
+> Nous allons proc=C3=A9der aux remises par rapport =C3=A0 la domiciliation=
+ Janvier et
+> D=C3=A9cembre pour les deux prochains mois.
+>
+>
+> Restant =C3=A0 votre disposition,
+>
+> Bien cordialement,
+>
+>
+> Faniry Fy Tia Jonah RAZAKARIVONY
+>
+> Assistant en cr=C3=A9ation et Domiciliation d'entreprises
+>
+> +261 32 05 357 42
+>
+> KENTIA-DOMICILIATION SARL
+>
+> Envoy=C3=A9 par KENTIA-DOMICILIATION sarl utilisant Odoo
+> <https://www.odoo.com?utm_source=3Ddb&utm_medium=3Demail>.
+>
+
+--00000000000037cfdf05d9385589
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr">Bonjour,<div><br></div><div>Par rapport =
+=C3=A0 ceci, je pense qu&#39;il y a un soucis:</div><div>&quot;<span style=
+=3D"font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-seri=
+f;font-size:13px">Nous allons proc=C3=A9der aux remises par rapport =C3=A0 =
+la domiciliation Janvier et D=C3=A9cembre pour les deux prochains mois.&quo=
+t;</span></div><div><br></div><div>=C3=87a veut dire qu&#39;il y aura toujo=
+urs 2 mois de retard d&#39;application de la remise. Car les 2 prochaines f=
+actures vont =C3=AAtre pay=C3=A9es avant le 5, donc une remise sera d=C3=A9=
+j=C3=A0 d=C3=BB sur ces factures l=C3=A0, ind=C3=A9pendamment des remises d=
+ues sur les factures pr=C3=A9c=C3=A9dentes de d=C3=A9cembre et janvier.</di=
+v><div><br></div><div>A moins que l=C3=A0 maintenant, pour la facture de Ma=
+rs, je fasse un virement comprenant les remises de d=C3=A9cembre (8.316,00 =
+Ar), janvier (8.316,00=C2=A0Ar) et de mars aussi donc car je vais payer ava=
+nt le 5 mars (8.316,00 Ar).</div><div>Au total =C3=A7a fait:</div><div>118.=
+800,00 (Loyer) - 8.316,00 (remise d=C3=A9cembre) - 8.316,00 (remise janvier=
+) - 8.316,00 (remise mars) =3D 93.852,00 Ar</div><div>=C2=A0</div><div><div=
+><div dir=3D"ltr" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div =
+style=3D"color:rgb(80,0,80)"><span style=3D"color:rgb(34,34,34)"><br></span=
+></div><div style=3D"color:rgb(80,0,80)"><span style=3D"color:rgb(34,34,34)=
+">Cordialement,</span><br></div><div style=3D"color:rgb(80,0,80)"><div styl=
+e=3D"color:rgb(34,34,34)"><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"c=
+olor:rgb(80,0,80)"><font color=3D"#073763"><b>Jules Ndisanze</b></font></di=
+v><div style=3D"color:rgb(80,0,80)"><i style=3D"color:rgb(0,0,0);font-famil=
+y:Calibri,sans-serif"><span lang=3D"EN-US"><font size=3D"1">Skype ID=C2=A0:=
+ njules5 | T=C3=A9l: +261 (0) 34 84 637 40</font></span></i></div></div></d=
+iv></div></div></div></div></div><br></div></div><br><div class=3D"gmail_qu=
+ote"><div dir=3D"ltr" class=3D"gmail_attr">On Tue, Feb 22, 2022 at 12:13 PM=
+ Tahiry &lt;<a href=3D"mailto:accountant3@kentia-services.com" target=3D"_b=
+lank">accountant3@kentia-services.com</a>&gt; wrote:<br></div><blockquote c=
+lass=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px soli=
+d rgb(204,204,204);padding-left:1ex">
+<div>
+
+
+<div><div style=3D"font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,=
+Arial,sans-serif;font-size:13px;margin:0px;padding:0px">
+    <p class=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lucida=
+ Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px"><span lang=3D"=
+FR">Bonjour monsieur Jules,</span><br><br><span lang=3D"FR"></span></p><p s=
+tyle=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Hel=
+vetica,Verdana,Arial,sans-serif"></p><p style=3D"margin:0px;font-size:13px;=
+font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif"><=
+/p><p class=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lucida =
+Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px"><span lang=3D"F=
+R">Nous vous prions de trouver ci-joint votre facture=C2=A0<span style=3D"f=
+ont-weight:bolder">N=C2=B00050/2022/KD</span>=C2=A0de domiciliation pour le=
+ mois de Janvier 2022 au nom de la soci=C3=A9t=C3=A9=C2=A0<span style=3D"fo=
+nt-weight:bolder">ENVIOO Madagascar=C2=A0</span>pour un montant de=C2=A0<sp=
+an style=3D"font-weight:bolder">118=C2=A0800,00=C2=A0Ar=C2=A0</span>Ar TTC.=
+</span></p><p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida G=
+rande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p style=3D"margin:0px;=
+font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Aria=
+l,sans-serif"></p><p class=3D"MsoNormal" style=3D"font-size:13px;font-famil=
+y:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px">=
+<br></p><p class=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lu=
+cida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px">Nous allon=
+s proc=C3=A9der aux remises par rapport =C3=A0 la domiciliation Janvier et =
+D=C3=A9cembre pour les deux prochains mois.</p><p class=3D"MsoNormal" style=
+=3D"font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,=
+Arial,sans-serif;margin:0px"><br><span lang=3D"FR"></span></p><p style=3D"m=
+argin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Ve=
+rdana,Arial,sans-serif"></p><p style=3D"margin:0px;font-size:13px;font-fami=
+ly:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p sty=
+le=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helve=
+tica,Verdana,Arial,sans-serif">Restant =C3=A0 votre disposition,</p><p clas=
+s=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif;margin:0px"><span lang=3D"FR">Bien co=
+rdialement,</span></p></div>
+           =20
+<p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;=
+,Helvetica,Verdana,Arial,sans-serif"><br></p><p style=3D"margin:0px;font-si=
+ze:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-=
+serif">Faniry Fy Tia Jonah RAZAKARIVONY</p><p style=3D"margin:0px;font-size=
+:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-se=
+rif">Assistant en cr=C3=A9ation et Domiciliation d&#39;entreprises</p><p st=
+yle=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helv=
+etica,Verdana,Arial,sans-serif">+261 32 05 357 42</p><p style=3D"margin:0px=
+;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Ari=
+al,sans-serif">KENTIA-DOMICILIATION SARL</p>
+</div>
+
+
+<p style=3D"color:rgb(85,85,85);margin-top:32px">
+    Envoy=C3=A9
+    <span>
+    par
+   =20
+    <span>KENTIA-DOMICILIATION sarl</span>
+    </span>
+    utilisant
+    <a href=3D"https://www.odoo.com?utm_source=3Ddb&amp;utm_medium=3Demail"=
+ style=3D"text-decoration:none;color:rgb(135,90,123)" target=3D"_blank">Odo=
+o</a>.
+</p>
+</div>
+        </blockquote></div></div>
+
+--00000000000037cfdf05d9385589--

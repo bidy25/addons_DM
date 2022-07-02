@@ -1,0 +1,6 @@
+
+$o-user-color-palette: map-merge($o-user-color-palette, o-map-omit((
+    'text': #3d3d3d,
+    'h1': #000000,
+    // -- hook --
+)));

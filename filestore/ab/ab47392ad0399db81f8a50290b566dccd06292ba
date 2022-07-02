@@ -1,0 +1,389 @@
+Return-Path: <anselmecmpt@hotmail.fr>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 11 Apr 2022 06:59:42 +0200
+Received: from unknown (HELO output28.mail.ovh.net) (10.108.106.125)
+  by mail342.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 11 Apr 2022 06:59:42 +0200
+Received: from vr39.mail.ovh.net (unknown [10.101.8.39])
+	by out28.mail.ovh.net (Postfix) with ESMTP id 4KcGqf2sP8zM0jQFj
+	for <notification@kentia-domiciliation.com>; Mon, 11 Apr 2022 04:59:42 +0000 (UTC)
+Received: from in35.mail.ovh.net (unknown [10.101.4.35])
+	by vr39.mail.ovh.net (Postfix) with ESMTP id 4KcGqb5dZyz3pfyq
+	for <notification@kentia-domiciliation.com>; Mon, 11 Apr 2022 04:59:39 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=40.92.69.67; helo=eur02-ve1-obe.outbound.protection.outlook.com; envelope-from=anselmecmpt@hotmail.fr; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in35.mail.ovh.net; dkim=none; dkim-atps=neutral
+Received: from EUR02-VE1-obe.outbound.protection.outlook.com (mail-oln040092069067.outbound.protection.outlook.com [40.92.69.67])
+	by in35.mail.ovh.net (Postfix) with ESMTPS id 4KcGqb3HPdz1cPLP8;
+	Mon, 11 Apr 2022 04:59:39 +0000 (UTC)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=aTsAJlHpvkoS2MaOsPIw6gV2zzypXJmveq6v0qaVDmn04B7m8pX6XFWT/2BTe56WCQJ6C9qZXo1gLw14SPhWpgYQXQEyEhCaS/y7kKUqgxf4It34J3SWoYNBdVckaCDBXLjQtYAHpZ8H0YOHsxpEBaHlrEvuVOTPCmzp4WGnVOclfQAx14qJGwsYOQNahSEMyFcIT4SDcw2xfIFJKRfMzId3fhx7S35Hm2lrf6GmWULeK+F0m7ByfbxIGjyftLInTzOi3DGq8JICE2CdKU2bAEqPm09rf4MOgOv4QUDFS8Byx5LMUDGHpUqFrR6o0wSxU4GnFoG8leco6Yu6tQ7aVw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=6s/QlypFJ51WaAYcXnG4kCFz/6TBNXWmIbt0c/6k4tk=;
+ b=c0DttcCCr3GIuNPkbVyv4YoCG2/aVCzsFISnM1aJVleZGjgqdjFqxn9lkXulWAjgR/WfBDLRt3EDbSVPSAjTDyDdnyHWlPsaVdY4BAyZqXRTkd5LTmz+FXb+nBTcyNMxzfhv/NWMWneURYDqfzRy+1rH1GCljJFQE2q3DGrLpB4lQJJpqaHmh3B05QXB+P7F3i26BeFCP9tu3GoAIQJK1v2JARrPDDMMUtBqdmFPtDB6p8VRyPasa65FdnIyyzYAA7C5rcodwfv4L7ei7M+j/YdqVAYLqrXs0Dzi+1uzLZXWV8OxBOH/x4keGoFvkoO24g49IIcav93ClAz6gbwj5A==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+Received: from VI1PR06MB4816.eurprd06.prod.outlook.com (2603:10a6:803:97::11)
+ by DB6PR06MB4008.eurprd06.prod.outlook.com (2603:10a6:6:54::31) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5144.29; Mon, 11 Apr
+ 2022 04:59:30 +0000
+Received: from VI1PR06MB4816.eurprd06.prod.outlook.com
+ ([fe80::f806:9a7c:401e:efee]) by VI1PR06MB4816.eurprd06.prod.outlook.com
+ ([fe80::f806:9a7c:401e:efee%2]) with mapi id 15.20.5144.029; Mon, 11 Apr 2022
+ 04:59:30 +0000
+From: RAKOTOARIMANANA Anselme <anselmecmpt@hotmail.fr>
+To: "notification@kentia-domiciliation.com"
+	<notification@kentia-domiciliation.com>, "team@kentia-domiciliation.com"
+	<team@kentia-domiciliation.com>
+Subject: 
+ =?Windows-1252?Q?RE:_Facture_N=B00224/2022/KD_|_MADAGASCAR_LOCAL_PRODUCT_?=
+ =?Windows-1252?Q?-_KENTIA-DOMICILIATION_sarl?=
+Thread-Topic: 
+ =?Windows-1252?Q?Facture_N=B00224/2022/KD_|_MADAGASCAR_LOCAL_PRODUCT_-_KE?=
+ =?Windows-1252?Q?NTIA-DOMICILIATION_sarl?=
+Thread-Index: AQHYQBk5RB+iyI619EGOXD/E0V8lFKzqQJto
+Date: Mon, 11 Apr 2022 04:59:30 +0000
+Message-ID: 
+ <VI1PR06MB481644C8CAA58B3E1016C5C9CDEA9@VI1PR06MB4816.eurprd06.prod.outlook.com>
+References: 
+ <736777800297748.1648192622.369100570678711-openerp-2081-account.move@kentia-domiciliation-1>
+ <566771843179542.1648193005.433048248291016-openerp-2081-account.move@kentia-domiciliation-1>
+In-Reply-To: 
+ <566771843179542.1648193005.433048248291016-openerp-2081-account.move@kentia-domiciliation-1>
+Accept-Language: fr-FR, en-US
+Content-Language: fr-FR
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+msip_labels: 
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [1k71uUWXhSEOjPrfrVusRUixJRaA3lIj]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 6d737cd3-d2db-4887-42e8-08da1b781030
+x-ms-traffictypediagnostic: DB6PR06MB4008:EE_
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: 
+ EGkVUlE5M01xWLrRmh9BfNjFVvr4t4x+BQuyOg8MOILI4zKtIgYa22BxU/OKNOUpUuciaX4bmOnJVmVc4xXQYAK/fRG0QnKF/Dri+W3+5cSbse6GrhlhR0Ah8LTcl6np5v5B/tfVv7pO2UCmmgHI+XDLiRBrQVcbufEnm4jPWTzp1LGE8/VKSZyi8CsdYzdwZt5G1WKPH5zU4mhhBCWTSgyqEVRe6plCM9RrxZhHk2FQEoZJD9rvsCeWaRLxGuviroyhC/SAKcvMkEktUhT8hsTCvdsLcMhO80I7MzBe8XEPbT98i4x7jazqhC3dq4ny5mQGDLKUQ1fR0W81lXOC1Adi62FU0dpoTpIlvIFsDyyYNix7T6MqyVjmacJE1ruungovMuh28IO5Y9z+6NVLhHLyfnpQHKgGH573ud8Hkvkglm3dqczKcWfzCYSwVNhX4wPVv9gYYYdpkklSbu8fIiSdzACuRj0zcSbVMDPY1TWzuvNA0Kph4xxQSRvhW93r5pOFDX6f3Lnixeo4JNp5mzzR8hHAAv5DgH2egDlhy/7tYAUP6XbWVDPwyRpW40BYxLS1t3IoxO3X5SHzRsXjrF/wLrzdFbiUHmfZ2cRUHqvFJmmTWczp/5Xqc+wXvthu
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: 
+ =?Windows-1252?Q?vlNW4k05YsJFm1VIHIu1Bv9U3Y6DsWYTjVAB6/5aD27UDafgOL8ifsgJ?=
+ =?Windows-1252?Q?G3nxEc+YBaexz4DBmVTwYubs5RfrpM1cnrnhroOhgqtontlCG5Y5e9YS?=
+ =?Windows-1252?Q?QumNhdoo5AoYISOTZPz5sW6AusOSKhnoIlUU/8bq7Id22G36arD7fhCR?=
+ =?Windows-1252?Q?y/knAlGIZ5ow/X/aPHvhY9WkI4c8Rt8XatE/gi4YE5zcXi17CTjgtKIU?=
+ =?Windows-1252?Q?IZeyaWwRXjeFw2cvrRmEmMfGRQ/OkGRS4ENHkWCB37qsQtxc/IaRj5Zc?=
+ =?Windows-1252?Q?XF5A5l2LrpJNlxV1BecC5Kt9UV0SkpypTWxS7+jdp71EkmDynwBnQJms?=
+ =?Windows-1252?Q?aTmuqlhBEX5T27lhffwbaR32PHkyI1Na9xMcBf6Ucpt7kjHVN2zzMmiN?=
+ =?Windows-1252?Q?XW0hnXM3PE04L+zFSI7mEcKMCTKgcyeXZFQ4S6sjuMgcfI053jTkbIGz?=
+ =?Windows-1252?Q?t/wGPI+2RNm5QleOzYjbP0CtuP5O+vbkQyhZOJT7ZzOuETdvwXskfpQa?=
+ =?Windows-1252?Q?E22QpPGfA0j7b5ZsJL6WJpuV7SwTyjkjXjQNbPWmn27tdxDY/nfv2VkP?=
+ =?Windows-1252?Q?5W2GCHFJiYLS6XKHd2CM2JEkK7qnmVpgIORP3MXiXLF4V4irAQI6K02A?=
+ =?Windows-1252?Q?LbmkI1W/BwP04zwBtCuB3Oz4SoeJx+5mMy/jSYdLaW/PDJUBuC07EXP2?=
+ =?Windows-1252?Q?iVWD/XCpxw4mT/ZTd9GwZdFW/tWPvU/z+by0nv8T5eFBLrahFGtR8DLE?=
+ =?Windows-1252?Q?R1OBU7vmUFltw+co5lHC79VfONAR21POmi+mKOTl2SVxfycaw0c/87xX?=
+ =?Windows-1252?Q?KBISPM8HvHLplGJhGJE3x23+pL3c1svnfdRdNhll54s5AhBu2uUwIpGh?=
+ =?Windows-1252?Q?KHCAyp8bO/oe/v1YaOUMl2QEVZNJxbWv7dK5gr8r7X0cmLyIkJkUNpd5?=
+ =?Windows-1252?Q?+NlM/+N/VX5Bckp+GuDgyi879x5ijlJGlgpB35paJhb3jA5t0FGNXoQc?=
+ =?Windows-1252?Q?W0hHR+reTFM8dxcQ2ja146UGJNzGOD36al12qzm4B983PswiYRyPXd9a?=
+ =?Windows-1252?Q?szZAAGQDMgRXFS2YmJLqRF2QuDaPVQITBnN+6vUE1278W0ylTAGtSHUe?=
+ =?Windows-1252?Q?oGpwEZWOZTDjTKCPPBhrvBefPPSz14ztMlcs3n89OuUmfQEl6pjjKw9Z?=
+ =?Windows-1252?Q?B4zEDW9FwMinzaoOUPtZtsEr4UPS+lJXI3odbH0AS4WMDnPyoXVdOgBQ?=
+ =?Windows-1252?Q?ZEVpFJ1TqJ3W3kFqn03JsdF+TsgfA1G9VC+Ehp67X81zCezAXZ7sLHfd?=
+ =?Windows-1252?Q?9D39yizj+2NNMx58aLpnBc7dtt9flVFxOUAlfsTA2uXnR6I7p5BFgRBq?=
+ =?Windows-1252?Q?eCY09mCGiPgU4H3PB2cO7NBd2FyRwQqPnUaQf61FK9Y9FC8eB+/AnL46?=
+ =?Windows-1252?Q?cm3EqgK7VBuw1LqqraeTK/51ccVMQDMHEBWp7/TzNHKS5jMk2hgrcH0P?=
+ =?Windows-1252?Q?qewl9yuD8uYaxN4BYVpXbe2GCbhUlKtWUIjOgKHVCC33ef7sok8=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_VI1PR06MB481644C8CAA58B3E1016C5C9CDEA9VI1PR06MB4816eurp_"
+MIME-Version: 1.0
+X-OriginatorOrg: sct-15-20-4755-11-msonline-outlook-6e454.templateTenant
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: VI1PR06MB4816.eurprd06.prod.outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6d737cd3-d2db-4887-42e8-08da1b781030
+X-MS-Exchange-CrossTenant-originalarrivaltime: 11 Apr 2022 04:59:30.7189
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DB6PR06MB4008
+X-OVH-Remote: 40.92.69.67 (mail-oln040092069067.outbound.protection.outlook.com)
+X-Ovh-Tracer-Id: 13095060345243463624
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 49
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvvddrudekhedgkeehucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuqfggjfdpvefjgfevmfevgfenuceurghilhhouhhtmecuhedttdenucgoufhushhpvggtthffohhmrghinhculdegledmnecujfgurhephffvufhtfffkfhgjtgggsegrtddtredttdehnecuhfhrohhmpefttefmqffvqfettffkofetpfetpfetucetnhhsvghlmhgvuceorghnshgvlhhmvggtmhhptheshhhothhmrghilhdrfhhrqeenucggtffrrghtthgvrhhnpeevtedvheeigeffhfevtdetheejteduveekgeekhefhveehgeefjefhtdffledvvdenucffohhmrghinhepohguohhordgtohhmnecukfhppeegtddrledvrdeiledrieejpddviedtfeemuddtrgeimeektdefmeeljeemmeduudenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepmhhouggvpehsmhhtphdphhgvlhhopehinhefhedrmhgrihhlrdhovhhhrdhnvghtpdhinhgvthepgedtrdelvddrieelrdeijedpmhgrihhlfhhrohhmpegrnhhsvghlmhgvtghmphhtsehhohhtmhgrihhlrdhfrhdpnhgspghrtghpthhtohepuddprhgtphhtthhopehnohhtihhfihgtrghtihhonheskhgvnhhtihgrqdguohhmihgtihhlihgrthhiohhnrdgtohhm
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+--_000_VI1PR06MB481644C8CAA58B3E1016C5C9CDEA9VI1PR06MB4816eurp_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour,
+Veuillez-trouver ci-dessous la r=E9f=E9rence de paiement via Mvola pour pai=
+ement du loyer mois d'Avril de Madagascar Local Product.
+-Num=E9ros d'envoi : 034 63 753 07
+-Reference Mvola :239614628
+-Montant : 118 800 Ar
+-Facture : 0224/2022/KD
+Cordialement.
+
+RAKOTOARIMANANA Anselme
+G=E9rant MALP
+
+________________________________
+De : Faniry R. <office@kentia-domiciliation.com>
+Envoy=E9 : vendredi 25 mars 2022 07:23
+=C0 : MADAGASCAR LOCAL PRODUCT <anselmecmpt@hotmail.fr>
+Objet : Facture N=B00224/2022/KD | MADAGASCAR LOCAL PRODUCT - KENTIA-DOMICI=
+LIATION sarl
+
+
+Bonjour Monsieur Ansleme,
+
+
+Nous vous prions de trouver ci-joint votre facture N=B00224/2022/KD de domi=
+ciliation pour le mois d'Avril 2022 au nom de la soci=E9t=E9 MADAGASCAR LOC=
+AL PRODUCT pour un montant de 118 800,00 Ar Ar TTC.
+
+Vous aurez 10 jours apr=E8s la date d'=E9dition de cette facture pour proc=
+=E9der au r=E8glement sans p=E9nalit=E9, c'est =E0 dire jusqu'au 11/04/2022=
+.
+
+
+Nous vous invitons =E0 privil=E9gier les modalit=E9s de paiement sans conta=
+ct afin de limiter la propagation du COVID-19. Ainsi, vous pri=E9s d=92effe=
+ctuer vos paiements par :
+
+- virement bancaire : 00008 00005 05003011573 19 SG ANTANINARENINA, au nom =
+de KENTIA-DOMICILIATION sarl
+
+- par mobile banking : Mvola 034 92 210 35 nom de KENTIA-DOMICILIATION sarl
+
+
+Nous vous rappelons que l=92acc=E8s dans nos locaux est actuellement tr=E8s=
+ limit=E9, d=92autant plus qu=92une majeure partie de l=92=E9quipe est part=
+ie en t=E9l=E9travail, ainsi vous =EAtes pri=E9s d=92appeler avant de venir=
+ si le d=E9placement est vraiment n=E9cessaire.
+
+
+Veuillez nous envoyer une copie de la pi=E8ce justificative du paiement s=
+=92il vous pla=EEt.
+
+Bien cordialement,
+
+RAZAKARIVONY Faniry Fy Tia Jonah
+
+Assistant en cr=E9ation et domiciliation d'entreprises
+
++261 32 05 357 42
+
+KENTIA-DOMICILIATION SARL
+
+Envoy=E9 par KENTIA-DOMICILIATION sarl utilisant Odoo<https://www.odoo.com?=
+utm_source=3Ddb&utm_medium=3Demail>.
+
+--_000_VI1PR06MB481644C8CAA58B3E1016C5C9CDEA9VI1PR06MB4816eurp_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+Bonjour,</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+Veuillez-trouver ci-dessous la r=E9f=E9rence de paiement via Mvola pour pai=
+ement du loyer mois d'Avril de Madagascar Local Product.</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+-Num=E9ros d'envoi : 034 63 753 07</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+-Reference Mvola :239614628</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+-Montant : 118 800 Ar</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+-Facture : 0224/2022/KD</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+Cordialement.</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+<br>
+</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+RAKOTOARIMANANA Anselme</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+G=E9rant MALP</div>
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+<br>
+</div>
+<div id=3D"appendonsend"></div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>De :</b> Faniry R. &lt;office@k=
+entia-domiciliation.com&gt;<br>
+<b>Envoy=E9 :</b> vendredi 25 mars 2022 07:23<br>
+<b>=C0 :</b> MADAGASCAR LOCAL PRODUCT &lt;anselmecmpt@hotmail.fr&gt;<br>
+<b>Objet :</b> Facture N=B00224/2022/KD | MADAGASCAR LOCAL PRODUCT - KENTIA=
+-DOMICILIATION sarl</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<div>
+<div>
+<div style=3D"font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial=
+,sans-serif; font-size:13px; margin:0px; padding:0px">
+<p class=3D"x_MsoNormal" style=3D"font-size:13px; font-family:&quot;Lucida =
+Grande&quot;,Helvetica,Verdana,Arial,sans-serif; margin:0px">
+<span lang=3D"FR">Bonjour Monsieur Ansleme,</span><br>
+<br>
+<span lang=3D"FR"></span></p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p class=3D"x_MsoNormal" style=3D"font-size:13px; font-family:&quot;Lucida =
+Grande&quot;,Helvetica,Verdana,Arial,sans-serif; margin:0px">
+<span lang=3D"FR">Nous vous prions de trouver ci-joint votre facture&nbsp;<=
+span style=3D"font-weight:bolder">N=B00224/2022/KD</span>&nbsp;de domicilia=
+tion pour le mois d'Avril 2022 au nom de la soci=E9t=E9&nbsp;<span style=3D=
+"font-weight:bolder">MADAGASCAR LOCAL PRODUCT&nbsp;</span>pour un
+ montant de&nbsp;<span style=3D"font-weight:bolder">118&nbsp;800,00&nbsp;Ar=
+&nbsp;</span>Ar TTC.</span></p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p class=3D"x_MsoNormal" style=3D"font-size:13px; font-family:&quot;Lucida =
+Grande&quot;,Helvetica,Verdana,Arial,sans-serif; margin:0px">
+<span lang=3D"FR">Vous aurez&nbsp;<span style=3D"font-weight:bolder">10 jou=
+rs</span>&nbsp;apr=E8s la date d'=E9dition de cette facture pour proc=E9der=
+ au r=E8glement sans p=E9nalit=E9, c'est =E0 dire jusqu'au&nbsp;</span><spa=
+n style=3D"text-align:inherit"><b style=3D"font-weight:bolder">11/04/2022</=
+b></span><span style=3D"color:rgb(0,0,0); font-weight:inherit; text-align:i=
+nherit">.</span></p>
+<p class=3D"x_MsoNormal" style=3D"font-size:13px; font-family:&quot;Lucida =
+Grande&quot;,Helvetica,Verdana,Arial,sans-serif; margin:0px">
+<br>
+<span lang=3D"FR"></span></p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p class=3D"x_MsoNormal" style=3D"font-size:13px; font-family:&quot;Lucida =
+Grande&quot;,Helvetica,Verdana,Arial,sans-serif; margin:0px">
+<span lang=3D"FR">Nous vous invitons =E0 privil=E9gier les modalit=E9s de p=
+aiement sans contact afin de limiter la propagation du COVID-19. Ainsi, vou=
+s pri=E9s d=92effectuer vos paiements par :</span></p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p class=3D"x_MsoNormal" style=3D"margin:0px; font-family:&quot;Lucida Gran=
+de&quot;,Helvetica,Verdana,Arial,sans-serif; font-size:13px; margin-left:35=
+.4pt">
+<span lang=3D"FR">- virement bancaire : 00008 00005 05003011573 19 SG ANTAN=
+INARENINA, au nom de KENTIA-DOMICILIATION sarl</span></p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p class=3D"x_MsoNormal" style=3D"margin:0px; font-family:&quot;Lucida Gran=
+de&quot;,Helvetica,Verdana,Arial,sans-serif; font-size:13px; margin-left:35=
+.4pt">
+<span lang=3D"FR">- par mobile banking : Mvola 034 92 210 35 nom de KENTIA-=
+DOMICILIATION sarl</span><br>
+<br>
+<span lang=3D"FR"></span></p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p class=3D"x_p1" style=3D"font-size:13px; font-family:&quot;Lucida Grande&=
+quot;,Helvetica,Verdana,Arial,sans-serif; margin:0px; line-height:normal">
+Nous vous rappelons que l=92acc=E8s dans nos locaux est actuellement tr=E8s=
+ limit=E9, d=92autant plus qu=92une majeure partie de l=92=E9quipe est part=
+ie en t=E9l=E9travail, ainsi vous =EAtes pri=E9s d=92appeler avant de venir=
+ si le d=E9placement est vraiment n=E9cessaire.</p>
+<p class=3D"x_p1" style=3D"font-size:13px; font-family:&quot;Lucida Grande&=
+quot;,Helvetica,Verdana,Arial,sans-serif; margin:0px; line-height:normal">
+<br>
+</p>
+<p class=3D"x_MsoNormal" style=3D"font-size:13px; font-family:&quot;Lucida =
+Grande&quot;,Helvetica,Verdana,Arial,sans-serif; margin:0px">
+<span lang=3D"FR">Veuillez nous envoyer une copie de la pi=E8ce justificati=
+ve du paiement s=92il vous pla=EEt.</span><br>
+<br>
+<span lang=3D"FR">Bien cordialement,</span></p>
+</div>
+<p style=3D"font-size:13px; font-family:&quot;Lucida Grande&quot;,Helvetica=
+,Verdana,Arial,sans-serif; margin:0cm; margin-bottom:.0001pt">
+<span style=3D"font-size:10.0pt; font-family:&quot;Helvetica&quot;,sans-ser=
+if">RAZAKARIVONY Faniry Fy Tia Jonah</p>
+<p></p>
+</span>
+<p></p>
+<p style=3D"font-size:13px; font-family:&quot;Lucida Grande&quot;,Helvetica=
+,Verdana,Arial,sans-serif; margin:0cm; margin-bottom:.0001pt">
+<span style=3D"font-size:10.0pt; font-family:&quot;Helvetica&quot;,sans-ser=
+if">Assistant en cr=E9ation et domiciliation d'entreprises</p>
+<p></p>
+</span>
+<p></p>
+<p style=3D"font-size:13px; font-family:&quot;Lucida Grande&quot;,Helvetica=
+,Verdana,Arial,sans-serif; margin:0cm; margin-bottom:.0001pt">
+<span style=3D"font-size:10.0pt; font-family:&quot;Helvetica&quot;,sans-ser=
+if">+261 32 05 357 42</p>
+<p></p>
+</span>
+<p></p>
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif">
+</p>
+<p style=3D"font-size:13px; font-family:&quot;Lucida Grande&quot;,Helvetica=
+,Verdana,Arial,sans-serif; margin:0cm; margin-bottom:.0001pt">
+<span style=3D"font-size:10.0pt; font-family:&quot;Helvetica&quot;,sans-ser=
+if">KENTIA-DOMICILIATION SARL</p>
+<p></p>
+</span>
+<p></p>
+</div>
+<p style=3D"color:#555555; margin-top:32px">Envoy=E9 <span>par <span>KENTIA=
+-DOMICILIATION sarl</span>
+</span>utilisant <a target=3D"_blank" href=3D"https://www.odoo.com?utm_sour=
+ce=3Ddb&amp;utm_medium=3Demail" style=3D"text-decoration:none; color:#875A7=
+B">
+Odoo</a>. </p>
+</div>
+</div>
+</body>
+</html>
+
+--_000_VI1PR06MB481644C8CAA58B3E1016C5C9CDEA9VI1PR06MB4816eurp_--
