@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <template id="user_navbar" inherit_id="website.user_navbar">
+      <xpath expr="//ul[hasclass('o_menu_systray')]/li[hasclass('o_new_content_menu')]/div/div/div/div[2]/a" position="replace">
+        <a href="#" data-action="new_blog_post_kentia">
+          <i class="fa fa-rss"/>
+          <p>New Blog Post</p>
+        </a>
+      </xpath>
+    </template>
+
+
+  </data>
+</odoo>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="popular_posts_list_template">
+            <ul class="list-group mb-3">
+                <t t-foreach="posts" t-as="p" class="blog_popular_posts">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <a t-attf-href="/actualites/#{p.blog_id.id}/#{p.id}" t-att-title="'Read' + p.name">
+                            <span t-field="p.name"/>
+                        </a>
+                    </li>
+                </t>
+            </ul>
+        </template>
+
+        <template id="opt_sidebar_blog_index_popular_post" name="Popular Posts" priority="4"
+                  inherit_id="website_blog.sidebar_blog_index" active="True" customize_show="True">
+            <xpath expr="//div[@id='o_wblog_sidebar']" position="inside">
+                <div class="o_wblog_sidebar_block pb-5">
+                    <h6 class="text-uppercase pb-2 mb-4 border-bottom font-weight-bold">Articles populaires</h6>
+                    <div class="h5 popular-posts">
+                    </div>
+                </div>
+                <div class="oe_structure" id="oe_structure_blog_sidebar_index_popular_posts"/>
+            </xpath>
+        </template>
+
+        <template id="opt_sidebar_blog_index_fb_plugin_page" name="FB Plugin Pages" priority="5"
+                  inherit_id="website_blog.sidebar_blog_index" active="True" customize_show="True">
+            <xpath expr="//div[@id='o_wblog_sidebar']" position="inside">
+                <div class="o_wblog_sidebar_block pb-5">
+                    <h6 class="text-uppercase pb-2 mb-4 border-bottom font-weight-bold">Facebook</h6>
+                    <div class="h5 iframe-container">
+                        <div class="fb-page" data-href="https://www.facebook.com/elearning.k" data-tabs=""
+                             data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
+                             data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/elearning.k" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/elearning.k">elearning.k</a>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure" id="oe_structure_blog_sidebar_index_fb_plugin_page"/>
+            </xpath>
+        </template>
+
+
+    </data>
+</odoo>

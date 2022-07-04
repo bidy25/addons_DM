@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="payment_icon_mv" model="payment.icon">
+      <field name="name">Mvola</field>
+      <field name="image" type="base64" file="payment_mvola/static/src/img/mvola_icon.png"/>
+    </record>
+  </data>
+</odoo>

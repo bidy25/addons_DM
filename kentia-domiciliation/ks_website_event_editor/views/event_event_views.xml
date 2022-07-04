@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_event_event_form_inherit" model="ir.ui.view">
+            <field name="name">event.event.form</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_tz']" position="after">
+                    <field name="website_published" invisible="1"/>
+                    <field name="post_type"/>
+                    <field name="publication_date" attrs="{'required':[('post_type','=','automatic')]}"/>
+                </xpath>
+                <xpath expr="//page[@name='event_communication']" position="after">
+                    <page string="Content">
+                        <field name="description"/>
+                    </page>
+                    <page string="Banner">
+                        <field name="banner" widget="image"/>
+                    </page>
+                    <page name="seo" string="SEO">
+                        <group name="default_opengraph">
+                            <field name="website_meta_title" string="Meta Title"/>
+                            <field name="website_meta_description" string="Meta Description"
+                                   placeholder="Min 50 characters"/>
+                            <field name="website_meta_keywords" string="Meta Keywords"
+                                   help="Separate every keyword with a comma"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//header" position="inside">
+                    <button string="Publish" name="button_publish" type="object" class="oe_highlight"
+                            groups="base.group_user"
+                            attrs="{'invisible':['|',('website_published','=',True),('state','=','draft')]}"/>
+                    <button string="Unpublish" name="button_unpublish" type="object" class="oe_highlight"
+                            groups="base.group_user"
+                            attrs="{'invisible':['|', ('website_published','=',False),('state','=','draft')]}"
+                            state="confirm,done"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_declaration_tree" model="ir.ui.view">
+            <field name="name">account.declaration.tree</field>
+            <field name="model">account.declaration</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="month_declaration"/>
+                    <field name="year"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_declaration_form" model="ir.ui.view">
+            <field name="name">account.declaration.form</field>
+            <field name="model">account.declaration</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="invoicing_list" string="Invoicing list" type="object" class="btn-primary"/>
+                        <button name="export_data_xls" string="Export XLS" type="object" class="btn-primary"/>
+                    </header>
+                    <sheet string="">
+                        <group>
+                            <group>
+                                <field name="month_declaration"/>
+                                <field name="start_date"/>
+                            </group>
+                            <group>
+                                <field name="year" width="4"/>
+                                <field name="end_date"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Invoice lines">
+                                <field name="invoice_lines_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="account_declaration_action" model="ir.actions.act_window">
+            <field name="name">Account declaration</field>
+            <field name="res_model">account.declaration</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="account_declaration_menu"
+                  name="Account declaration"
+                  parent="account.menu_finance"
+                  action="account_declaration_action"
+                  sequence="21"/>
+    </data>
+</odoo>

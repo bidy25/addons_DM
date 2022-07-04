@@ -1,0 +1,85 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_kentia_blog
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20191108\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-08 18:38+0000\n"
+"PO-Revision-Date: 2020-11-08 18:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.opt_sidebar_blog_index_popular_post
+msgid "Articles populaires"
+msgstr ""
+
+#. module: website_kentia_blog
+#: model:ir.model,name:website_kentia_blog.model_blog_post
+msgid "Blog Post"
+msgstr "Article de blog"
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.latest_blog_single_kentia
+msgid "Comment"
+msgstr "Commentaires"
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.latest_blog_single_kentia
+msgid "Comments"
+msgstr "Commentaires"
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.blog_post_sidebar_fb_plugin_page
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.opt_sidebar_blog_index_fb_plugin_page
+msgid "Facebook"
+msgstr ""
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.user_navbar
+msgid "New Blog Post"
+msgstr "Nouvel article de blog"
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.latest_blog_single_kentia
+msgid "Subtitle"
+msgstr "Sous-titre"
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.latest_blog_single_kentia
+msgid "Title"
+msgstr "Titre"
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.latest_blog_cover_kentia
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.latest_blog_kentia
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.latest_blog_single_kentia
+msgid "blog-picture"
+msgstr ""
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.latest_blog_single_kentia
+msgid "by"
+msgstr "par"
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.blog_post_sidebar_fb_plugin_page
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.opt_sidebar_blog_index_fb_plugin_page
+msgid "elearning.k"
+msgstr ""
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.latest_blog_list_kentia
+msgid "unpublished"
+msgstr "Non publié"
+
+#. module: website_kentia_blog
+#: model_terms:ir.ui.view,arch_db:website_kentia_blog.latest_blog_single_kentia
+msgid "| No comments yet"
+msgstr "| Aucun commentaire pour l'instant"

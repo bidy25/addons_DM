@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_blog_post_form_inherit" model="ir.ui.view">
+            <field name="name">blog.post.form</field>
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="publish_blog" type="object" groups="base.group_user" string="Publish"
+                                class="btn-primary"
+                                attrs="{'invisible':[('is_published','=',True)]}"></button>
+                        <button name="unpublish_blog" type="object" groups="base.group_user" string="Unpublish"
+                                class="btn-primary"
+                                attrs="{'invisible':[('is_published','=',False)]}"></button>
+                    </header>
+                </xpath>
+                <xpath expr="//field[@name='post_date']" position="replace">
+                    <field name="post_type"/>
+                    <field name="publication_date" attrs="{'required':[('post_type','=','automatic')]}"/>
+                </xpath>
+
+                <xpath expr="//page[@name='seo']" position="attributes">
+                    <attribute name="groups"/>
+                </xpath>
+
+                <xpath expr="//field[@name='website_meta_description']" position="attributes">
+                    <attribute name="placeholder">Min 50 characters</attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='seo']" position="before">
+                    <page string="Content">
+                        <field name="content"/>
+                    </page>
+                    <page string="Banner">
+                        <field name="banner" widget="image"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

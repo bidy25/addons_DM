@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="" model="ir.ui.view">
+            <field name="name">payment.transaction.form</field>
+            <field name="model">payment.transaction</field>
+            <field name="inherit_id" ref="payment.transaction_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="done_transaction" type="object" groups="base.group_user" string="Done"
+                            class="btn-primary"
+                            attrs="{'invisible':[('state','!=','pending')]}"></button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

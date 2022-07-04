@@ -1,0 +1,494 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kentia_domiciliation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20210330\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-14 07:09+0000\n"
+"PO-Revision-Date: 2021-07-14 07:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_move__amount_convert
+msgid " In €"
+msgstr "Valeur indicatif en  €"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_sale_order__amount_convert
+msgid " In € "
+msgstr "Valeur indicatif en  €"
+
+#. module: kentia_domiciliation
+#: model:mail.template,body_html:kentia_domiciliation.email_invoicing
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<table width=\"100%\" class=\"w100\" summary=\"\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" bgcolor=\"#f7f7f7\" align=\"center\">\n"
+"                    <tr>\n"
+"                        <td>\n"
+"                            <table summary=\"\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                <tr>\n"
+"                                    <td width=\"40\"/>\n"
+"                                    <td>\n"
+"                                        <table summary=\"\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                            <img src=\"/kentia_domiciliation/static/src/img/header.jpg\" style=\"max-height: 109px;\"/>\n"
+"\n"
+"                                            <tr>\n"
+"                                                <td height=\"40\"/>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td style=\"font-family:Nunito Sans,Trebuchet MS,Arial, Helvetica, sans-serif; font-size:15px; color:#333333\">\n"
+"                                                    Chers ${object.invoice_partner_display_name},\n"
+"                                                    <p>\n"
+"                                                        Nous vous faisons parvenir ci-joint notre facture n° ${object.name} du\n"
+"                                                        ${object.invoice_date }\n"
+"                                                        <br/>\n"
+"                                                        correspondant à votre bon de commande n° ${object.invoice_origin} du\n"
+"                                                        ${object.invoice_date } / finalisée le\n"
+"                                                        ${object.invoice_date }.\n"
+"                                                        <br/>\n"
+"                                                        Nous vous en souhaitons bonne réception.\n"
+"                                                        <br/>\n"
+"                                                        Dans l'attente de votre aimable règlement par chèque, virement ou espèces,\n"
+"                                                        <br/>\n"
+"                                                        selon votre convenance, nous restons à votre disposition.\n"
+"                                                        <br/>\n"
+"                                                        Veuillez agréer Madame/Monsieur\n"
+"                                                    </p>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td height=\"25\"/>\n"
+"                                            </tr>\n"
+"\n"
+"                                            <tr>\n"
+"                                                <td style=\"font-family:Nunito Sans,Trebuchet MS,Arial, Helvetica, sans-serif; font-size:15px; color:#333333\">\n"
+"\n"
+"                                                    <br/>\n"
+"                                                    <br/>\n"
+"                                                    <table border=\"2\" cellpadding=\"5\" cellspacing=\"4\" style=\"width:100%;\">\n"
+"                                                        <tr>\n"
+"                                                            <td>Article</td>\n"
+"                                                            <td>Montant</td>\n"
+"\n"
+"                                                        </tr>\n"
+"                                                        <tr>\n"
+"                                                            <td>\n"
+"                                                                ${object.name}\n"
+"                                                            </td>\n"
+"\n"
+"                                                            <td>\n"
+"                                                                ${object.amount_total_signed }\n"
+"                                                            </td>\n"
+"                                                        </tr>\n"
+"                                                    </table>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td height=\"40\"/>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td style=\"font-family:Nunito Sans,Trebuchet MS,Arial, Helvetica, sans-serif; font-size:15px; color:#333333\">\n"
+"                                                    Cordialement\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td height=\"40\"/>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                    <td width=\"40\"/>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </table>\n"
+"            "
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_invoice_document_inherit
+msgid "<strong>En €</strong>"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_invoice_document_inherit
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_saleorder_inherit
+msgid ""
+"<strong>Payments terms :</strong>\n"
+"                                    <br/>\n"
+"                                    Each rent is payable no later than the 10th of the current month.\n"
+"                                    <br/>\n"
+"                                    Get a 7% discount for payment before the 5th of the month.\n"
+"                                    <br/>\n"
+"                                    Please make checks or bank transfers payable to KENTIA-DOMICILIATION sarl\n"
+"                                    <br/>\n"
+"                                    BFV-SG Antaninarenina 00008 00005 05003011573 19 MGA\n"
+"                                    <br/>Mvola : 034 92 210 35 OrangeMoney : 032 05 357 47 on behalf of KENTIA-DOMICILIATION sarl"
+msgstr ""
+"<strong>Conditions de paiement :</strong> <br />                    Chaque "
+"loyer est payable au plus tard le 10 du mois courant. <br />"
+"                    Bénéficiez d’une remise de 7% pour paiement avant le 5 "
+"du mois. <br />                    Veuillez établir les chèques ou virement "
+"à l’ordre de KENTIA-DOMICILIATION sarl <br />                    BFV-SG "
+"Antaninarenina 00008 00005 05003011573 19 MGA                    <br />Mvola"
+" : 034 92 210 35 OrangeMoney : 032 05 357 47 au nom de KENTIA-DOMICILIATION "
+"sarl"
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_invoice_document_inherit
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_saleorder_inherit
+msgid "<strong>Signature</strong>"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#: model:ir.actions.act_window,name:kentia_domiciliation.account_declaration_action
+#: model:ir.model,name:kentia_domiciliation.model_account_declaration
+#: model:ir.ui.menu,name:kentia_domiciliation.account_declaration_menu
+#, python-format
+msgid "Account declaration"
+msgstr "Déclaration fiscale"
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Amount due"
+msgstr "Montant dû"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__4
+msgid "April"
+msgstr "Avril"
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_invoice_document_inherit
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_saleorder_inherit
+msgid "Arrested at the sum of :"
+msgstr "Arrêté à la somme de :"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__8
+msgid "August"
+msgstr "Août"
+
+#. module: kentia_domiciliation
+#: model:ir.model,name:kentia_domiciliation.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.sale_order_form_inherit
+msgid "Contract"
+msgstr "Contrat"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_sale_order__contract_sequence
+msgid "Contract N°"
+msgstr "Contrat N°"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__create_uid
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_mail_subscription__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__create_date
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_mail_subscription__create_date
+msgid "Created on"
+msgstr "Créé sur"
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Currency:"
+msgstr "Devise"
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Date due"
+msgstr "Date d'écheance"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__12
+msgid "December"
+msgstr "Décembre"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__display_name
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_mail_subscription__display_name
+msgid "Display Name"
+msgstr "Afficher un nom"
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_saleorder_inherit
+msgid "En €"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__end_date
+msgid "End date"
+msgstr "Fin date"
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "End date:"
+msgstr "Date fin"
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.account_declaration_form
+msgid "Export XLS"
+msgstr "Exportation XLS"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__2
+msgid "February"
+msgstr "Février"
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.subscription_subscription_search_inherit
+msgid "Group By Customer"
+msgstr "Grouper par client"
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.subscription_subscription_search_inherit
+msgid "Group By Subscription plan"
+msgstr "Grouper par abonnement"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__id
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_mail_subscription__id
+msgid "ID"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__invoice_lines_ids
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.account_declaration_form
+msgid "Invoice lines"
+msgstr "Lignes de facture "
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.account_declaration_form
+msgid "Invoicing list"
+msgstr "Liste de facture"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_product_product__is_creation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_product_template__is_creation
+msgid "Is creation type"
+msgstr "Est de type création"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__1
+msgid "January"
+msgstr "Janvier"
+
+#. module: kentia_domiciliation
+#: model:ir.model,name:kentia_domiciliation.model_account_move
+msgid "Journal Entries"
+msgstr "Pièces comptables"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__7
+msgid "July"
+msgstr "Jullet"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__6
+msgid "June"
+msgstr "Juin"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration____last_update
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_mail_subscription____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__write_uid
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_mail_subscription__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__write_date
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_mail_subscription__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__3
+msgid "March"
+msgstr "Mars"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__5
+msgid "May"
+msgstr "Mai"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__month_declaration
+msgid "Month"
+msgstr "Mois"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_res_partner__nif
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_res_users__nif
+msgid "NIF"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_invoice_document_inherit
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_saleorder_inherit
+msgid "NIF :"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__name
+msgid "Name"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__11
+msgid "November"
+msgstr "Novembre"
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Number"
+msgstr "Numéro"
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Number of digits must on exceed 4"
+msgstr "Le nombre de chiffres doit être supérieur à 4"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__10
+msgid "October"
+msgstr "Octobre"
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_invoice_document_inherit
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_saleorder_inherit
+msgid "Onisoa Ratovoson"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Original document"
+msgstr "Document d'origine"
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Payment"
+msgstr "Paiement"
+
+#. module: kentia_domiciliation
+#: model:ir.model,name:kentia_domiciliation.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_res_partner__rcs
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_res_users__rcs
+msgid "RCS"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_invoice_document_inherit
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_saleorder_inherit
+msgid "RCS :"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Reference"
+msgstr "Référence"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_res_partner__stat
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_res_users__stat
+msgid "STAT"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_invoice_document_inherit
+#: model_terms:ir.ui.view,arch_db:kentia_domiciliation.report_saleorder_inherit
+msgid "STAT :"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: model:ir.model,name:kentia_domiciliation.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: kentia_domiciliation
+#: model:ir.actions.server,name:kentia_domiciliation.ir_cron_send_mail_action_ir_actions_server
+#: model:ir.cron,cron_name:kentia_domiciliation.ir_cron_send_mail_action
+#: model:ir.cron,name:kentia_domiciliation.ir_cron_send_mail_action
+msgid "Send mail"
+msgstr "Envoyer un mail"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields.selection,name:kentia_domiciliation.selection__account_declaration__month_declaration__9
+msgid "September"
+msgstr "Septembre"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__start_date
+msgid "Start date"
+msgstr "Date de but"
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Start date:"
+msgstr "Date début"
+
+#. module: kentia_domiciliation
+#: model:mail.template,subject:kentia_domiciliation.email_invoicing
+msgid "Subscription Mail"
+msgstr "Courrier d'abonnement"
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Taxe signed"
+msgstr "Taxe"
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Total"
+msgstr ""
+
+#. module: kentia_domiciliation
+#: code:addons/kentia_domiciliation/models/account_declaration.py:0
+#, python-format
+msgid "Untaxe signed"
+msgstr "Taxe exclus"
+
+#. module: kentia_domiciliation
+#: model:ir.model.fields,field_description:kentia_domiciliation.field_account_declaration__year
+msgid "Year"
+msgstr "Année"
+
+#. module: kentia_domiciliation
+#: model:ir.model,name:kentia_domiciliation.model_mail_subscription
+msgid "mail.subscription"
+msgstr ""

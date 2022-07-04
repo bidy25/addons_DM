@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="payment_icon_om" model="payment.icon">
+      <field name="name">Orange Money</field>
+      <field name="image" type="base64" file="payment_orange_money/static/src/img/orange_money_icon.png"/>
+    </record>
+  </data>
+
+</odoo>
