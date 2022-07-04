@@ -1,0 +1,335 @@
+Return-Path: <rado@ikimakers.com>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 1 Mar 2022 10:55:40 +0200
+Received: from unknown (HELO output24.mail.ovh.net) (10.108.117.70)
+  by mail701.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 1 Mar 2022 10:55:40 +0200
+Received: from vr42.mail.ovh.net (unknown [10.101.8.42])
+	by out24.mail.ovh.net (Postfix) with ESMTP id 4K7B0r26dZzLRGq2B
+	for <notification@kentia-domiciliation.com>; Tue,  1 Mar 2022 08:55:40 +0000 (UTC)
+Received: from in40.mail.ovh.net (unknown [10.101.4.40])
+	by vr42.mail.ovh.net (Postfix) with ESMTP id 4K7B0q60HXz2LDkCL
+	for <notification@kentia-domiciliation.com>; Tue,  1 Mar 2022 08:55:39 +0000 (UTC)
+Received-SPF: Softfail (mailfrom) identity=mailfrom; client-ip=23.83.209.14; helo=bee.birch.relay.mailchannels.net; envelope-from=rado@ikimakers.com; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in40.mail.ovh.net; dkim=none; dkim-atps=neutral
+Received: from bee.birch.relay.mailchannels.net (bee.birch.relay.mailchannels.net [23.83.209.14])
+	by in40.mail.ovh.net (Postfix) with ESMTPS id 4K7B0p5NQCz1Y2H1w
+	for <notification@kentia-domiciliation.com>; Tue,  1 Mar 2022 08:55:38 +0000 (UTC)
+X-Sender-Id: aa6lqz8gxm|x-authuser|rado@ikimakers.com
+Received: from relay.mailchannels.net (localhost [127.0.0.1])
+	by relay.mailchannels.net (Postfix) with ESMTP id F135C880AFC
+	for <notification@kentia-domiciliation.com>; Tue,  1 Mar 2022 08:55:34 +0000 (UTC)
+Received: from da-uk1.cloudns.io (unknown [127.0.0.6])
+	(Authenticated sender: aa6lqz8gxm)
+	by relay.mailchannels.net (Postfix) with ESMTPA id 181B2881072
+	for <notification@kentia-domiciliation.com>; Tue,  1 Mar 2022 08:55:30 +0000 (UTC)
+ARC-Seal: i=1; s=arc-2022; d=mailchannels.net; t=1646124934; a=rsa-sha256;
+	cv=none;
+	b=N1N50MskcrqRr0nVhgX6Wx+muPhXORP6V+Jz2MVWYlbGGJjOXe6VAisaUOh6kjHTW85y8O
+	+x9C1I4gkwxtqUMB6b+8oXP8XxwqmwUI6fZvB3sdIXVABCpYJRg7W7L6F+v5ROx1S58oMD
+	/FWyB3zguUQ7TpgM5kyU2eKQnQXVUhqFiJAyxNHdQqfcojp/T93WdKoziHsgptCLwnuDD1
+	2e0EpVxB1bUhawm+gKED+ITMCHqA5I3ILkKPR443lyYyDVnxEbFS1FkwvzROgzBDhnNscW
+	ramKdy+YkqP40MGkiVCY3fcWOPl6372WzlvRAvcCzYTQ+2RK0LmXns6SMvNAvg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=mailchannels.net;
+	s=arc-2022; t=1646124934;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 in-reply-to:in-reply-to:references:references;
+	bh=s1pudc+bueG9XZLGhBNIF+UBSJhG1J81ajJIgJyteLI=;
+	b=af2CbjnNGzG+aRWAVKUzxh+4YdmayR22i9A2A55Is/FiKHiA25nrdJudtoC6JP4xaCjDeV
+	QKOammcaXNVNrRLS6b0N37FZ9lbZxtWv99MEe0rv7EYoZMO8sH+bqhrLp4Rz+8C8hHs4dp
+	Hd4PnLmviczd74vhl+GRhgAZm072t4YC5MnHy27nZsx7uK8l5dIK/OXLdgiIdTi7l8yztu
+	rEf6fzlXVQjpD3UMhCHr/f9t8JlFa7xgBuM/Oy9Jo3NBHMLi0KKutcTK0tde9Zls16q57o
+	pOvrJr+KhG1SNpE1fP3SGaYd2jJBdfG35aixp/xct0WXv/6x5c8n/ojDYDPZog==
+ARC-Authentication-Results: i=1;
+	rspamd-c9cb649d9-24lf2;
+	auth=pass smtp.auth=aa6lqz8gxm smtp.mailfrom=rado@ikimakers.com
+X-Sender-Id: aa6lqz8gxm|x-authuser|rado@ikimakers.com
+Received: from da-uk1.cloudns.io (da-uk1.cloudns.io [81.19.215.17])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384)
+	by 100.121.92.91 (trex/6.5.3);
+	Tue, 01 Mar 2022 08:55:34 +0000
+X-MC-Relay: Neutral
+X-MailChannels-SenderId: aa6lqz8gxm|x-authuser|rado@ikimakers.com
+X-MailChannels-Auth-Id: aa6lqz8gxm
+X-Befitting-Company: 166ff7303185b86d_1646124934568_3978344232
+X-MC-Loop-Signature: 1646124934568:2560105114
+X-MC-Ingress-Time: 1646124934568
+Received: from [154.126.108.112] (helo=Rado.local.mail)
+	by da-uk1.cloudns.io with esmtpsa  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.94.2)
+	(envelope-from <rado@ikimakers.com>)
+	id 1nOyI8-0008SX-HT
+	for notification@kentia-domiciliation.com; Tue, 01 Mar 2022 08:55:34 +0000
+Date: Tue, 1 Mar 2022 11:55:25 +0300
+From: Rado <rado@ikimakers.com>
+To: notification@kentia-domiciliation.com
+Message-ID: <etPan.621ddf7d.49a933d8.522@ikimakers.com>
+In-Reply-To: <247460981681789.1646114465.389537334442139-openerp-1875-account.move@kentia-domiciliation-1>
+References: <806452062585485.1646113896.946774005889893-openerp-1875-account.move@kentia-domiciliation-1>
+ <247460981681789.1646114465.389537334442139-openerp-1875-account.move@kentia-domiciliation-1>
+Subject: Re: Facture =?utf-8?Q?N=C2=B00143/2022/KD_?=| IKI Sarlu -
+ KENTIA-DOMICILIATION sarl
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="621ddf7d_57045091_522"
+X-AuthUser: rado@ikimakers.com
+X-OVH-Remote: 23.83.209.14 (bee.birch.relay.mailchannels.net)
+X-Ovh-Tracer-Id: 16107968492287921264
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 49
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvvddruddtuddguddviecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfqggfjpdevjffgvefmvefgnecuuegrihhlohhuthemucehtddtnecuogfuuhhsphgvtghtffhomhgrihhnucdlgeelmdenucfjughrpeffhffvkfgjfhfugggtsegrtderredttdejnecuhfhrohhmpeftrgguohcuoehrrgguohesihhkihhmrghkvghrshdrtghomheqnecuggftrfgrthhtvghrnhepkefhfeefgedvvedtfedvgeeutdeufedujedtiedvtddugeekleejgfdufeelleevnecuffhomhgrihhnpehoughoohdrtghomhenucfkphepvdefrdekfedrvddtledrudegpdduheegrdduvdeirddutdekrdduuddvnecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehmohguvgepshhmthhppdhhvghlohepihhngedtrdhmrghilhdrohhvhhdrnhgvthdpihhnvghtpedvfedrkeefrddvtdelrddugedpmhgrihhlfhhrohhmpehrrgguohesihhkihhmrghkvghrshdrtghomhdpnhgspghrtghpthhtohepuddprhgtphhtthhopehnohhtihhfihgtrghtihhonheskhgvnhhtihgrqdguohhmihgtihhlihgrthhiohhnrdgtohhm
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+--621ddf7d_57045091_522
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+Bonjour,
+
+J=E2=80=99accuse bonne r=C3=A9ception de la facture et vous informe que l=
+e virement a bien =C3=A9t=C3=A9 effectu=C3=A9 ce jour-m=C3=AAme, par cont=
+re il a =C3=A9t=C3=A9 indiqu=C3=A9 par erreur =22paiement du domiciliatio=
+n du mois de =46=C3=A9vrier=22 au lieu de Mars.
+
+Je vous prie de bien vouloir m=E2=80=99excuser pour la g=C3=AAne occasion=
+n=C3=A9e.
+
+Bien cordialement,
+
+Rado Randriantsilefitra
+IKI Makers =7C General Manager
++261 33 02 020 30=C2=A0=7C +261 34 40 006 48
+
+Le 1 mars 2022 =C3=A0 09:01:10, =46aniry R. (office=40kentia-domiciliatio=
+n.com) a =C3=A9crit:
+
+Bonjour madame/monsieur,
+
+Nous vous prions de trouver ci-joint votre facture=C2=A0N=C2=B00143/2022/=
+KD=C2=A0de domiciliation pour le mois de Mars 2022 au nom de la soci=C3=A9=
+t=C3=A9=C2=A0IKI Sarlu=C2=A0pour un montant de=C2=A060=C2=A0000,00=C2=A0A=
+r=C2=A0Ar TTC.
+Vous aurez=C2=A010 jours=C2=A0apr=C3=A8s la date d'=C3=A9dition de cette =
+facture pour proc=C3=A9der au r=C3=A8glement sans p=C3=A9nalit=C3=A9, c'e=
+st =C3=A0 dire jusqu'au=C2=A011/03/2022.
+
+Nous vous invitons =C3=A0 privil=C3=A9gier les modalit=C3=A9s de paiement=
+ sans contact afin de limiter la propagation du COVID-19. Ainsi, vous pri=
+=C3=A9s d=E2=80=99effectuer vos paiements par :
+- virement bancaire : 00008 00005 05003011573 19 SG ANTANINARENINA, au no=
+m de KENTIA-DOMICILIATION sarl
+- par mobile banking : Mvola 034 92 210 35 nom de KENTIA-DOMICILIATION sa=
+rl
+
+Nous vous rappelons que l=E2=80=99acc=C3=A8s dans nos locaux est actuelle=
+ment tr=C3=A8s limit=C3=A9, d=E2=80=99autant plus qu=E2=80=99une majeure =
+partie de l=E2=80=99=C3=A9quipe est partie en t=C3=A9l=C3=A9travail, ains=
+i vous =C3=AAtes pri=C3=A9s d=E2=80=99appeler avant de venir si le d=C3=A9=
+placement est vraiment n=C3=A9cessaire.
+
+Veuillez nous envoyer une copie de la pi=C3=A8ce justificative du paiemen=
+t s=E2=80=99il vous pla=C3=AEt.
+
+Bien cordialement,
+
+=46aniry =46y Tia Jonah RAZAKARIVONY
+Assistant en cr=C3=A9ation et domiciliation
++261 32 05 357 42
+KENTIA-DOMICILIATION SARL
+
+Envoy=C3=A9 par KENTIA-DOMICILIATION sarl utilisant Odoo.
+--621ddf7d_57045091_522
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<html><head><style>body=7Bfont-family:Helvetica,Arial;font-size:13px=7D</=
+style></head><body><div style=3D=22font-family:Helvetica,Arial;font-size:=
+13px; ; =22>Bonjour,</div><div style=3D=22font-family:Helvetica,Arial;fon=
+t-size:13px; ; =22><br></div><div style=3D=22font-family:Helvetica,Arial;=
+font-size:13px; ; =22>J=E2=80=99accuse bonne r=C3=A9ception de la facture=
+ et vous informe que le virement a bien =C3=A9t=C3=A9 effectu=C3=A9 ce jo=
+ur-m=C3=AAme, par contre il a =C3=A9t=C3=A9 indiqu=C3=A9 par erreur =22pa=
+iement du domiciliation du mois de =46=C3=A9vrier=22 au lieu de Mars.</di=
+v><div style=3D=22font-family:Helvetica,Arial;font-size:13px; ; =22><br><=
+/div><div style=3D=22font-family:Helvetica,Arial;font-size:13px; ; =22>Je=
+ vous prie de bien vouloir m=E2=80=99excuser pour la g=C3=AAne occasionn=C3=
+=A9e.</div><div style=3D=22font-family:Helvetica,Arial;font-size:13px; ; =
+=22><br></div><div style=3D=22font-family:Helvetica,Arial;font-size:13px;=
+ ; =22>Bien cordialement,</div> <br> <div class=3D=22gmail=5Fsignature=22=
+><font face=3D=22Helvetica=22><span style=3D=22font-style: normal; font-s=
+ize: 12px;=22><b>Rado Randriantsilefitra</b></span></font><div><font face=
+=3D=22Helvetica=22><span style=3D=22font-size: 12px;=22><b style=3D=22fon=
+t-style: normal;=22>IKI Makers =7C </b><span style=3D=22font-style: norma=
+l;=22>General Manager</span></span></font></div><div><font face=3D=22Helv=
+etica=22 style=3D=22caret-color: rgb(255, 255, 255);=22><span style=3D=22=
+font-size: 12px;=22>+261 33 02 020 30&nbsp;</span></font><span style=3D=22=
+caret-color: rgb(255, 255, 255); font-family: Helvetica; font-size: 12px;=
+=22>=7C +261 34 40 006 48</span></div></div> <br><p class=3D=22airmail=5F=
+on=22>Le 1 mars 2022 =C3=A0 09:01:10, =46aniry R. (<a href=3D=22mailto:of=
+fice=40kentia-domiciliation.com=22>office=40kentia-domiciliation.com</a>)=
+ a =C3=A9crit:</p> <blockquote type=3D=22cite=22 class=3D=22clean=5Fbq=22=
+><span><div><div></div><div>
+
+
+<title></title>
+
+
+<div>
+<div>
+<div style=3D=22font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana=
+, Arial, sans-serif; font-size:13px; margin:0px; padding:0px=22>
+<p class=3D=22MsoNormal=22 style=3D=22font-size:13px; font-family:&quot;L=
+ucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px=22>=
+
+<span lang=3D=22=46R=22 xml:lang=3D=22=46R=22>Bonjour madame/monsieur,</s=
+pan><br>
+<br></p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p class=3D=22MsoNormal=22 style=3D=22font-size:13px; font-family:&quot;L=
+ucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px=22>=
+
+<span lang=3D=22=46R=22 xml:lang=3D=22=46R=22>Nous vous prions de trouver=
+ ci-joint
+votre facture&nbsp;<span style=3D=22font-weight:bolder=22>N=C2=B00143/202=
+2/KD</span>&nbsp;de domiciliation
+pour le mois de Mars 2022 au nom de la soci=C3=A9t=C3=A9&nbsp;<span style=
+=3D=22font-weight:bolder=22>IKI Sarlu&nbsp;</span>pour un montant
+de&nbsp;<span style=3D=22font-weight:bolder=22>60&nbsp;000,00&nbsp;Ar&nbs=
+p;</span>Ar
+TTC.</span></p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p class=3D=22MsoNormal=22 style=3D=22font-size:13px; font-family:&quot;L=
+ucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px=22>=
+
+<span lang=3D=22=46R=22 xml:lang=3D=22=46R=22>Vous aurez&nbsp;<span style=
+=3D=22font-weight:bolder=22>10 jours</span>&nbsp;apr=C3=A8s la date d'=C3=
+=A9dition
+de cette facture pour proc=C3=A9der au r=C3=A8glement sans p=C3=A9nalit=C3=
+=A9, c'est =C3=A0
+dire jusqu'au&nbsp;</span><span style=3D=22text-align:inherit=22><b style=
+=3D=22font-weight:bolder=22>11/03/2022</b></span><span style=3D=22color:r=
+gb(0, 0, 0); font-weight:inherit; text-align:inherit=22>.</span></p>
+<p class=3D=22MsoNormal=22 style=3D=22font-size:13px; font-family:&quot;L=
+ucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px=22>=
+
+<br></p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p class=3D=22MsoNormal=22 style=3D=22font-size:13px; font-family:&quot;L=
+ucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px=22>=
+
+<span lang=3D=22=46R=22 xml:lang=3D=22=46R=22>Nous vous invitons =C3=A0 p=
+rivil=C3=A9gier les
+modalit=C3=A9s de paiement sans contact afin de limiter la propagation
+du COVID-19. Ainsi, vous pri=C3=A9s d=E2=80=99effectuer vos paiements par=
+
+:</span></p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p class=3D=22MsoNormal=22 style=3D=22margin:0px; font-family:&quot;Lucid=
+a Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size:13px; ma=
+rgin-left:35.4pt=22>
+<span lang=3D=22=46R=22 xml:lang=3D=22=46R=22>- virement bancaire : 00008=
+ 00005
+05003011573 19 SG ANTANINARENINA, au nom de KENTIA-DOMICILIATION
+sarl</span></p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p class=3D=22MsoNormal=22 style=3D=22margin:0px; font-family:&quot;Lucid=
+a Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size:13px; ma=
+rgin-left:35.4pt=22>
+<span lang=3D=22=46R=22 xml:lang=3D=22=46R=22>- par mobile banking : Mvol=
+a 034 92
+210 35 nom de KENTIA-DOMICILIATION sarl</span><br>
+<br></p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+</p>
+<p class=3D=22p1=22 style=3D=22font-size:13px; font-family:&quot;Lucida G=
+rande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px; line-heig=
+ht:normal=22>
+Nous vous rappelons que l=E2=80=99acc=C3=A8s dans nos locaux est actuelle=
+ment
+tr=C3=A8s limit=C3=A9, d=E2=80=99autant plus qu=E2=80=99une majeure parti=
+e de l=E2=80=99=C3=A9quipe est
+partie en t=C3=A9l=C3=A9travail, ainsi vous =C3=AAtes pri=C3=A9s d=E2=80=99=
+appeler avant de
+venir si le d=C3=A9placement est vraiment n=C3=A9cessaire.</p>
+<p class=3D=22p1=22 style=3D=22font-size:13px; font-family:&quot;Lucida G=
+rande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px; line-heig=
+ht:normal=22>
+<br></p>
+<p class=3D=22MsoNormal=22 style=3D=22font-size:13px; font-family:&quot;L=
+ucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px=22>=
+
+<span lang=3D=22=46R=22 xml:lang=3D=22=46R=22>Veuillez nous envoyer une c=
+opie de la
+pi=C3=A8ce justificative du paiement s=E2=80=99il vous pla=C3=AEt.</span>=
+<br>
+<br>
+<span lang=3D=22=46R=22 xml:lang=3D=22=46R=22>Bien cordialement,</span><b=
+r>
+<br></p>
+<p class=3D=22MsoNormal=22 style=3D=22font-size:13px; font-family:&quot;L=
+ucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px=22>=
+
+=46aniry =46y Tia Jonah RAZAKARIVONY</p>
+<p class=3D=22MsoNormal=22 style=3D=22font-size:13px; font-family:&quot;L=
+ucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px=22>=
+
+Assistant en cr=C3=A9ation et domiciliation</p>
+<p class=3D=22MsoNormal=22 style=3D=22font-size:13px; font-family:&quot;L=
+ucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px=22>=
+
++261 32 05 357 42</p>
+<p class=3D=22MsoNormal=22 style=3D=22font-size:13px; font-family:&quot;L=
+ucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin:0px=22>=
+
+KENTIA-DOMICILIATION SARL</p>
+</div>
+<p style=3D=22margin:0px; font-size:13px; font-family:&quot;Lucida Grande=
+&quot;, Helvetica, Verdana, Arial, sans-serif=22>
+<br></p>
+</div>
+<p style=3D=22color: =23555555; margin-top:32px;=22>Envoy=C3=A9 <span>par=
+
+<span>KENTIA-DOMICILIATION sarl</span></span> utilisant <a target=3D=22=5F=
+blank=22 href=3D=22https://www.odoo.com=3Futm=5Fsource=3Ddb&amp;utm=5Fmed=
+ium=3Demail=22 style=3D=22text-decoration:none; color: =23875A7B;=22>Odoo=
+</a>.</p>
+</div>
+
+
+</div></div></span></blockquote></body></html>
+--621ddf7d_57045091_522--
+

@@ -1,0 +1,535 @@
+Return-Path: <randrianantenaina.andosoa@gmail.com>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 27 Jan 2022 10:39:32 +0200
+Received: from unknown (HELO output45.mail.ovh.net) (10.108.117.17)
+  by mail660.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 27 Jan 2022 10:39:32 +0200
+Received: from vr40.mail.ovh.net (unknown [10.101.8.40])
+	by out45.mail.ovh.net (Postfix) with ESMTP id 4JkvCS0RGPzKqN74B
+	for <notification@kentia-domiciliation.com>; Thu, 27 Jan 2022 08:39:32 +0000 (UTC)
+Received: from in29.mail.ovh.net (unknown [10.101.4.29])
+	by vr40.mail.ovh.net (Postfix) with ESMTP id 4JkvCR5X46z2CmHqj
+	for <notification@kentia-domiciliation.com>; Thu, 27 Jan 2022 08:39:31 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=209.85.128.48; helo=mail-wm1-f48.google.com; envelope-from=randrianantenaina.andosoa@gmail.com; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in29.mail.ovh.net;
+	dkim=pass (2048-bit key; unprotected) header.d=gmail.com header.i=@gmail.com header.b="IciaCVyA";
+	dkim-atps=neutral
+Received: from mail-wm1-f48.google.com (mail-wm1-f48.google.com [209.85.128.48])
+	by in29.mail.ovh.net (Postfix) with ESMTPS id 4JkvCR4jMKz1RQGtK
+	for <notification@kentia-domiciliation.com>; Thu, 27 Jan 2022 08:39:31 +0000 (UTC)
+Received: by mail-wm1-f48.google.com with SMTP id i187-20020a1c3bc4000000b0034d2ed1be2aso5371192wma.1
+        for <notification@kentia-domiciliation.com>; Thu, 27 Jan 2022 00:39:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=from:mime-version:subject:date:references:to:in-reply-to:message-id;
+        bh=gjcs4ch7SrUY5EaPZ0JJXBfyfoa7onzHh20A4dNaDL8=;
+        b=IciaCVyAOeQcuXWP/xt+PRHO8fntWVWoQUNKX90zAtyK9RHksAciSk4wuyHkOEJWFY
+         YucPSXBK+QC1pLUuvUkZSzLa4zJGEFT5Igh1wcd8uaELcLLBlqfQ7eHs9zzSWoW4IAhe
+         D/tOpHSSWzkhKoSh7K8NoBkNvoW+ZGwqHYZDLvJa2Wq9ouF0sxS5Cw0zEqchDDFYeMXV
+         tUXY+Udxj3Yvzk/hNiMvzobcTbCHLm/vmxR8wcTQWby2rXpR+IVw8b41pFbNEf+k+YUf
+         UbcogEK9qReTYVT5Ro/GWWAFBVZiI/oio4xSppQBU3MEarM8HH6lP0t4Ofmc5LHb1LAe
+         cJng==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:from:mime-version:subject:date:references:to
+         :in-reply-to:message-id;
+        bh=gjcs4ch7SrUY5EaPZ0JJXBfyfoa7onzHh20A4dNaDL8=;
+        b=Gf5+oMg4fjg+Jz09tmxkh+uCCGjc7KXB9X7QEwrRoEKTUbVSrFop2JsRNaupBTwtPc
+         GWC0FqbXslZHrERmN5WXF7rY+Wtsd4X/JAV3XfpE2m5Z5OSzL9jySrjXjBuM7leEb60y
+         eyuQRnw9qhbwhLy6GbnJyZNIQMiubTrMc3caaF2AswMSJeVQv9WA31oiaqgVqSO1WL66
+         tSif3Vol2EDq77Dc3kgVx4+gPLuCIFRceH/9FVgwjJ0r34LQG2LEOvlxEDmCaj5Y9bM3
+         amhnTn88xt4GGfONjkeb1YQD+XZlMRr3bcLS8gpOozGXD3ih8WF5WAPzu6dSI6lyOzaA
+         mRlg==
+X-Gm-Message-State: AOAM530TlcULLPHsz4x2+LweCd+S9Q7YTT2snerWrS3P1rzkN1p+oV3J
+	rMzXZebck6jxTyy5SHuU38XvnFwJdQM=
+X-Google-Smtp-Source: ABdhPJzmSOFIbztAzhlmvO0FmAVeaYZKBIgnZIIl6QdMcgoxjNNN+6Ponl0KdVaQZSGWy9aZl2QM/A==
+X-Received: by 2002:a05:600c:1c1a:: with SMTP id j26mr10936140wms.88.1643272770989;
+        Thu, 27 Jan 2022 00:39:30 -0800 (PST)
+Received: from [192.168.88.35] ([197.149.15.36])
+        by smtp.gmail.com with ESMTPSA id f20sm914632wmg.2.2022.01.27.00.39.29
+        for <notification@kentia-domiciliation.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 27 Jan 2022 00:39:30 -0800 (PST)
+From: RANDRIANANTENAINA Andosoa <randrianantenaina.andosoa@gmail.com>
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_C7F38E1E-E50C-452F-B347-584B044946BE"
+Mime-Version: 1.0 (Mac OS X Mail 13.4 \(3608.120.23.2.4\))
+Subject: =?utf-8?Q?Re=3A_Offre_cr=C3=A9ation/_domiciliation_-_Formation_od?=
+ =?utf-8?Q?oo_KD?=
+Date: Thu, 27 Jan 2022 11:39:26 +0300
+References: <623832695438267.1643271072.525856971740723-openerp-34-crm.lead@kentia-domiciliation-1>
+ <753948466062895.1643272682.175342082977295-openerp-34-crm.lead@kentia-domiciliation-1>
+To: notification@kentia-domiciliation.com
+In-Reply-To: <753948466062895.1643272682.175342082977295-openerp-34-crm.lead@kentia-domiciliation-1>
+Message-Id: <BEA812DD-B701-4BF3-A11A-15832286F2A3@gmail.com>
+X-Mailer: Apple Mail (2.3608.120.23.2.4)
+X-OVH-Remote: 209.85.128.48 (mail-wm1-f48.google.com)
+X-Ovh-Tracer-Id: 6504042287975007344
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 49
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvvddrfedvgdduvdefucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuqfggjfdpvefjgfevmfevgfenuceurghilhhouhhtmecuhedttdenucgoufhushhpvggtthffohhmrghinhculdegledmnecujfgurhephfgtggfuffhfvfgjkffosegrtdhmrehhtdejnecuhfhrohhmpefttefpffftkfetpfetpffvgffptefkpfetucetnhguohhsohgruceorhgrnhgurhhirghnrghnthgvnhgrihhnrgdrrghnughoshhorgesghhmrghilhdrtghomheqnecuggftrfgrthhtvghrnhepteegudeiheefjedutdfhleefgfejhfetjeeihedvueevvdevhefhhfeuleetheejnecuffhomhgrihhnpehfohhrmhhsrdhglhgvpdhoughoohdrtghomhenucfkphepvddtledrkeehrdduvdekrdegkedpudeljedrudegledrudehrdefieenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepmhhouggvpehsmhhtphdphhgvlhhopehinhdvledrmhgrihhlrdhovhhhrdhnvghtpdhinhgvthepvddtledrkeehrdduvdekrdegkedpmhgrihhlfhhrohhmpehrrghnughrihgrnhgrnhhtvghnrghinhgrrdgrnhguohhsohgrsehgmhgrihhlrdgtohhmpdhnsggprhgtphhtthhopedupdhrtghpthhtohepnhhothhifhhitggrthhiohhnsehkvghnthhirgdqughomhhitghilhhirghtihhonhdrtghomh
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+
+--Apple-Mail=_C7F38E1E-E50C-452F-B347-584B044946BE
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Bien re=C3=A7u.
+Blablabla
+
+> Le 27 janv. 2022 =C3=A0 11:38, Ando R. <mail@taralila-marketing.com> a =
+=C3=A9crit :
+>=20
+> Bonjour,
+>=20
+> Nous vous remercions de l'inter=C3=AAt que vous portez =C3=A0 notre =
+service.
+> En esp=C3=A9rant que ce mail vous  trouve en bonne sant=C3=A9, je me =
+permet de vous remercier pour l=E2=80=99int=C3=A9r=C3=AAt que vous =
+portez =C3=A0 nos services.
+> =E2=80=A2 Par rapport =C3=A0 la cr=C3=A9ation de soci=C3=A9t=C3=A9, le =
+tarif varie suivant la forme juridique qui vous est le plus adapt=C3=A9 =
+:
+> - SA/SAU : 1 199 000 Ariary HT soit 1 438 800 Ariary TTC ; hors frais =
+administratifs
+> - SARL/ EI/ SARLU: 499 000 Ariary HT soit 598 800 Ariary TTC ; hors =
+frais administratifs Nous offrons un service tout compris : R=C3=A9daction=
+, d=C3=A9p=C3=B4t et r=C3=A9cup=C3=A9ration des documents tels que:=20
+> - Carte NIF
+> - Carte STAT
+> - RCS
+> - Statuts
+> - PV de constitution
+> - Contrat de domiciliation (si vous =C3=AAtes domicili=C3=A9)
+> On vous invite par cons=C3=A9quent =C3=A0 remplir la fiche sur Google =
+form en cliquant le lien suivant : https://forms.gle/LrHevfr6hwG5scYQ7 =
+<https://forms.gle/LrHevfr6hwG5scYQ7>
+> Une fois le lien rempli nous aurions aussi besoin des documents =
+suivants de votre part :
+> Nous aurons besoins des quelques compl=C3=A9ments de dossier suivants =
+:
+> - Quatre copies CIN du g=C3=A9rant ainsi que des associ=C3=A9s
+> - Quatre certificat de r=C3=A9sidence <3 mois des associ=C3=A9s ainsi =
+que du g=C3=A9rant
+> Une fois le lien rempli aussi, on vous fera un retour imm=C3=A9diat.
+> Par rapport au si=C3=A8ge social :
+> -          si vous =C3=AAtes propri=C3=A9taire : un certificat de =
+situation juridique du terrain et/ ou tous documents pouvant justifi=C3=A9=
+s la possession du local (acte de vente)
+> -          si vous =C3=AAtes locataire : 6 contrat de bail ou contra =
+de mise =C3=A0 disposition au nom de la soci=C3=A9t=C3=A9
+> -          si vous n=E2=80=99=C3=AAtes pas dans les deux cas cit=C3=A9s =
+ci-dessus :
+> Nous vous proposons un service de domiciliation chez Kentia =
+Domiciliation. Nous offrons 3 formules, soient :=20
+> 1) PREMIUM
+> Tarif 199 000 Ariary HT/mois soit 2 388 000 Ariary HT les Douze mois
+> Ce qui est inclus: scan des courriers, acc=C3=A8s =C3=A0 la salle de =
+r=C3=A9union 8h par semaine (meeting room, koon space), standard =
+t=C3=A9l=C3=A9phonique, bo=C3=AEte aux lettres, conseil en optimisation =
+de la structure de votre entreprise.=20
+> 2) STANDARD=20
+> Tarif 99 000 Ariary HT/mois soit 1 188 000 Ariary HT les douze mois
+> Ce qui est inclus: acc=C3=A8s =C3=A0 la salle de r=C3=A9union 4h/mois, =
+scan des courriers, bo=C3=AEte aux lettres, localisation en centre-ville =
+(centre d'affaires)
+> 3) ESSENTIEL
+> Tarif 49 000 Ariary HT/mois soit 588.000 Ariary HT les douze mois
+> Ce qui est inclus: scan des courriers, bo=C3=AEte aux lettres, =
+localisation en p=C3=A9riph=C3=A9rie
+> NB : il est =C3=A0 noter que le payement pour l=E2=80=99offre =C2=AB =
+ESSENTIEL =C2=BB devra toujours se faire en int=C3=A9gralit=C3=A9 et une =
+seule  fois.=20
+> Il est =C3=A0 aussi =C3=A0 noter que :
+> =C2=B7          le futur domicili=C3=A9 devra vers=C3=A9 en plus des =
+loyers une quotient =C3=A0 hauteur de 1 mois de loyer.
+> =C2=B7         Les frais administratifs concernant l=E2=80=99enregistrem=
+ent, les =C2=AB adidy =C2=BB, le visa des plans de rep=C3=A9rage au =
+niveau du Fokontany sont de 70.000 ar et sont =C3=A0 la charge du futur =
+domicili=C3=A9.
+> =C2=B7         Au besoin du domicili=C3=A9 et =C3=A0 titre =
+d=E2=80=99information, un certificat d=E2=80=99existence au niveau du =
+Fokontany est de 30.000ar.
+> On vous invite par cons=C3=A9quent =C3=A0 remplir la fiche sur Google =
+form en cliquant le lien suivant si cela vous int=C3=A9resse =
+https://forms.gle/f7UCRe49CJQWR3G5A =
+<https://forms.gle/f7UCRe49CJQWR3G5A>
+> En attach=C3=A9, un devis approximatif des frais administratifs et un =
+mod=C3=A8le de contrat de mise =C3=A0 disposition.
+> Dans l=E2=80=99attente d=E2=80=99un retour de votre part, veuillez =
+agr=C3=A9er mes salutations les plus distingu=C3=A9es.
+> =20
+> Ando
+> D=C3=A9veloppeur ODOO
+> Envoy=C3=A9 par KENTIA-DOMICILIATION sarl utilisant Odoo =
+<https://www.odoo.com/?utm_source=3Ddb&utm_medium=3Demail>.
+>=20
+
+
+--Apple-Mail=_C7F38E1E-E50C-452F-B347-584B044946BE
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: after-white-space;" class=3D"">Bien =
+re=C3=A7u.<div class=3D"">Blablabla<br class=3D""><div><br =
+class=3D""><blockquote type=3D"cite" class=3D""><div class=3D"">Le 27 =
+janv. 2022 =C3=A0 11:38, Ando R. &lt;<a =
+href=3D"mailto:mail@taralila-marketing.com" =
+class=3D"">mail@taralila-marketing.com</a>&gt; a =C3=A9crit :</div><br =
+class=3D"Apple-interchange-newline"><div class=3D"">
+<div class=3D"">
+
+
+<div class=3D""><div style=3D"font-size: 13px; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin: 0px;" =
+class=3D"">Bonjour,</div><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0px;" class=3D""><br class=3D""></div><div style=3D"font-size: =
+13px; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; margin: 0px;" class=3D"">Nous vous remercions de l'inter=C3=AA=
+t que vous portez =C3=A0 notre service.</div><div style=3D"margin: 0cm =
+0cm 0.0001pt; font-family: &quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif; font-size: 13px;" class=3D"">En esp=C3=A9rant =
+que ce mail vous&nbsp; trouve en bonne sant=C3=A9, je me permet de vous =
+remercier pour l=E2=80=99int=C3=A9r=C3=AAt que vous portez =C3=A0 nos =
+services.</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt =
+35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">=E2=80=A2&nbsp;Par =
+rapport =C3=A0 la<span =
+class=3D"Apple-converted-space">&nbsp;</span>cr=C3=A9ation de soci=C3=A9t=C3=
+=A9, le tarif varie suivant la forme juridique qui vous est le plus =
+adapt=C3=A9 :</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" class=3D"">- SA/SAU : 1 199 000 Ariary HT =
+soit 1 438 800 Ariary TTC ; hors frais administratifs</div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">- SARL/ EI/ SARLU: 499 000 Ariary HT soit 598 800 Ariary TTC =
+; hors frais administratifs&nbsp;Nous offrons un service tout compris : =
+R=C3=A9daction, d=C3=A9p=C3=B4t et r=C3=A9cup=C3=A9ration des documents =
+tels que:&nbsp;</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt =
+35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">- Carte NIF</div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt 35.4pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">- Carte STAT</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt =
+35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">- RCS</div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt 35.4pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">- Statuts</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt =
+35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">- PV de =
+constitution</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt =
+35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">- Contrat de =
+domiciliation (si vous =C3=AAtes domicili=C3=A9)</div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">On vous invite par cons=C3=A9quent =C3=A0 remplir la fiche =
+sur Google form en cliquant le lien suivant&nbsp;:<span =
+class=3D"Apple-converted-space">&nbsp;</span><span =
+class=3D"MsoHyperlink"><a href=3D"https://forms.gle/LrHevfr6hwG5scYQ7" =
+target=3D"_blank" style=3D"color:rgb(94, 194, 105); =
+background-color:transparent" =
+class=3D"">https://forms.gle/LrHevfr6hwG5scYQ7</a></span></div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">Une fois le lien rempli nous aurions aussi besoin des =
+documents suivants de votre part :</div><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm =
+0.0001pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">Nous aurons besoins des =
+quelques compl=C3=A9ments de dossier suivants&nbsp;:</div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt 35.4pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">- Quatre copies CIN du g=C3=A9rant ainsi que des =
+associ=C3=A9s</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt =
+35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">- Quatre certificat de =
+r=C3=A9sidence &lt;3 mois des associ=C3=A9s ainsi que du g=C3=A9rant</div>=
+<p style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">Une fois le lien rempli aussi, on vous fera un retour =
+imm=C3=A9diat.</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" class=3D"">Par rapport au si=C3=A8ge =
+social&nbsp;:</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0px 0cm 0px 35.4pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" =
+class=3D"">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span =
+class=3D"Apple-converted-space">&nbsp;</span>si vous =C3=AAtes =
+propri=C3=A9taire&nbsp;: un certificat de situation juridique du terrain =
+et/ ou tous documents pouvant justifi=C3=A9s la possession du local =
+(acte de vente)</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0px 0cm 0px 35.4pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" =
+class=3D"">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span =
+class=3D"Apple-converted-space">&nbsp;</span>si vous =C3=AAtes =
+locataire&nbsp;: 6 contrat de bail ou contra de mise =C3=A0 disposition =
+au nom de la soci=C3=A9t=C3=A9</div><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><div style=3D"margin: 0px 0cm =
+0px 35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" =
+class=3D"">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span =
+class=3D"Apple-converted-space">&nbsp;</span>si vous n=E2=80=99=C3=AAtes =
+pas dans les deux cas cit=C3=A9s ci-dessus&nbsp;:</div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">Nous vous proposons un<span =
+class=3D"Apple-converted-space">&nbsp;</span>service de domiciliation =
+chez Kentia Domiciliation. Nous offrons 3 formules, soient =
+:&nbsp;</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt =
+35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">1) PREMIUM</div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">Tarif 199 000 Ariary HT/mois soit 2 388&nbsp;000 Ariary HT =
+les Douze mois</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" class=3D"">Ce qui est inclus: scan des =
+courriers, acc=C3=A8s =C3=A0 la salle de r=C3=A9union 8h par semaine =
+(meeting room, koon space), standard t=C3=A9l=C3=A9phonique, bo=C3=AEte =
+aux lettres, conseil en optimisation de la structure de votre =
+entreprise.&nbsp;</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt =
+35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">2) STANDARD<span =
+class=3D"Apple-converted-space">&nbsp;</span></div><p style=3D"margin:0px;=
+ font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm =
+0.0001pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">Tarif 99 000 Ariary =
+HT/mois soit 1&nbsp;188&nbsp;000 Ariary HT les douze mois</div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">Ce qui est inclus: acc=C3=A8s =C3=A0 la salle de r=C3=A9union =
+4h/mois, scan des courriers, bo=C3=AEte aux lettres, localisation en =
+centre-ville (centre d'affaires)</div><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm =
+0.0001pt 35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif; font-size: 13px;" class=3D"">3) =
+ESSENTIEL</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" class=3D"">Tarif 49 000 Ariary HT/mois =
+soit 588.000 Ariary HT les douze mois</div><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm =
+0.0001pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">Ce qui est inclus: scan =
+des courriers, bo=C3=AEte aux lettres, localisation en =
+p=C3=A9riph=C3=A9rie</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt =
+35.4pt; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, =
+Arial, sans-serif; font-size: 13px;" class=3D"">NB&nbsp;: il est =C3=A0 =
+noter que le payement pour l=E2=80=99offre =C2=AB&nbsp;ESSENTIEL&nbsp;=C2=BB=
+ devra toujours se faire en int=C3=A9gralit=C3=A9 et une seule&nbsp; =
+fois.&nbsp;</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" class=3D"">Il est =C3=A0 aussi =C3=A0 =
+noter que&nbsp;:</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0px 0cm 0px 35.4pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" =
+class=3D"">=C2=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span =
+class=3D"Apple-converted-space">&nbsp;</span>&nbsp;le futur domicili=C3=A9=
+ devra vers=C3=A9 en plus des loyers une quotient =C3=A0 hauteur de 1 =
+mois de loyer.</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0px 0cm 0px 35.4pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" =
+class=3D"">=C2=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span =
+class=3D"Apple-converted-space">&nbsp;</span>Les frais administratifs =
+concernant l=E2=80=99enregistrement, les =C2=AB&nbsp;adidy&nbsp;=C2=BB, =
+le visa des plans de rep=C3=A9rage au niveau du Fokontany sont de 70.000 =
+ar et sont =C3=A0 la charge du futur domicili=C3=A9.</div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0px 0cm 0px 35.4pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">=C2=B7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span =
+class=3D"Apple-converted-space">&nbsp;</span>Au besoin du domicili=C3=A9 =
+et =C3=A0 titre d=E2=80=99information, un certificat d=E2=80=99existence<s=
+pan class=3D"Apple-converted-space">&nbsp;</span>au niveau du Fokontany =
+est de 30.000ar.</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" class=3D"">On vous invite par cons=C3=A9quen=
+t =C3=A0 remplir la fiche sur Google form en cliquant le lien suivant si =
+cela vous int=C3=A9resse<span =
+class=3D"Apple-converted-space">&nbsp;</span><a =
+href=3D"https://forms.gle/f7UCRe49CJQWR3G5A" target=3D"_blank" =
+style=3D"color:rgb(94, 194, 105); background-color:transparent" =
+class=3D"">https://forms.gle/f7UCRe49CJQWR3G5A</a></div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0cm 0cm 0.0001pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D"">En attach=C3=A9, un devis approximatif des frais =
+administratifs et un mod=C3=A8le de contrat de mise =C3=A0 =
+disposition.</div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0cm 0cm 0.0001pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" class=3D"">Dans l=E2=80=99attente d=E2=80=99=
+un retour de votre part, veuillez agr=C3=A9er mes salutations les plus =
+distingu=C3=A9es.</div><p style=3D"font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; margin:0px" class=3D"">&nbsp;</p><div style=3D"margin: 0px; =
+font-size: 13px; font-family: &quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif;" class=3D"">Ando</div><div style=3D"margin: =
+0px; font-size: 13px; font-family: &quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif;" class=3D"">D=C3=A9veloppeur ODOO</div>
+</div><p style=3D"color: #555555; margin-top:32px;" class=3D"">
+    Envoy=C3=A9
+    <span class=3D"">
+    par
+   =20
+    <span class=3D"">KENTIA-DOMICILIATION sarl</span>
+    </span>
+    utilisant
+    <a target=3D"_blank" =
+href=3D"https://www.odoo.com/?utm_source=3Ddb&amp;utm_medium=3Demail" =
+style=3D"text-decoration:none; color: #875A7B;" class=3D"">Odoo</a>.
+</p>
+</div>
+        </div></blockquote></div><br class=3D""></div></body></html>=
+
+--Apple-Mail=_C7F38E1E-E50C-452F-B347-584B044946BE--

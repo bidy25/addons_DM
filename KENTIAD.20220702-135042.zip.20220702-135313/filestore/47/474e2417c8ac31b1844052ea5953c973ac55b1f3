@@ -1,0 +1,198 @@
+Return-Path: <karine.legallo@unitedworldschools.org>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 8 Mar 2022 09:34:15 +0200
+Received: from unknown (HELO output31.mail.ovh.net) (10.108.97.95)
+  by mail768.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 8 Mar 2022 09:34:15 +0200
+Received: from vr50.mail.ovh.net (unknown [10.101.8.50])
+	by out31.mail.ovh.net (Postfix) with ESMTP id 4KCRsg0d9GzLd91C8
+	for <notification@kentia-domiciliation.com>; Tue,  8 Mar 2022 07:34:15 +0000 (UTC)
+Received: from in39.mail.ovh.net (unknown [10.101.4.39])
+	by vr50.mail.ovh.net (Postfix) with ESMTP id 4KCRsf644Sz2HsGkh
+	for <notification@kentia-domiciliation.com>; Tue,  8 Mar 2022 07:34:14 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=209.85.218.48; helo=mail-ej1-f48.google.com; envelope-from=karine.legallo@unitedworldschools.org; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in39.mail.ovh.net;
+	dkim=pass (2048-bit key; unprotected) header.d=unitedworldschools-org.20210112.gappssmtp.com header.i=@unitedworldschools-org.20210112.gappssmtp.com header.b="UcTKj8Es";
+	dkim-atps=neutral
+Received: from mail-ej1-f48.google.com (mail-ej1-f48.google.com [209.85.218.48])
+	by in39.mail.ovh.net (Postfix) with ESMTPS id 4KCRsf4rMpz1YYbf2
+	for <notification@kentia-domiciliation.com>; Tue,  8 Mar 2022 07:34:14 +0000 (UTC)
+Received: by mail-ej1-f48.google.com with SMTP id r13so37205410ejd.5
+        for <notification@kentia-domiciliation.com>; Mon, 07 Mar 2022 23:34:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unitedworldschools-org.20210112.gappssmtp.com; s=20210112;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=0taA4XHm7qM3AYjSCFevqw2RVuVKkVljW2NUncW/7j8=;
+        b=UcTKj8EsXQO3MsXVqONDN+R0c1VkxK/M524dOgalA+rq0LXUnQNpCMWczbxCkxbmc/
+         CuK+ncUTu+lOUoYqJwRBsvpbs/WSp8AtI4BsOj0zsdr2eXzFT/E+x4WbD1uYnFQG6Szh
+         MBD7DlHuT2YzgtKjFJjh/7Svq4/A55ekCnCp0pN83XijWcMmUv1yLKLq0idM9FhdqTS0
+         kAMvsMfa05EhjoGQNldi11B4a/3lETPeIJQKcl6rFRVVoGzQSekCj0lBmAv7cycxKs5/
+         pNMH+r/e+y3W/8KR9//oS85bkXoRJZJSv3HdO7ipx5ubyNsDZoqVXTm2pQQVhcO8k7mg
+         tv7A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=0taA4XHm7qM3AYjSCFevqw2RVuVKkVljW2NUncW/7j8=;
+        b=VKYxDBnXKriaNxOyvqjQO+wjgibIxS/TmCPfJPOwmDW0j1umKo9i9Co36VlOeH2sJC
+         WvlwpVur/2NE5Ycb34Gao2zjaIuFm5BJYT8kt4sQd+uwkaYYnpPoR9yeP/JxkyiYeNs5
+         jDJn2oVBSaxLWmQhuVUtUUcDaX9y9pgWZaJlfZSxCXMLOFr6qORx9ZREEm7ADRWaKKfq
+         8qD4bpWFDi7hc/XGutBLDzuXtkLKrWYTQ8fJ5B5EvBlFFATcRWMSzv7hNZpXsJ8iGxFl
+         LVAQAsqJ+DjRWTV9EjnhLfVZ6lQbakGrMD1vsVpaF7Gt7oofnvsjvCzWYP32hvFbMjFR
+         T/TQ==
+X-Gm-Message-State: AOAM53125BwcDWh1djGt+xv6zYwaYLbjxV05KdLVAdLGQFHdF8smeE1T
+	iQyHmEpWA6ftpoqoFH7UXvCncq4yIWAgfUVmyqsOCg7CdHg=
+X-Google-Smtp-Source: ABdhPJz27ayLBD3CdJif/HEuGxAaZl/xsDrImHjgSkT6V93tP4+0AtUJJXJBT6O/xRX4i6S57hhJZ7RHoi0mhGGaiq8=
+X-Received: by 2002:a17:907:d06:b0:6da:2902:e9ad with SMTP id
+ gn6-20020a1709070d0600b006da2902e9admr12420414ejc.566.1646724853927; Mon, 07
+ Mar 2022 23:34:13 -0800 (PST)
+MIME-Version: 1.0
+References: <299771965535169.1646311401.450723409652710-openerp-2007-account.move@kentia-domiciliation-1>
+ <410949929395119.1646634541.695788145065308-openerp-2007-account.move@kentia-domiciliation-1>
+In-Reply-To: <410949929395119.1646634541.695788145065308-openerp-2007-account.move@kentia-domiciliation-1>
+From: Karine le Gallo <karine.legallo@unitedworldschools.org>
+Date: Tue, 8 Mar 2022 10:34:03 +0300
+Message-ID: <CAPCJbS8+SFEdaiXsifc5x4zxFvKBaJPwLihC0fGcOXFo82asdQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Facture_N=C2=B00186=2F2022=2FKD_=7C_UNITED_WORLD_SCHOOL_=2D_?=
+	=?UTF-8?Q?KENTIA=2DDOMICILIATION_sarl?=
+To: notification@kentia-domiciliation.com, team@kentia-domiciliation.com
+Content-Type: multipart/alternative; boundary="000000000000f6540a05d9b001bd"
+X-OVH-Remote: 209.85.218.48 (mail-ej1-f48.google.com)
+X-Ovh-Tracer-Id: 501588410809462384
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 49
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvvddrudduhedguddtkecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfqggfjpdevjffgvefmvefgnecuuegrihhlohhuthemucehtddtnecuogfuuhhsphgvtghtffhomhgrihhnucdlgeelmdenucfjughrpeggfhgjhfffkffuvfgtsegrtderredttdejnecuhfhrohhmpefmrghrihhnvgculhgvucfirghllhhouceokhgrrhhinhgvrdhlvghgrghllhhosehunhhithgvugifohhrlhgushgthhhoohhlshdrohhrgheqnecuggftrfgrthhtvghrnhephefhvddvffffhfeuvdehjeehteekjefhvdekfeeggeehvdduvdeigefglefhfeehnecuffhomhgrihhnpehoughoohdrtghomhdpuhhnihhtvggufihorhhlughstghhohholhhsrdhorhhgpdhnihhtvggufihorhhlughstghhohholhhsrdhorhhgnecukfhppedvtdelrdekhedrvddukedrgeeknecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehmohguvgepshhmthhppdhhvghlohepihhnfeelrdhmrghilhdrohhvhhdrnhgvthdpihhnvghtpedvtdelrdekhedrvddukedrgeekpdhmrghilhhfrhhomhepkhgrrhhinhgvrdhlvghgrghllhhosehunhhithgvugifohhrlhgushgthhhoohhlshdrohhrghdpnhgspghrtghpthhtohepuddprhgtphhtthhopehnohhtihhfihgtrghtihhonheskhgvnhhtihgrqdguohhmihgtihhlihgrthhiohhnrdgtohhm
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+--000000000000f6540a05d9b001bd
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour,
+pouvez-vous me faire une liste de tout ce qui est compris dans ce forfait
+svp ?
+
+merci
+
+Le lun. 7 mars 2022 =C3=A0 09:29, Fanja R. <direction@kentia-domiciliation.=
+com>
+a =C3=A9crit :
+
+> Re Bonjour madame Karine,
+>
+> Vous pouvez trouvez en attach=C3=A9  la facture pour l'accompagnement =C3=
+=A0 la
+> cr=C3=A9ation d'une ONG.
+>
+>
+> Restant =C3=A0 votre disposition,
+>
+> Bien cordialement,
+>
+>
+> Faniry Fy Tia Jonah RAZAKARIVONY
+>
+> Assistant en cr=C3=A9ation et domiciliation d'entreprises
+>
+> +261 32 05 357 42
+>
+> KENTIA-DOMICILIATION SARL
+>
+> Envoy=C3=A9 par KENTIA-DOMICILIATION sarl utilisant Odoo
+> <https://www.odoo.com?utm_source=3Ddb&utm_medium=3Demail>.
+>
+
+
+--=20
+*Karine LE GALLO - RAZAFINDRAZAKA*
+
+*Chef de Projet Madagascar / Project Manager Madagascar *| United World
+Schools <https://www.unitedworldschools.org/>
+karine.legallo@unitedworldschools.org
+
+Phone : +261 32 03 340 43
+
+--000000000000f6540a05d9b001bd
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Bonjour,=C2=A0<div>pouvez-vous me faire une liste de tout =
+ce qui est compris dans ce forfait svp ?</div><div><br></div><div>merci</di=
+v></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr=
+">Le=C2=A0lun. 7 mars 2022 =C3=A0=C2=A009:29, Fanja R. &lt;<a href=3D"mailt=
+o:direction@kentia-domiciliation.com">direction@kentia-domiciliation.com</a=
+>&gt; a =C3=A9crit=C2=A0:<br></div><blockquote class=3D"gmail_quote" style=
+=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding=
+-left:1ex">
+<div>
+
+
+<div><div style=3D"font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,=
+Arial,sans-serif;font-size:13px;margin:0px;padding:0px">
+    <p class=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lucida=
+ Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px"><span lang=3D"=
+FR">Re Bonjour madame Karine,</span><br><br><span lang=3D"FR"></span></p><p=
+ class=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lucida Grand=
+e&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px">Vous pouvez trouvez =
+en attach=C3=A9=C2=A0 la facture pour l&#39;accompagnement =C3=A0 la cr=C3=
+=A9ation d&#39;une ONG.</p><p class=3D"MsoNormal" style=3D"font-size:13px;f=
+ont-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;mar=
+gin:0px"><br></p><p class=3D"MsoNormal" style=3D"font-size:13px;font-family=
+:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px">R=
+estant =C3=A0 votre disposition,</p><p style=3D"margin:0px;font-size:13px;f=
+ont-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></=
+p><p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif"></p><p class=3D"MsoNormal" style=3D"=
+font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Aria=
+l,sans-serif;margin:0px"><span lang=3D"FR">Bien cordialement,</span></p></d=
+iv>
+           =20
+<p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;=
+,Helvetica,Verdana,Arial,sans-serif"><br></p><p style=3D"margin:0px;font-si=
+ze:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-=
+serif">Faniry Fy Tia Jonah RAZAKARIVONY</p><p style=3D"margin:0px;font-size=
+:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-se=
+rif">Assistant en cr=C3=A9ation et domiciliation d&#39;entreprises</p><p st=
+yle=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helv=
+etica,Verdana,Arial,sans-serif">+261 32 05 357 42</p><p style=3D"margin:0px=
+;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Ari=
+al,sans-serif">KENTIA-DOMICILIATION SARL</p>
+</div>
+
+
+<p style=3D"color:rgb(85,85,85);margin-top:32px">
+    Envoy=C3=A9
+    <span>
+    par
+   =20
+    <span>KENTIA-DOMICILIATION sarl</span>
+    </span>
+    utilisant
+    <a href=3D"https://www.odoo.com?utm_source=3Ddb&amp;utm_medium=3Demail"=
+ style=3D"text-decoration:none;color:rgb(135,90,123)" target=3D"_blank">Odo=
+o</a>.
+</p>
+</div>
+        </blockquote></div><br clear=3D"all"><div><br></div>-- <br><div dir=
+=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><b style=3D"color:rgb(3=
+3,33,33);font-family:Helvetica,Arial,sans-serif;font-size:12px"><font color=
+=3D"rgb(102,102,102)">Karine LE GALLO - RAZAFINDRAZAKA</font></b><div><b st=
+yle=3D"color:rgb(33,33,33);font-family:Helvetica,Arial,sans-serif;font-size=
+:12px"><font color=3D"rgb(102,102,102)"><br></font></b></div><div><b style=
+=3D"font-family:Helvetica,Arial,sans-serif;font-size:12px"><font style=3D"b=
+ackground-color:rgb(255,255,255)" color=3D"#444444">Chef de Projet Madagasc=
+ar / Project Manager Madagascar=C2=A0</font></b><span style=3D"color:rgb(13=
+6,136,136)">|=C2=A0</span><a href=3D"https://www.unitedworldschools.org/" s=
+tyle=3D"color:rgb(17,85,204)" target=3D"_blank">United World Schools</a><br=
+></div><div><a href=3D"mailto:karine.legallo@unitedworldschools.org" style=
+=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif" target=3D"_b=
+lank">karine.legallo<font color=3D"#1155cc">@u</font>nitedworldschools.org<=
+/a><br></div><div><p style=3D"font-family:Helvetica,Arial,sans-serif;font-s=
+ize:12px;line-height:14px;color:rgb(33,33,33)">Phone : +261 32 03 340 43=C2=
+=A0<img src=3D"https://docs.google.com/uc?export=3Ddownload&amp;id=3D1NUVas=
+CaEF6NzFGoMR1XYXXBwxkLxszNN&amp;revid=3D0BxHz69OHpQubem5iVlhtS2h0YmxYQ0hLSH=
+FZbWJIQXYzcldZPQ"><br></p></div></div></div>
+
+--000000000000f6540a05d9b001bd--

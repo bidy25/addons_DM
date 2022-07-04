@@ -1,0 +1,475 @@
+Return-Path: <nicolas@nielsenconcept.com>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 25 Mar 2022 10:08:03 +0200
+Received: from unknown (HELO output45.mail.ovh.net) (10.108.97.43)
+  by mail689.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 25 Mar 2022 10:08:03 +0200
+Received: from vr39.mail.ovh.net (unknown [10.101.8.39])
+	by out45.mail.ovh.net (Postfix) with ESMTP id 4KPvpp6x6dzLnRFQt
+	for <notification@kentia-domiciliation.com>; Fri, 25 Mar 2022 08:08:02 +0000 (UTC)
+Received: from in31.mail.ovh.net (unknown [10.101.4.31])
+	by vr39.mail.ovh.net (Postfix) with ESMTP id 4KPvpp52T6z3pfyl
+	for <notification@kentia-domiciliation.com>; Fri, 25 Mar 2022 08:08:02 +0000 (UTC)
+Received-SPF: Neutral (mailfrom) identity=mailfrom; client-ip=209.85.208.174; helo=mail-lj1-f174.google.com; envelope-from=nicolas@nielsenconcept.com; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in31.mail.ovh.net;
+	dkim=pass (2048-bit key; unprotected) header.d=nielsenconcept-com.20210112.gappssmtp.com header.i=@nielsenconcept-com.20210112.gappssmtp.com header.b="2SFuva72";
+	dkim-atps=neutral
+Received: from mail-lj1-f174.google.com (mail-lj1-f174.google.com [209.85.208.174])
+	by in31.mail.ovh.net (Postfix) with ESMTPS id 4KPvpp3bXKz1b1PVY
+	for <notification@kentia-domiciliation.com>; Fri, 25 Mar 2022 08:08:02 +0000 (UTC)
+Received: by mail-lj1-f174.google.com with SMTP id bn33so9279033ljb.6
+        for <notification@kentia-domiciliation.com>; Fri, 25 Mar 2022 01:08:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=nielsenconcept-com.20210112.gappssmtp.com; s=20210112;
+        h=from:message-id:mime-version:subject:date:in-reply-to:cc:to
+         :references;
+        bh=76KS67uSts0jiUFUKhLfQQ+0xv9OFGaeo/cArCOoUuY=;
+        b=2SFuva72RfyXPLmKKeMtvnjqKEKnwAU2SrbRAaPlEre6pktIeEy28f6XjBwNRAvTWT
+         5e3/Aoslurp+BfYZzjUBJ2v+lm+cA4GNAhVV0wIInw0a0SazC+7cDGDY3kDvMUJMImlS
+         cPoKuKqPdoULuXgcCB02v77Tnf6uj7UvIwCFksLAjfewHw4P57htVjVNVtiAyQipI9mb
+         9vipNsZy7zNaQyBdGbhXylFR6VLf9Fv1YpkfvuXHZE4+/zBUZweoVGZkqTkqTxr55Zi5
+         a1lrnl6zoUHnyZmuTeYKD+9AL0+Onxo3DfCcmiDs7jk/vnDwnsh957QqoJR8YbdpQLEe
+         eQQw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:from:message-id:mime-version:subject:date
+         :in-reply-to:cc:to:references;
+        bh=76KS67uSts0jiUFUKhLfQQ+0xv9OFGaeo/cArCOoUuY=;
+        b=H4w9O5NxjVLvJl0cWEP6GqYEVCRz3p/BUT2a7DK7zhhhgpHCgsAILZvx5KK4sSWylw
+         1j0xDIcM8ClKfvpT7Qw31D9uUnDBMDeJFybOETRBV/uN5dbC/Trg6TL1nOzW1cEx4CHj
+         Km+U2iTjTrmeckhkJ5CUoqGcV5Q6EMlem2EWPVfg7gT1aYEGdYPWPj0bRt/ZVJYNeIAZ
+         Rx12eqxTii97kz65P3QKD/K6kbZuB4DcY6MeZhoU56633yHuo2RPwBujcX4m187DZX1i
+         IAq8/DEI+iynsdgZjzdkokObGaypnl9T9SBzMp0tMInXUeoxCSTCvsX1nro4qoyUiC7X
+         d0Jg==
+X-Gm-Message-State: AOAM533yXvc0ehfRvS1mkDdC/mP9Z6gDJ7kXxgRXLlOvYIgW234mssFo
+	SE/+ZjKEEAh7LaDzqG+rX5nBNc+xL/RDIatmc7yqJZVOZtiwFgbQwuXXdikrGXtVjApY0hdl1HJ
+	+ucHLiAtCB0abl66so6mQfpgHLgVFBe3VxUt7sJznSmbVhuL24TItVKxH7L/ze9zb9j7O2xzcmv
+	0pDfjhkUOMj7W5xfoQQcg=
+X-Google-Smtp-Source: ABdhPJycD1Tl0a33pPk9jXreAmKeEsp70tUtMpl2o1+lR+r6XrCnMa0oX84eA8NsbjpYVaixmTG3tw==
+X-Received: by 2002:a2e:b88b:0:b0:249:8a0b:ad3d with SMTP id r11-20020a2eb88b000000b002498a0bad3dmr7412725ljp.53.1648195676080;
+        Fri, 25 Mar 2022 01:07:56 -0700 (PDT)
+Received: from smtpclient.apple (131-164-232-178-dynamic.dk.customer.tdc.net. [131.164.232.178])
+        by smtp.gmail.com with ESMTPSA id u1-20020a2eb801000000b002494252ff07sm586386ljo.112.2022.03.25.01.07.55
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 25 Mar 2022 01:07:55 -0700 (PDT)
+From: nicolas Salmon <nicolas@nielsenconcept.com>
+Message-Id: <D7ED69BB-B8D6-4CE0-B178-B88D248F390E@nielsenconcept.com>
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_9BBBCB91-482D-4AE6-9FB9-9707A6A13FB7"
+Mime-Version: 1.0 (Mac OS X Mail 15.0 \(3693.60.0.1.1\))
+Subject: =?utf-8?Q?Re=3A_Facture_N=C2=B00206/2022/KD_=7C_mystartupstudio_-?=
+ =?utf-8?Q?_KENTIA-DOMICILIATION_sarl?=
+Date: Fri, 25 Mar 2022 09:07:54 +0100
+In-Reply-To: <316062496024241.1648186577.737255096435547-openerp-2065-account.move@kentia-domiciliation-1>
+Cc: Raphael DUBOIS <raphael@nielsenconcept.com>,
+ Cindy Perez <cindy@nielsenconcept.com>
+To: notification@kentia-domiciliation.com,
+ team@kentia-domiciliation.com
+References: <551867716072842.1648186190.668654441833496-openerp-2065-account.move@kentia-domiciliation-1>
+ <316062496024241.1648186577.737255096435547-openerp-2065-account.move@kentia-domiciliation-1>
+X-Mailer: Apple Mail (2.3693.60.0.1.1)
+X-OVH-Remote: 209.85.208.174 (mail-lj1-f174.google.com)
+X-Ovh-Tracer-Id: 8674495833406559344
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: -51
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvvddrudehtddgudduudcutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfqggfjpdevjffgvefmvefgnecuuegrihhlohhuthemucehtddtnecusecvtfgvtghiphhivghnthhsucdlqddutddtmdenogfuuhhsphgvtghtffhomhgrihhnucdlgeelmdenucfjughrpefhkfgtggfuffgjvfhfofesrgdtmherhhdtjeenucfhrhhomhepnhhitgholhgrshcuufgrlhhmohhnuceonhhitgholhgrshesnhhivghlshgvnhgtohhntggvphhtrdgtohhmqeenucggtffrrghtthgvrhhnpeekueeghedvgfdufeffuefhuedvfeffvdfhgfegjeefueetvdeltdeuleetgedtieenucffohhmrghinhepnhhivghlshgvnhgtohhntggvphhtrdgtohhmpdhinhhsthgrghhrrghmrdgtohhmpdhfrggtvggsohhokhdrtghomhdplhhinhhkvgguihhnrdgtohhmpdgtrghlvghnughlhidrtghomhdpohguohhordgtohhmnecukfhppedvtdelrdekhedrvddtkedrudejgedpudefuddrudeigedrvdefvddrudejkeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepmhhouggvpehsmhhtphdphhgvlhhopehinhefuddrmhgrihhlrdhovhhhrdhnvghtpdhinhgvthepvddtledrkeehrddvtdekrddujeegpdhmrghilhhfrhhomhepnhhitgholhgrshesnhhivghlshgvnhgtohhntggvphhtrdgtohhmpdhnsggprhgtphhtthhopedupdhrtghpthhtohepnhhothhifh
+ hitggrthhiohhnsehkvghnthhirgdqughomhhitghilhhirghtihhonhdrtghomh
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+
+--Apple-Mail=_9BBBCB91-482D-4AE6-9FB9-9707A6A13FB7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Bonjour Faniry,
+Merci de d=C3=A9sormais mettre en copie Raphael qui est notre =
+responsable Financier et qui va g=C3=A9rer les comptes et les factures  =
+de MSS.
+Raphael, merci de relire le contrat de prestation avec Kentia pour la =
+partie comptabilit=C3=A9 pour bien d=C3=A9finir les limites des taches =
+entre toi et eux.
+
+
+=20
+NICOLAS SALMON / Co-fondateur
+=20
+Je facilite vos mobilit=C3=A9s urbaines du quotidien gr=C3=A2ce =C3=A0 =
+des abris v=C3=A9los s=C3=A9curis=C3=A9s, des v=C3=A9los individuels et =
+collectifs.
+=20
+T=C3=A9l : +33 6.30.26.59.47  +45. 93.75.51.20
+Mail : nicolas@nielsenconcept.com <mailto:nicolas@nielsenconcept.com>=20
+ <https://nielsenconcept.com/>   =
+<https://www.instagram.com/nielsenconcept/?hl=3Dfr>   =
+<https://www.facebook.com/NIELSENCONCEPT>   =
+<https://www.linkedin.com/company/25753783/admin/>     =20
+NIELSEN CONCEPT
+mobility
+Une question ?=C2=A0 <https://calendly.com/nicolas-salmon>
+Cliquez-ici pour prendre rendez-vous ! =
+<https://calendly.com/nicolas-salmon>
+
+> Le 25 mars 2022 =C3=A0 06:36, Faniry R. =
+<office@kentia-domiciliation.com> a =C3=A9crit :
+>=20
+> Bonjour monsieur Nicolas,
+>=20
+> Nous vous prions de trouver ci-joint votre facture N=C2=B00206/2022/KD =
+de domiciliation pour le mois d'Avril 2022 au nom de la soci=C3=A9t=C3=A9 =
+mystartupstudio pour un montant de 118 800,00 Ar Ar TTC. Merci de tenir =
+compte des frais de rapatriement.
+> Vous aurez 10 jours apr=C3=A8s la date d'=C3=A9dition de cette facture =
+pour proc=C3=A9der au r=C3=A8glement sans p=C3=A9nalit=C3=A9, c'est =C3=A0=
+ dire jusqu'au 04/04/2022.
+>=20
+> =20
+> Nous vous invitons =C3=A0 privil=C3=A9gier les modalit=C3=A9s de =
+paiement sans contact afin de limiter la propagation du COVID-19. Ainsi, =
+vous pri=C3=A9s d=E2=80=99effectuer vos paiements par :
+> - virement bancaire : 00008 00005 05003011573 19 SG ANTANINARENINA, au =
+nom de KENTIA-DOMICILIATION sarl
+> - par mobile banking : Mvola 034 92 210 35 nom de KENTIA-DOMICILIATION =
+sarl
+>=20
+> Nous vous rappelons que l=E2=80=99acc=C3=A8s dans nos locaux est =
+actuellement tr=C3=A8s limit=C3=A9, d=E2=80=99autant plus qu=E2=80=99une =
+majeure partie de l=E2=80=99=C3=A9quipe est partie en t=C3=A9l=C3=A9travai=
+l, ainsi vous =C3=AAtes pri=C3=A9s d=E2=80=99appeler avant de venir si =
+le d=C3=A9placement est vraiment n=C3=A9cessaire.
+>=20
+> Veuillez nous envoyer une copie de la pi=C3=A8ce justificative du =
+paiement s=E2=80=99il vous pla=C3=AEt.
+>=20
+> Bien cordialement,
+>=20
+> RAZAKARIVONY Faniry Fy Tia Jonah
+> Assistant en cr=C3=A9ation et domiciliation d'entreprises
+> +261 32 05 357 42
+> KENTIA-DOMICILIATION SARL
+> Envoy=C3=A9 par KENTIA-DOMICILIATION sarl utilisant Odoo =
+<https://www.odoo.com/?utm_source=3Ddb&utm_medium=3Demail>.
+>=20
+> <Facture_N=C2=B00206_2022_KD.pdf>
+
+
+--Apple-Mail=_9BBBCB91-482D-4AE6-9FB9-9707A6A13FB7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: after-white-space;" =
+class=3D"">Bonjour Faniry,<div class=3D"">Merci de d=C3=A9sormais mettre =
+en copie Raphael qui est notre responsable Financier et qui va g=C3=A9rer =
+les comptes et les factures &nbsp;de MSS.</div><div class=3D"">Raphael, =
+merci de relire le contrat de prestation avec Kentia pour la partie =
+comptabilit=C3=A9 pour bien d=C3=A9finir les limites des taches entre =
+toi et eux.</div><div class=3D""><br class=3D""><div class=3D"">
+<div dir=3D"ltr" align=3D"left" style=3D"caret-color: rgb(0, 0, 0); =
+color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; =
+font-style: normal; font-variant-caps: normal; font-weight: normal; =
+letter-spacing: normal; text-align: -webkit-left; text-indent: 0px; =
+text-transform: none; white-space: normal; word-spacing: 0px; =
+-webkit-text-stroke-width: 0px; text-decoration: none; margin-left: =
+0pt;" class=3D""><table style=3D"border: none; border-collapse: =
+collapse;" class=3D""><tbody class=3D""><tr style=3D"height: 99pt;" =
+class=3D""><td style=3D"vertical-align: top; padding: 5pt; overflow: =
+hidden; overflow-wrap: break-word;" class=3D""><div style=3D"line-height: =
+1.38; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span =
+style=3D"font-size: 9pt; font-family: Arial; font-variant-ligatures: =
+normal; font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D""><br =
+class=3D"Apple-interchange-newline"> </span><span style=3D"font-size: =
+9pt; font-family: Arial; font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D""><span =
+style=3D"border: none; display: inline-block; overflow: hidden; width: =
+105px; height: 105px;" class=3D""><img =
+src=3D"https://lh5.googleusercontent.com/C8vg2cSYEsmAkivBs3VtNSS8by8uYpO_I=
+bREkr0NyBBZHqfDHg2Y28yJwKkW_Nb7WZfmaAKlRVRM2ptEuK707o4O3WU9P_Pckc7kyyoS_B2=
+CV2rcL-DZ9MxNJD84TqKGlTrCmpAX" width=3D"105" height=3D"105" =
+style=3D"margin-left: 0px; margin-top: 0px;" =
+class=3D""></span></span></div></td><td style=3D"vertical-align: top; =
+padding: 5pt; overflow: hidden; overflow-wrap: break-word;" =
+class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; =
+margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 11pt; =
+font-family: Arial; font-weight: 700; font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D"">NICOLAS =
+SALMON</span><span style=3D"font-size: 8pt; font-family: Arial; =
+font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D""> /</span><span style=3D"font-size: 9pt; =
+font-family: Arial; font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D""> =
+Co-fondateur</span></div><p dir=3D"ltr" style=3D"line-height: 1.38; =
+margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size:=
+ 6.999999999999999pt; font-family: Arial; font-variant-ligatures: =
+normal; font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">&nbsp;</span></p><div style=3D"line-height: 1.38; margin-top: =
+0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 9pt; =
+font-family: Arial; font-style: italic; font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D"">Je facilite =
+vos mobilit=C3=A9s urbaines du quotidien gr=C3=A2ce =C3=A0 des abris =
+v=C3=A9los s=C3=A9curis=C3=A9s, des v=C3=A9los individuels et =
+collectifs.</span></div><p dir=3D"ltr" style=3D"line-height: 1.38; =
+margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size:=
+ 9pt; font-family: Arial; font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">&nbsp;</span></p><div style=3D"line-height: 1.2; margin-top: =
+0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-family: Arial; =
+font-size: 12px; white-space: pre-wrap;" class=3D"">T=C3=A9l : +33 =
+6.30.26.59.47  +45. 93.75.51.20</span></div><div style=3D"line-height: =
+1.2; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span =
+style=3D"font-size: 9pt; font-family: Arial; font-variant-ligatures: =
+normal; font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" class=3D"">Mail : =
+</span><a href=3D"mailto:nicolas@nielsenconcept.com" =
+style=3D"text-decoration: none;" class=3D""><span style=3D"font-size: =
+9pt; font-family: Arial; color: rgb(0, 0, 0); font-variant-ligatures: =
+normal; font-variant-east-asian: normal; font-variant-position: normal; =
+text-decoration: underline; text-decoration-skip: none; vertical-align: =
+baseline; white-space: pre-wrap;" =
+class=3D"">nicolas@nielsenconcept.com</span></a><span style=3D"font-size: =
+9pt; font-family: Arial; font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; =
+vertical-align: baseline; white-space: pre-wrap;" =
+class=3D"">&nbsp;</span></div></td><td style=3D"vertical-align: top; =
+padding: 5pt; overflow: hidden; overflow-wrap: break-word;" =
+class=3D""><div style=3D"line-height: 1.38; margin-top: 0pt; =
+margin-bottom: 0pt;" class=3D""><a href=3D"https://nielsenconcept.com/" =
+style=3D"text-decoration: none;" class=3D""><span style=3D"font-size: =
+9pt; font-family: Arial; color: rgb(17, 85, 204); =
+font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; text-decoration: underline; =
+text-decoration-skip: none; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D""><span style=3D"border: none; display: =
+inline-block; overflow: hidden; width: 22px; height: 17px;" =
+class=3D""><img =
+src=3D"https://lh4.googleusercontent.com/5X4qxyLEGn5I-T3ogUDp81IGWXb2Cwkfm=
+BpLD-Hxm8dfkErhNYFu9LS36b3TsrEDLGQ6zg3Ade5h4zWd2rORfv2k-dj3yuYHAD12sM92FvQ=
+sybYTQVaA7vwohLdRG_ZB3e2na-le" width=3D"22" height=3D"17" =
+style=3D"margin-left: 0px; margin-top: 0px;" =
+class=3D""></span></span></a><span style=3D"font-size: 9pt; font-family: =
+Arial; font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">&nbsp; </span><a =
+href=3D"https://www.instagram.com/nielsenconcept/?hl=3Dfr" =
+style=3D"text-decoration: none;" class=3D""><span style=3D"font-size: =
+9pt; font-family: Arial; color: rgb(17, 85, 204); =
+font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; text-decoration: underline; =
+text-decoration-skip: none; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D""><span style=3D"border: none; display: =
+inline-block; overflow: hidden; width: 16px; height: 16px;" =
+class=3D""><img =
+src=3D"https://lh6.googleusercontent.com/8GF3E-cBbJ0pGLfiOBoWYmnsyoeMVbIx8=
+jGMTgQJ59_SgppkQ6Q78TEc9BzzKYBKQh9iWNjxu7XbU738Z7xaj505bF27iNC56K7zVlkp61g=
+Cxr28HHyxXaJAfUstgQGD5cmt4bhE" width=3D"16" height=3D"16" =
+style=3D"margin-left: 0px; margin-top: 0px;" =
+class=3D""></span></span></a><span style=3D"font-size: 9pt; font-family: =
+Arial; font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">&nbsp; </span><a =
+href=3D"https://www.facebook.com/NIELSENCONCEPT" style=3D"text-decoration:=
+ none;" class=3D""><span style=3D"font-size: 9pt; font-family: Arial; =
+color: rgb(17, 85, 204); font-variant-ligatures: normal; =
+font-variant-east-asian: normal; font-variant-position: normal; =
+text-decoration: underline; text-decoration-skip: none; vertical-align: =
+baseline; white-space: pre-wrap;" class=3D""><span style=3D"border: =
+none; display: inline-block; overflow: hidden; width: 16px; height: =
+16px;" class=3D""><img =
+src=3D"https://lh5.googleusercontent.com/70XnnWQYs62-H3S2l2e2lA5ykYIF0T5s1=
+Cbr7BYKa_G73KYuUFUxYwNH5I1QBjK1rXOAuO1SrdM-rtcFkUNs9jjw5MNQYSzxp51cGYqNpB1=
+1xmoLFo6hXm34hiuepiAqcKc2aXWb" width=3D"16" height=3D"16" =
+style=3D"margin-left: 0px; margin-top: 0px;" =
+class=3D""></span></span></a><span style=3D"font-size: 9pt; font-family: =
+Arial; font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">&nbsp; </span><a =
+href=3D"https://www.linkedin.com/company/25753783/admin/" =
+style=3D"text-decoration: none;" class=3D""><span style=3D"font-size: =
+9pt; font-family: Arial; color: rgb(17, 85, 204); =
+font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; text-decoration: underline; =
+text-decoration-skip: none; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D""><span style=3D"border: none; display: =
+inline-block; overflow: hidden; width: 17px; height: 17px;" =
+class=3D""><img =
+src=3D"https://lh3.googleusercontent.com/Bk4rNe2G5BrGSQP1XGtaU7rQ9ipsRLLLm=
+RBgvQetuSHLX65dxB49be6SyZe0Vavyy0_3C0o2q5mtPWP951NSLR8l55CSnCauUKm55y1e3Ys=
+OivSFzAKWI-3agvbzsTEQC1dVEIDI" width=3D"17" height=3D"17" =
+style=3D"margin-left: 0px; margin-top: 0px;" =
+class=3D""></span></span></a><span style=3D"font-size: 9pt; font-family: =
+Arial; font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" =
+class=3D"">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></td></tr><tr =
+style=3D"height: 43.5pt;" class=3D""><td style=3D"vertical-align: top; =
+padding: 5pt; overflow: hidden; overflow-wrap: break-word;" =
+class=3D""><div style=3D"line-height: 1.38; text-align: center; =
+margin-top: 0pt; margin-bottom: 0pt;" class=3D""><span style=3D"font-size:=
+ 11pt; font-family: Arial; color: rgb(8, 81, 94); font-weight: 700; =
+font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">NIELSEN CONCEPT</span></div><div =
+style=3D"line-height: 1.38; text-align: center; margin-top: 0pt; =
+margin-bottom: 0pt;" class=3D""><span style=3D"font-size: 9pt; =
+font-family: Arial; color: rgb(235, 148, 134); font-style: italic; =
+font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">mobility</span></div></td><td colspan=3D"2" =
+style=3D"border-right-width: 0.99609pt; border-right-style: solid; =
+border-right-color: rgb(0, 0, 0); vertical-align: top; background-color: =
+rgb(8, 81, 94); padding: 5pt; overflow: hidden; overflow-wrap: =
+break-word;" class=3D""><div style=3D"line-height: 1.7999999999999998; =
+text-align: center; margin-top: 0pt; margin-bottom: 0pt;" class=3D""><a =
+href=3D"https://calendly.com/nicolas-salmon" style=3D"text-decoration: =
+none;" class=3D""><span style=3D"font-size: 9pt; font-family: Arial; =
+color: rgb(255, 255, 255); background-color: transparent; font-weight: =
+700; font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">Une question ?&nbsp;</span></a></div><div =
+style=3D"line-height: 1.7999999999999998; text-align: center; =
+margin-top: 0pt; margin-bottom: 0pt;" class=3D""><a =
+href=3D"https://calendly.com/nicolas-salmon" style=3D"text-decoration: =
+none;" class=3D""><span style=3D"font-size: 9pt; font-family: Arial; =
+color: rgb(255, 255, 255); background-color: transparent; font-weight: =
+700; font-variant-ligatures: normal; font-variant-east-asian: normal; =
+font-variant-position: normal; vertical-align: baseline; white-space: =
+pre-wrap;" class=3D"">Cliquez-ici pour prendre rendez-vous =
+!</span></a></div></td></tr></tbody></table></div><br =
+style=3D"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: =
+Helvetica; font-size: 12px; font-style: normal; font-variant-caps: =
+normal; font-weight: normal; letter-spacing: normal; text-align: =
+-webkit-left; text-indent: 0px; text-transform: none; white-space: =
+normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; =
+text-decoration: none;" class=3D"">
+</div>
+<div><br class=3D""><blockquote type=3D"cite" class=3D""><div =
+class=3D"">Le 25 mars 2022 =C3=A0 06:36, Faniry R. &lt;<a =
+href=3D"mailto:office@kentia-domiciliation.com" =
+class=3D"">office@kentia-domiciliation.com</a>&gt; a =C3=A9crit =
+:</div><br class=3D"Apple-interchange-newline"><div class=3D"">
+<div class=3D"">
+
+
+<div class=3D""><div style=3D"font-family:&quot;Lucida Grande&quot;, =
+Helvetica, Verdana, Arial, sans-serif; font-size:13px; margin:0px; =
+padding:0px" class=3D""><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0px;" class=3D""><span lang=3D"FR" class=3D"">Bonjour monsieur =
+Nicolas,</span><br class=3D""><br class=3D""><span lang=3D"FR" =
+class=3D""></span></div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0px;" class=3D""><span lang=3D"FR" class=3D"">Nous vous prions =
+de trouver ci-joint votre facture&nbsp;<span style=3D"font-weight:bolder" =
+class=3D"">N=C2=B00206/2022/KD</span>&nbsp;de domiciliation pour le mois =
+d'Avril 2022 au nom de la soci=C3=A9t=C3=A9&nbsp;<span =
+style=3D"font-weight:bolder" class=3D"">mystartupstudio&nbsp;</span>pour =
+un montant de&nbsp;<span style=3D"font-weight:bolder" =
+class=3D"">118&nbsp;800,00&nbsp;Ar&nbsp;</span>Ar TTC. Merci de tenir =
+compte des frais de rapatriement.</span></div><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D""></p><div style=3D"font-size: =
+13px; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; margin: 0px;" class=3D""><span lang=3D"FR" class=3D"">Vous =
+aurez&nbsp;<span style=3D"font-weight:bolder" class=3D"">10 =
+jours</span>&nbsp;apr=C3=A8s la date d'=C3=A9dition de cette facture =
+pour proc=C3=A9der au r=C3=A8glement sans p=C3=A9nalit=C3=A9, c'est =C3=A0=
+ dire jusqu'au&nbsp;</span><span style=3D"text-align:inherit" =
+class=3D""><b style=3D"font-weight:bolder" =
+class=3D"">04/04/2022</b></span><span style=3D"font-weight: inherit; =
+text-align: inherit;" class=3D"">.</span><br class=3D""><br =
+class=3D""></div><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0px;" class=3D""><span style=3D"font-weight:bolder" =
+class=3D"">&nbsp;</span><br class=3D""><span lang=3D"FR" =
+class=3D""></span></div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0px; font-size: 13px; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif;" class=3D""><span lang=3D"FR" class=3D"">Nous vous invitons =
+=C3=A0 privil=C3=A9gier les modalit=C3=A9s de paiement sans contact afin =
+de limiter la propagation du COVID-19. Ainsi, vous pri=C3=A9s =
+d=E2=80=99effectuer vos paiements par :</span></div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0px 0px 0px 35.4pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D""><span lang=3D"FR" class=3D"">- virement bancaire : 00008 =
+00005 05003011573 19 SG ANTANINARENINA, au nom de KENTIA-DOMICILIATION =
+sarl</span></div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0px 0px 0px 35.4pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" class=3D""><span lang=3D"FR" class=3D"">- =
+par mobile banking : Mvola 034 92 210 35 nom de KENTIA-DOMICILIATION =
+sarl</span><br class=3D""><br class=3D""><span lang=3D"FR" =
+class=3D""></span></div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0px; line-height: normal;" class=3D"">Nous vous rappelons que =
+l=E2=80=99acc=C3=A8s dans nos locaux est actuellement tr=C3=A8s limit=C3=A9=
+, d=E2=80=99autant plus qu=E2=80=99une majeure partie de l=E2=80=99=C3=A9q=
+uipe est partie en t=C3=A9l=C3=A9travail, ainsi vous =C3=AAtes pri=C3=A9s =
+d=E2=80=99appeler avant de venir si le d=C3=A9placement est vraiment =
+n=C3=A9cessaire.</div><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0px; line-height: normal;" class=3D""><br class=3D""></div><div =
+style=3D"font-size: 13px; font-family: &quot;Lucida Grande&quot;, =
+Helvetica, Verdana, Arial, sans-serif; margin: 0px;" class=3D""><span =
+lang=3D"FR" class=3D"">Veuillez nous envoyer une copie de la pi=C3=A8ce =
+justificative du paiement s=E2=80=99il vous pla=C3=AEt.</span><br =
+class=3D""><br class=3D""><span lang=3D"FR" class=3D"">Bien =
+cordialement,</span><br class=3D""><br class=3D""></div></div><div =
+style=3D"margin: 0px; font-size: 13px; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif;" =
+class=3D"">RAZAKARIVONY Faniry Fy Tia Jonah</div><div style=3D"margin: =
+0px; font-size: 13px; font-family: &quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif;" class=3D"">Assistant en cr=C3=A9ation et =
+domiciliation d'entreprises</div><div style=3D"margin: 0px; font-size: =
+13px; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif;" class=3D"">+261 32 05 357 42</div><div style=3D"margin: =
+0px; font-size: 13px; font-family: &quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif;" class=3D"">KENTIA-DOMICILIATION SARL</div>
+</div><p style=3D"color: #555555; margin-top:32px;" class=3D"">
+    Envoy=C3=A9
+    <span class=3D"">
+    par
+   =20
+    <span class=3D"">KENTIA-DOMICILIATION sarl</span>
+    </span>
+    utilisant
+    <a target=3D"_blank" =
+href=3D"https://www.odoo.com/?utm_source=3Ddb&amp;utm_medium=3Demail" =
+style=3D"text-decoration:none; color: #875A7B;" class=3D"">Odoo</a>.
+</p>
+</div>
+        <span =
+id=3D"cid:FFFF732E-1EDA-4DE1-9158-3CD26AB64655">&lt;Facture_N=C2=B00206_20=
+22_KD.pdf&gt;</span></div></blockquote></div><br =
+class=3D""></div></body></html>=
+
+--Apple-Mail=_9BBBCB91-482D-4AE6-9FB9-9707A6A13FB7--
