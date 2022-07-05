@@ -1,0 +1,678 @@
+
+/* Copyright 2018 Tecnativa - Jairo Llopis
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+@media (min-width: 768px) {
+  .o_form_view .oe_button_box + .oe_title, .o_form_view .oe_button_box + .oe_avatar + .oe_title {
+    /* Button-box has a hardcoded width of 132px per button and have three columns */
+    width: calc(100% - 450px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .o_main_navbar {
+    display: -webkit-box; display: -webkit-flex; display: flex;
+  }
+  .o_main_navbar > .dropdown {
+    display: -webkit-box; display: -webkit-flex; display: flex;
+  }
+  .o_main_navbar > .dropdown .navbar-toggler {
+    color: #FFFFFF;
+  }
+  .o_main_navbar > .dropdown .o_menu_sections,
+  .o_main_navbar > .dropdown .o_menu_systray {
+    padding: 0;
+  }
+  .o_main_navbar .o_menu_systray {
+    margin-left: auto;
+  }
+  .o_main_navbar .o_menu_brand,
+  .o_main_navbar .o_menu_sections,
+  .o_main_navbar .oe_topbar_name {
+    display: none;
+  }
+  .o_main_navbar .o-menu-toggle {
+    cursor: pointer;
+    padding: 0 16px;
+  }
+  .o_main_navbar .o_menu_sections.show {
+    border: none;
+    box-shadow: none;
+    display: -webkit-box; display: -webkit-flex; display: flex;
+    -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; flex-direction: column;
+    height: calc(100vh - 46px);
+    position: fixed;
+    margin: 0;
+    width: 100vw;
+    z-index: 100;
+    top: 46px !important;
+    transform: none !important;
+    background-color: #FFFFFF;
+  }
+  .o_main_navbar .o_menu_sections.show .show {
+    display: -webkit-box; display: -webkit-flex; display: flex;
+    -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; flex-direction: column;
+  }
+  .o_main_navbar .o_menu_sections.show .show .dropdown-menu {
+    margin-left: 1rem;
+    min-width: auto;
+    width: calc(100vw - 2rem);
+  }
+  .o_main_navbar .o_menu_sections.show > li,
+  .o_main_navbar .o_menu_sections.show .o_menu_entry_lvl_1,
+  .o_main_navbar .o_menu_sections.show .o_menu_header_lvl_1 {
+    background-color: #FFFFFF;
+    color: #4c4c4c;
+  }
+  .o_main_navbar .o_menu_sections.show > li:hover,
+  .o_main_navbar .o_menu_sections.show .o_menu_entry_lvl_1:hover,
+  .o_main_navbar .o_menu_sections.show .o_menu_header_lvl_1:hover {
+    background-color: #e9ecef;
+    color: #212529;
+  }
+  .o_main_navbar .o_menu_sections.show > li.o-no-caret::after,
+  .o_main_navbar .o_menu_sections.show .o_menu_entry_lvl_1.o-no-caret::after,
+  .o_main_navbar .o_menu_sections.show .o_menu_header_lvl_1.o-no-caret::after {
+    content: "";
+  }
+  .o_main_navbar .o_menu_sections.show > li .dropdown-header,
+  .o_main_navbar .o_menu_sections.show .o_menu_entry_lvl_1 .dropdown-header,
+  .o_main_navbar .o_menu_sections.show .o_menu_header_lvl_1 .dropdown-header {
+    color: #6c757d;
+  }
+  .o_main_navbar .o_mail_systray_dropdown.show {
+    border: none;
+    box-shadow: none;
+    display: -webkit-box; display: -webkit-flex; display: flex;
+    -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; flex-direction: column;
+    height: calc(100vh - 46px);
+    position: fixed;
+    margin: 0;
+    width: 100vw;
+    z-index: 100;
+    top: 46px !important;
+    transform: none !important;
+  }
+  .o_main_navbar .o_mail_systray_dropdown.show .o_mail_preview_image {
+    align-items: center;
+    display: -webkit-box; display: -webkit-flex; display: flex;
+    flex-direction: row;
+  }
+  .o_main_navbar .o_mail_systray_dropdown.show .o_mail_preview_image img {
+    display: block;
+    height: auto;
+  }
+  .o_main_navbar .dropdown-menu .dropdown-item {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+}
+
+.o_main_navbar {
+  color: #FFFFFF;
+}
+
+.o_main_navbar > ul > li > a,
+.o_main_navbar > ul > li > label {
+  color: #FFFFFF;
+}
+
+.o_main_navbar .dropdown-menu.show {
+  max-height: calc(100vh - 46px);
+}
+
+.o_menu_apps {
+  user-select: none;
+}
+
+.o_menu_apps a.full {
+  width: 46px;
+  text-align: center;
+}
+
+.o_menu_apps .dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.o_menu_apps .dropdown-menu {
+  border: none;
+  box-shadow: none;
+  display: -webkit-box; display: -webkit-flex; display: flex;
+  -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; flex-direction: column;
+  height: calc(100vh - 46px);
+  position: fixed;
+  margin: 0;
+  width: 100vw;
+  z-index: 100;
+  top: 46px !important;
+  transform: none !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 100ms ease, opacity 100ms ease;
+  background: url("/web_responsive/static/src/css/../img/home-menu-bg-overlay.svg"), linear-gradient(to bottom, #7C7BAD, #c3c2cc);
+  background-size: cover;
+  border-radius: 0;
+  align-content: flex-start;
+  display: -webkit-box; display: -webkit-flex; display: flex;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap; flex-wrap: wrap;
+  -webkit-box-pack: start; justify-content: flex-start;
+}
+
+@media (min-width: 992px) {
+  .o_menu_apps .dropdown-menu {
+    padding-left: calc((100vw - 850px) / 2);
+    padding-right: calc((100vw - 850px) / 2);
+  }
+}
+
+.o_menu_apps .dropdown-menu .o_app {
+  align-items: center;
+  display: -webkit-box; display: -webkit-flex; display: flex;
+  padding: 10px 0;
+  border-radius: 4px;
+  -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; flex-direction: column;
+  -webkit-box-pack: start; justify-content: flex-start;
+  background: none;
+  transition: 300ms ease;
+  transition-property: background-color;
+  width: 33.33333333%;
+}
+
+.o_menu_apps .dropdown-menu .o_app img {
+  box-shadow: none;
+  transition: 300ms ease;
+  transition-property: box-shadow, transform;
+}
+
+.o_menu_apps .dropdown-menu .o_app:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 576px) {
+  .o_menu_apps .dropdown-menu .o_app {
+    width: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .o_menu_apps .dropdown-menu .o_app {
+    width: 16.6666666%;
+  }
+}
+
+.o_menu_apps .dropdown-menu .o_app:hover img {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 12px -4px rgba(0, 0, 0, 0.3);
+}
+
+.o_menu_apps .dropdown-menu .has-results ~ .o_app {
+  display: none;
+}
+
+.o_menu_apps .dropdown-menu .o-app-icon {
+  height: auto;
+  max-width: 6rem;
+}
+
+.o_menu_apps .dropdown-menu .o-app-name {
+  color: #FFFFFF;
+  margin-top: 4px;
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.o_menu_apps .dropdown-menu .form-row {
+  width: 100%;
+}
+
+.o_menu_apps .dropdown-menu .o-menu-search-result {
+  align-items: center;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  padding-left: 3rem;
+  white-space: normal;
+}
+
+.o_menu_apps .dropdown-menu .search-container {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.o_menu_apps .dropdown-menu .search-container .search-input {
+  margin-bottom: 0 !important;
+  padding: 0;
+}
+
+.o_menu_apps .dropdown-menu .search-container .search-input .input-group {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .o_menu_apps .dropdown-menu .search-container .search-input .input-group {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+.o_menu_apps .dropdown-menu .search-container .search-input .input-group .input-group-prepend span.fa {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  padding-top: 1px;
+}
+
+.o_menu_apps .dropdown-menu .search-container .search-input .input-group .form-control {
+  height: 2rem;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  display: block;
+  padding: 1px 2px 2px 2px;
+  box-shadow: none;
+}
+
+.o_menu_apps .dropdown-menu .search-container .search-input .input-group .form-control::placeholder {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.o_menu_apps .dropdown-menu .search-container.has-results {
+  height: 100%;
+}
+
+.o_menu_apps .dropdown-menu .search-container.has-results .search-results {
+  max-height: calc(100vh - 47px - 6em);
+  overflow-y: hidden;
+  overflow-x: scroll;
+  overflow: auto;
+  background: url("/web_responsive/static/src/css/../img/home-menu-bg-overlay.svg"), linear-gradient(to bottom, #e9ecef, #FFFFFF);
+  background-position: center;
+  background-size: cover;
+}
+
+html .o_web_client .o_action_manager .o_action {
+  max-width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  html .o_web_client .o_action_manager .o_action {
+    overflow: auto;
+  }
+  html .o_web_client .o_action_manager .o_action .o_content {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .o_control_panel .breadcrumb,
+  .o_control_panel .o_cp_buttons,
+  .o_control_panel .o_cp_left,
+  .o_control_panel .o_cp_right,
+  .o_control_panel .o_cp_searchview {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 767.98px) and (min-width: 768px) {
+  .o_control_panel .breadcrumb,
+  .o_control_panel .o_cp_buttons,
+  .o_control_panel .o_cp_left,
+  .o_control_panel .o_cp_right,
+  .o_control_panel .o_cp_searchview {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .o_control_panel .breadcrumb {
+    flex-basis: 80%;
+  }
+  .o_control_panel .o_cp_searchview,
+  .o_control_panel .o_cp_right {
+    flex-basis: 10%;
+  }
+  .o_control_panel .o_cp_left {
+    flex-basis: 50%;
+    white-space: nowrap;
+  }
+  .o_control_panel .o_cp_pager {
+    white-space: nowrap;
+  }
+  .o_control_panel .breadcrumb-item:not(.active) {
+    padding-left: 0;
+  }
+  .o_control_panel .breadcrumb-item::before {
+    content: none;
+    padding-right: 0;
+  }
+  .o_control_panel .breadcrumb-item:nth-last-of-type(1n + 3) {
+    display: none;
+  }
+  .o_control_panel .breadcrumb-item:nth-last-of-type(2)::before {
+    color: var(--primary);
+    content: "\f048";
+    cursor: pointer;
+    font-family: FontAwesome;
+  }
+  .o_control_panel .breadcrumb-item:nth-last-of-type(2) a {
+    display: none;
+  }
+  .o_control_panel .breadcrumb {
+    max-width: 100%;
+    text-overflow: ellipsis;
+  }
+  .o_control_panel .o_cp_sidebar:blank {
+    display: none;
+  }
+  .o_control_panel .o_cp_buttons .btn.d-block:not(.d-none) {
+    display: inline-block !important;
+  }
+  .o_control_panel .o_cp_switch_buttons.show .dropdown-menu {
+    align-content: center;
+    display: -webkit-box; display: -webkit-flex; display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+  }
+  .o_control_panel .o_cp_switch_buttons.show .dropdown-menu .btn {
+    border-bottom: 0;
+    border-radius: 0;
+    border-top: 0;
+  }
+}
+
+.o_content,
+.modal-content {
+  max-width: 100%;
+}
+
+.o_content .o_form_view .o_form_sheet,
+.modal-content .o_form_view .o_form_sheet {
+  max-width: calc(100% - 32px);
+  overflow-x: auto;
+}
+
+.o_content .o_form_view .oe_chatter,
+.modal-content .o_form_view .oe_chatter {
+  padding-top: 0;
+}
+
+.o_content .o_form_view .o_chatter_topbar,
+.modal-content .o_form_view .o_chatter_topbar {
+  height: auto;
+  flex-wrap: wrap-reverse;
+}
+
+.o_content .o_form_view .o_form_statusbar,
+.modal-content .o_form_view .o_form_statusbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.o_content .o_form_view .oe_title span.o_field_widget,
+.modal-content .o_form_view .oe_title span.o_field_widget {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: initial;
+}
+
+.o_content .o_form_view .oe_title span:active,
+.modal-content .o_form_view .oe_title span:active {
+  white-space: normal;
+}
+
+@media (max-width: 767.98px) {
+  .o_content .o_form_view,
+  .modal-content .o_form_view {
+    min-width: auto;
+  }
+  .o_content .o_form_view .oe_button_box .o_dropdown_more button:last-child,
+  .modal-content .o_form_view .oe_button_box .o_dropdown_more button:last-child {
+    border-right: 1px solid #ced4da;
+  }
+  .o_content .o_form_view .oe_title,
+  .modal-content .o_form_view .oe_title {
+    max-width: 100%;
+  }
+  .o_content .o_form_view .oe_button_box + .oe_title,
+  .o_content .o_form_view .oe_button_box + .oe_avatar + .oe_title,
+  .modal-content .o_form_view .oe_button_box + .oe_title,
+  .modal-content .o_form_view .oe_button_box + .oe_avatar + .oe_title {
+    width: 100%;
+  }
+  .o_content .o_form_view .o_form_sheet,
+  .modal-content .o_form_view .o_form_sheet {
+    min-width: auto;
+  }
+  .o_content .o_form_view .o_group .o_field_widget.o_text_overflow,
+  .modal-content .o_form_view .o_group .o_field_widget.o_text_overflow {
+    width: auto !important;
+  }
+  .o_content .o_form_view .o_group_col_6,
+  .modal-content .o_form_view .o_group_col_6 {
+    width: 100%;
+  }
+  .o_content .o_form_view .o_statusbar_buttons_dropdown,
+  .modal-content .o_form_view .o_statusbar_buttons_dropdown {
+    border-bottom: 0;
+    border-radius: 0;
+    border-top: 0;
+    height: 100%;
+  }
+  .o_content .o_form_view .o_statusbar_buttons > .btn,
+  .modal-content .o_form_view .o_statusbar_buttons > .btn {
+    border-radius: 0;
+    border: 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+  }
+  .o_content .o_form_view .o_statusbar_buttons > .btn:last-child,
+  .modal-content .o_form_view .o_statusbar_buttons > .btn:last-child {
+    margin-bottom: 0;
+  }
+  .o_content .o_form_view .o_statusbar_status .o_arrow_button:first-child::before,
+  .modal-content .o_form_view .o_statusbar_status .o_arrow_button:first-child::before {
+    content: none;
+    display: none;
+  }
+  .o_content .o_form_view .o_form_sheet,
+  .o_content .o_form_view .oe_chatter,
+  .modal-content .o_form_view .o_form_sheet,
+  .modal-content .o_form_view .oe_chatter {
+    min-width: auto;
+    max-width: 98%;
+  }
+  .o_content .o_form_view .app_settings_block .row,
+  .modal-content .o_form_view .app_settings_block .row {
+    margin: 0;
+  }
+  .o_content .o_form_view .o_chatter,
+  .modal-content .o_form_view .o_chatter {
+    padding-top: initial;
+  }
+  .o_content .o_form_view .o_chatter .o_thread_composer,
+  .modal-content .o_form_view .o_chatter .o_thread_composer {
+    padding-left: 18px;
+  }
+  .o_content .o_form_view .o_chatter .o_thread_composer .o_composer_button_send,
+  .modal-content .o_form_view .o_chatter .o_thread_composer .o_composer_button_send {
+    display: initial !important;
+  }
+  .o_content .o_form_view .o_chatter .o_thread_composer .o_chatter_avatar,
+  .modal-content .o_form_view .o_chatter .o_thread_composer .o_chatter_avatar {
+    display: none;
+  }
+  .o_content .o_form_view .o_chatter .o_chatter_topbar > .o_topbar_right_area,
+  .modal-content .o_form_view .o_chatter .o_chatter_topbar > .o_topbar_right_area {
+    -webkit-box-flex: 1; -webkit-flex: 1 0 auto; flex: 1 0 auto;
+    -webkit-flex-wrap: wrap; flex-wrap: wrap;
+    max-width: 100%;
+  }
+  .o_content .o_form_view .o_chatter .o_chatter_topbar > .o_topbar_right_area .o_followers,
+  .modal-content .o_form_view .o_chatter .o_chatter_topbar > .o_topbar_right_area .o_followers {
+    display: initial !important;
+  }
+}
+
+@media (max-width: 767.98px) and (max-width: 575.98px) {
+  .o_content .o_form_view .o_chatter .o_chatter_topbar > .o_topbar_right_area .o_followers,
+  .modal-content .o_form_view .o_chatter .o_chatter_topbar > .o_topbar_right_area .o_followers {
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .o_chatter_position_sided .o_content .o_form_view:not(.o_form_nosheet), .o_chatter_position_sided
+  .modal-content .o_form_view:not(.o_form_nosheet) {
+    display: -webkit-box; display: -webkit-flex; display: flex;
+    -webkit-flex-flow: row nowrap; flex-flow: row nowrap;
+    height: 100%;
+  }
+  .o_chatter_position_sided .o_content .o_form_view:not(.o_form_nosheet) .o_form_sheet_bg, .o_chatter_position_sided
+  .modal-content .o_form_view:not(.o_form_nosheet) .o_form_sheet_bg {
+    -webkit-box-flex: 1; -webkit-flex: 1 1 auto; flex: 1 1 auto;
+    overflow: auto;
+  }
+  .o_chatter_position_sided .o_content .o_form_view:not(.o_form_nosheet) .o_form_sheet_bg > .o_form_sheet, .o_chatter_position_sided
+  .modal-content .o_form_view:not(.o_form_nosheet) .o_form_sheet_bg > .o_form_sheet {
+    min-width: unset;
+  }
+  .o_chatter_position_sided .o_content .o_form_view:not(.o_form_nosheet) .o_chatter, .o_chatter_position_sided
+  .modal-content .o_form_view:not(.o_form_nosheet) .o_chatter {
+    border-left: 1px solid #ced4da;
+    flex: 0 0 35%;
+    max-width: initial;
+    min-width: initial;
+    overflow: auto;
+  }
+  .o_chatter_position_sided .o_content .o_form_view:not(.o_form_nosheet) .o_chatter .o_chatter_header_container, .o_chatter_position_sided
+  .modal-content .o_form_view:not(.o_form_nosheet) .o_chatter .o_chatter_header_container {
+    padding-top: 16px;
+    top: 0;
+    position: sticky;
+    background-color: white;
+    z-index: 1;
+  }
+  .o_chatter_position_sided .o_content .o_form_view:not(.o_form_nosheet) .o_chatter .o_chatter_header_container .o_composer_text_field, .o_chatter_position_sided
+  .modal-content .o_form_view:not(.o_form_nosheet) .o_chatter .o_chatter_header_container .o_composer_text_field {
+    max-height: 120px;
+    overflow-y: auto !important;
+    /* Forced because Odoo uses inline style */
+  }
+  .o_chatter_position_sided .o_content .o_form_view:not(.o_form_nosheet) .o_chatter .o_chatter_header_container .o_attachments_list, .o_chatter_position_sided
+  .modal-content .o_form_view:not(.o_form_nosheet) .o_chatter .o_chatter_header_container .o_attachments_list {
+    overflow: auto;
+    max-height: 300px;
+    margin-top: 0.4em;
+  }
+  .o_chatter_position_sided .o_content .o_form_view:not(.o_form_nosheet) .o_chatter .o_chatter_header_container .o_attachments_previews, .o_chatter_position_sided
+  .modal-content .o_form_view:not(.o_form_nosheet) .o_chatter .o_chatter_header_container .o_attachments_previews {
+    overflow: auto;
+    max-height: 600px;
+  }
+}
+
+.o_list_view .table-responsive .o_list_table thead,
+.o_list_view .table-responsive .o_list_table thead tr:nth-child(1) th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.o_list_view .table-responsive .o_list_table thead tr:nth-child(1) th {
+  background-color: #eee;
+}
+
+.o_list_view .table-responsive .o_list_table tfoot,
+.o_list_view .table-responsive .o_list_table tfoot tr:nth-child(1) td {
+  position: sticky;
+  bottom: 0;
+}
+
+.o_list_view .table-responsive .o_list_table tfoot tr:nth-child(1) td {
+  background-color: #eee;
+}
+
+.oe_wait {
+  cursor: progress;
+}
+
+.o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer {
+  z-index: 10;
+}
+
+.o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer.o_responsive_document_viewer {
+  /* Show sided viewer on large screens */
+}
+
+@media (min-width: 992px) {
+  .o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer.o_responsive_document_viewer {
+    width: 35%;
+    margin-left: auto;
+    right: 0;
+    /* Show/Hide control buttons (next, prev, etc..) */
+  }
+  .o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer.o_responsive_document_viewer:hover .arrow,
+  .o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer.o_responsive_document_viewer:hover .o_viewer_toolbar {
+    display: -webkit-box; display: -webkit-flex; display: flex;
+  }
+  .o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer.o_responsive_document_viewer .arrow,
+  .o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer.o_responsive_document_viewer .o_viewer_toolbar {
+    display: none;
+  }
+  .o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer.o_responsive_document_viewer .o_viewer_img_wrapper {
+    position: relative;
+  }
+  .o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer.o_responsive_document_viewer .o_viewer_img_wrapper .o_viewer_pdf {
+    width: 95%;
+  }
+}
+
+.o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer.o_responsive_document_viewer .o_minimize_btn {
+  display: none;
+}
+
+.o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer:not(.o_responsive_document_viewer) .o_maximize_btn {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer .o_minimize_btn,
+  .o_web_client.o_chatter_position_sided .o_modal_fullscreen.o_document_viewer .o_maximize_btn {
+    display: none;
+  }
+}
+
+/* Max/Min buttons only are usefull in sided mode */
+.o_web_client:not(.o_chatter_position_sided) .o_minimize_btn,
+.o_web_client:not(.o_chatter_position_sided) .o_maximize_btn {
+  display: none;
+}
+
+.o_modal_fullscreen .o_viewer_content .o_viewer-header .o_image_caption {
+  display: contents;
+}
+
+.o_modal_fullscreen .o_viewer_content .o_viewer-header .o_buttons {
+  min-width: 35px;
+  text-align: right;
+}
+
+.o_modal_fullscreen .o_viewer_content .o_viewer-header .o_buttons > .o_close_btn {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  font-size: unset;
+  font-weight: unset;
+}
+

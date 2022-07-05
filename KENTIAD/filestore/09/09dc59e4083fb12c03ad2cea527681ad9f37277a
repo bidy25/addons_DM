@@ -1,0 +1,324 @@
+Return-Path: <chro@kentia-rh.com>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 25 Mar 2022 08:53:02 +0200
+Received: from unknown (HELO output30.mail.ovh.net) (10.108.97.240)
+  by mail307.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 25 Mar 2022 08:53:02 +0200
+Received: from vr35.mail.ovh.net (unknown [10.101.8.35])
+	by out30.mail.ovh.net (Postfix) with ESMTP id 4KPt8F6CdHzM7smNL
+	for <notification@kentia-domiciliation.com>; Fri, 25 Mar 2022 06:53:01 +0000 (UTC)
+Received: from in53.mail.ovh.net (unknown [10.101.4.53])
+	by vr35.mail.ovh.net (Postfix) with ESMTP id 4KPt8F46ktz2NSYWH
+	for <notification@kentia-domiciliation.com>; Fri, 25 Mar 2022 06:53:01 +0000 (UTC)
+X-Comment: SPF check N/A for local connections - client-ip=213.251.189.206; helo=player688.ha.ovh.net; envelope-from=chro@kentia-rh.com; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in53.mail.ovh.net; dkim=none; dkim-atps=neutral
+Received: from player688.ha.ovh.net (gw6.ovh.net [213.251.189.206])
+	by in53.mail.ovh.net (Postfix) with ESMTP id 4KPt8F3TQ8z1Zvdg1
+	for <notification@kentia-domiciliation.com>; Fri, 25 Mar 2022 06:53:01 +0000 (UTC)
+Received: from kentia-rh.com (122.145.120.154-ip-dyn.orange.mg [154.120.145.122])
+	(Authenticated sender: chro@kentia-rh.com)
+	by player688.ha.ovh.net (Postfix) with ESMTPSA id 13B8B28AC7D38;
+	Fri, 25 Mar 2022 06:52:58 +0000 (UTC)
+Authentication-Results: garm.ovh; auth=pass (GARM-102R004530676f1-5939-4189-aee5-308b4077d398,
+                    734525B51B127C215F1225C566E887289E8B80A8) smtp.auth=chro@kentia-rh.com
+X-OVh-ClientIp: 154.120.145.122
+From: Liva Saholy RAKOTOASIMBOLA <chro@kentia-rh.com>
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_AC0646CD-80E5-4191-B836-4492FBC84770"
+Mime-Version: 1.0 (Mac OS X Mail 12.4 \(3445.104.21\))
+Subject: =?utf-8?Q?Re=3A_Facture_N=C2=B00217/2022/KD_=7C_KENTIA-RH=2ECOM_S?=
+ =?utf-8?Q?arl_-_KENTIA-DOMICILIATION_sarl?=
+Date: Fri, 25 Mar 2022 09:52:55 +0300
+References: <593096960618407.1648190830.482779502868652-openerp-2074-account.move@kentia-domiciliation-1>
+ <412287408811279.1648190944.543131589889526-openerp-2074-account.move@kentia-domiciliation-1>
+To: notification@kentia-domiciliation.com,
+ Team <team@kentia-domiciliation.com>
+In-Reply-To: <412287408811279.1648190944.543131589889526-openerp-2074-account.move@kentia-domiciliation-1>
+Message-Id: <B3C3B28C-9661-4BA1-BE05-C785343DB932@kentia-rh.com>
+X-Mailer: Apple Mail (2.3445.104.21)
+X-Ovh-Tracer-Id: 7407576962424659144
+X-OVH-Remote: 213.251.189.206 (gw6.ovh.net)
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 49
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvvddrudehtddgleeiucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuqfggjfdpvefjgfevmfevgfenuceurghilhhouhhtmecuhedttdenucgoufhushhpvggtthffohhmrghinhculdegledmnecujfgurhephfgtggfuffhfvfgjkffosegrtdhmrehhtdejnecuhfhrohhmpefnihhvrgcuufgrhhholhihucfttefmqffvqfetuffkofeuqffntecuoegthhhroheskhgvnhhtihgrqdhrhhdrtghomheqnecuggftrfgrthhtvghrnhepudegjeffhfehvdehffefveejteeutdfhuefffefggfeigeejvedtffegteffgfegnecuffhomhgrihhnpehkvghnthhirgdqrhhhrdgtohhmpdhoughoohdrtghomhenucfkpheptddrtddrtddrtddpudehgedruddvtddrudeghedruddvvdenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepmhhouggvpehsmhhtphdphhgvlhhopehinhehfedrmhgrihhlrdhovhhhrdhnvghtpdhinhgvtheptddrtddrtddrtddpmhgrihhlfhhrohhmpegthhhroheskhgvnhhtihgrqdhrhhdrtghomhdpnhgspghrtghpthhtohepuddprhgtphhtthhopehnohhtihhfihgtrghtihhonheskhgvnhhtihgrqdguohhmihgtihhlihgrthhiohhnrdgtohhm
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+
+--Apple-Mail=_AC0646CD-80E5-4191-B836-4492FBC84770
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Bonjour,
+
+Nous accusons bonne r=C3=A9ception. Nous allons voir de notre c=C3=B4t=C3=A9=
+ et vous ferons un retour.
+
+Cordialement,
+
+Saholy RAKOTOASIMBOLA
+KENTIA-RH.COM <http://kentia-rh.com/> sarl
+Recrutement =20
+Administration du personnel
+Gestion de paie et payroll
+Portage salarial
+Conseil juridique
+Evaluation du personnel
+BP 3947 - Bureau n=C2=B03, Immeuble Jacaranda
+Ambatonakanga, 101 Antananarivo
+MADAGASCAR
+M: +261 34 11 357 38
+
+
+
+> Le 25 mars 2022 =C3=A0 09:49, Faniry R. =
+<office@kentia-domiciliation.com> a =C3=A9crit :
+>=20
+> Bonjour Saholy,
+>=20
+> Tu peux trouver ci-joint la facture N=C2=B00217/2022/KD de votre loyer =
+pour le mois d'Avril 2022 au nom de la soci=C3=A9t=C3=A9 KENTIA-RH.COM =
+Sarl pour un montant de 576 000,00 Ar Ar TTC.
+> Vous aurez 10 jours apr=C3=A8s la date d'=C3=A9dition de cette facture =
+pour proc=C3=A9der au r=C3=A8glement sans p=C3=A9nalit=C3=A9, c'est =C3=A0=
+ dire jusqu'au 11/04/2022.
+>=20
+> Nous vous invitons =C3=A0 privil=C3=A9gier les modalit=C3=A9s de =
+paiement sans contact afin de limiter la propagation du COVID-19. Ainsi, =
+vous pri=C3=A9s d=E2=80=99effectuer vos paiements par :
+> - virement bancaire : 00008 00005 05003011573 19 SG ANTANINARENINA, au =
+nom de KENTIA-DOMICILIATION sarl
+> - par mobile banking : Mvola 034 92 210 35 nom de KENTIA-DOMICILIATION =
+sarl
+>=20
+> Veuillez nous envoyer une copie de la pi=C3=A8ce justificative du =
+paiement s=E2=80=99il vous pla=C3=AEt.
+>=20
+> Bien cordialement,
+>=20
+> RAZAKARIVONY Faniry Fy Tia Jonah
+>=20
+>=20
+> Assistant en cr=C3=A9ation et domiciliation d'entreprises
+>=20
+>=20
+> +261 32 05 357 42
+>=20
+>=20
+> KENTIA-DOMICILIATION SARL
+>=20
+>=20
+> Envoy=C3=A9 par KENTIA-DOMICILIATION sarl utilisant Odoo =
+<https://www.odoo.com/?utm_source=3Ddb&utm_medium=3Demail>.
+>=20
+> <Facture_N=C2=B00217_2022_KD.pdf>
+
+
+--Apple-Mail=_AC0646CD-80E5-4191-B836-4492FBC84770
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: after-white-space;" =
+class=3D"">Bonjour,<div class=3D""><br class=3D""></div><div =
+class=3D"">Nous accusons bonne r=C3=A9ception. Nous allons voir de notre =
+c=C3=B4t=C3=A9 et vous ferons un retour.</div><div class=3D""><br =
+class=3D""></div><div class=3D""><div class=3D"">Cordialement,</div><div =
+class=3D""><br class=3D""></div><div class=3D""><div class=3D""><span =
+class=3D"" style=3D"color: rgb(127, 127, 127); font-family: Arial, =
+sans-serif; font-size: 9pt;">Saholy RAKOTOASIMBOLA</span></div><div =
+class=3D""><div class=3D""><div class=3D""><div class=3D""><div =
+class=3D""><div class=3D""><div class=3D""><div class=3D""><div =
+class=3D"_1w3f0" data-hook=3D"form-template-title" style=3D"border: =
+none; outline: 0px; margin-bottom: 20px;"><div class=3D""><div class=3D"" =
+style=3D"font-family: &quot;Times New Roman&quot;, serif; margin: 0cm =
+0cm 0.0001pt; font-size: 12pt;"><o:p class=3D""></o:p></div><div =
+class=3D"" style=3D"font-family: &quot;Times New Roman&quot;, serif; =
+margin: 0cm 0cm 0.0001pt; font-size: 12pt;"><span class=3D"" =
+style=3D"font-size: 9pt; font-family: Arial, sans-serif; color: rgb(127, =
+127, 127);"><a href=3D"http://kentia-rh.com/" class=3D"" style=3D"color: =
+purple;">KENTIA-RH.COM</a>&nbsp;sarl</span><o:p =
+class=3D""></o:p></div><div class=3D"" style=3D"font-family: &quot;Times =
+New Roman&quot;, serif; margin: 0cm 0cm 0.0001pt; font-size: 12pt;"><i =
+class=3D""><span class=3D"" style=3D"font-size: 9pt; font-family: Arial, =
+sans-serif; color: rgb(31, 73, =
+125);">Recrutement&nbsp;&nbsp;</span></i><o:p class=3D""></o:p></div><div =
+class=3D"" style=3D"font-family: &quot;Times New Roman&quot;, serif; =
+margin: 0cm 0cm 0.0001pt; font-size: 12pt;"><i class=3D""><span class=3D""=
+ style=3D"font-size: 9pt; font-family: Arial, sans-serif; color: rgb(31, =
+73, 125);">Administration du personnel</span></i><o:p =
+class=3D""></o:p></div><div class=3D"" style=3D"font-family: &quot;Times =
+New Roman&quot;, serif; margin: 0cm 0cm 0.0001pt; font-size: 12pt;"><i =
+class=3D""><span class=3D"" style=3D"font-size: 9pt; font-family: Arial, =
+sans-serif; color: rgb(31, 73, 125);">Gestion de paie et =
+payroll</span></i><o:p class=3D""></o:p></div><div class=3D"" =
+style=3D"font-family: &quot;Times New Roman&quot;, serif; margin: 0cm =
+0cm 0.0001pt; font-size: 12pt;"><i class=3D""><span class=3D"" =
+style=3D"font-size: 9pt; font-family: Arial, sans-serif; color: rgb(31, =
+73, 125);">Portage salarial</span></i><o:p class=3D""></o:p></div><div =
+class=3D"" style=3D"font-family: &quot;Times New Roman&quot;, serif; =
+margin: 0cm 0cm 0.0001pt; font-size: 12pt;"><i class=3D""><span class=3D""=
+ style=3D"font-size: 9pt; font-family: Arial, sans-serif; color: rgb(31, =
+73, 125);">Conseil juridique</span></i><o:p class=3D""></o:p></div><div =
+class=3D"" style=3D"font-family: &quot;Times New Roman&quot;, serif; =
+margin: 0cm 0cm 0.0001pt; font-size: 12pt;"><i class=3D""><span class=3D""=
+ style=3D"font-size: 9pt; font-family: Arial, sans-serif; color: rgb(31, =
+73, 125);">Evaluation du personnel</span></i><o:p =
+class=3D""></o:p></div><div class=3D"" style=3D"font-family: &quot;Times =
+New Roman&quot;, serif; margin: 0cm 0cm 0.0001pt; font-size: =
+12pt;"><span class=3D"" style=3D"font-size: 9pt; font-family: Arial, =
+sans-serif; color: rgb(127, 127, 127);">BP 3947 - Bureau n=C2=B03, =
+Immeuble Jacaranda</span><o:p class=3D""></o:p></div><div class=3D"" =
+style=3D"font-family: &quot;Times New Roman&quot;, serif; margin: 0cm =
+0cm 0.0001pt; font-size: 12pt;"><span class=3D"" style=3D"font-size: =
+9pt; font-family: Arial, sans-serif; color: rgb(127, 127, =
+127);">Ambatonakanga, 101 Antananarivo</span><o:p =
+class=3D""></o:p></div><div class=3D"" style=3D"font-family: &quot;Times =
+New Roman&quot;, serif; margin: 0cm 0cm 0.0001pt; font-size: =
+12pt;"><span class=3D"" style=3D"font-size: 9pt; font-family: Arial, =
+sans-serif; color: rgb(127, 127, 127);">MADAGASCAR</span><o:p =
+class=3D""></o:p></div><div class=3D"" style=3D"font-family: &quot;Times =
+New Roman&quot;, serif; margin: 0cm 0cm 0.0001pt; font-size: =
+12pt;"><span class=3D"" style=3D"font-size: 9pt; font-family: Arial, =
+sans-serif; color: rgb(127, 127, 127);">M: +261 34 11&nbsp;357 =
+38</span></div><div class=3D""><span class=3D"" style=3D"font-size: 9pt; =
+font-family: Arial, sans-serif; color: rgb(127, 127, 127);"><br =
+class=3D""></span></div></div></div></div></div></div></div></div></div></=
+div></div></div></div><div class=3D""><br class=3D""><div><br =
+class=3D""><blockquote type=3D"cite" class=3D""><div class=3D"">Le 25 =
+mars 2022 =C3=A0 09:49, Faniry R. &lt;<a =
+href=3D"mailto:office@kentia-domiciliation.com" =
+class=3D"">office@kentia-domiciliation.com</a>&gt; a =C3=A9crit =
+:</div><br class=3D"Apple-interchange-newline"><div class=3D"">
+<div class=3D"">
+
+
+<div class=3D""><div style=3D"font-family:&quot;Lucida Grande&quot;, =
+Helvetica, Verdana, Arial, sans-serif; font-size:13px; margin:0px; =
+padding:0px" class=3D""><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0px;" class=3D""><span lang=3D"FR" class=3D"">Bonjour =
+Saholy,</span><br class=3D""><br class=3D""><span lang=3D"FR" =
+class=3D""></span></div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0px;" class=3D""><span lang=3D"FR" class=3D"">Tu peux trouver =
+ci-joint la facture&nbsp;<span style=3D"font-weight:bolder" =
+class=3D"">N=C2=B00217/2022/KD</span>&nbsp;de votre loyer pour le mois =
+d'Avril 2022 au nom de la soci=C3=A9t=C3=A9&nbsp;<span =
+style=3D"font-weight:bolder" class=3D""><a href=3D"http://KENTIA-RH.COM" =
+class=3D"">KENTIA-RH.COM</a> Sarl&nbsp;</span>pour un montant =
+de&nbsp;<span style=3D"font-weight:bolder" =
+class=3D"">576&nbsp;000,00&nbsp;Ar&nbsp;</span>Ar TTC.</span></div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"font-size: 13px; font-family: &quot;Lucida Grande&quot;, =
+Helvetica, Verdana, Arial, sans-serif; margin: 0px;" class=3D""><span =
+lang=3D"FR" class=3D"">Vous aurez&nbsp;<span style=3D"font-weight:bolder" =
+class=3D"">10 jours</span>&nbsp;apr=C3=A8s la date d'=C3=A9dition de =
+cette facture pour proc=C3=A9der au r=C3=A8glement sans p=C3=A9nalit=C3=A9=
+, c'est =C3=A0 dire jusqu'au&nbsp;</span><span =
+style=3D"text-align:inherit" class=3D""><b style=3D"font-weight:bolder" =
+class=3D"">11/04/2022</b></span><span style=3D"font-weight: inherit; =
+text-align: inherit;" class=3D"">.</span></div><div style=3D"font-size: =
+13px; font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; margin: 0px;" class=3D""><br class=3D""><span lang=3D"FR" =
+class=3D""></span></div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0px;" class=3D""><span lang=3D"FR" class=3D"">Nous vous invitons =
+=C3=A0 privil=C3=A9gier les modalit=C3=A9s de paiement sans contact afin =
+de limiter la propagation du COVID-19. Ainsi, vous pri=C3=A9s =
+d=E2=80=99effectuer vos paiements par :</span></div><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><p =
+style=3D"margin:0px; font-size:13px; font-family:&quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif" class=3D""></p><div =
+style=3D"margin: 0px 0px 0px 35.4pt; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; font-size: 13px;" =
+class=3D""><span lang=3D"FR" class=3D"">- virement bancaire : 00008 =
+00005 05003011573 19 SG ANTANINARENINA, au nom de KENTIA-DOMICILIATION =
+sarl</span></div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"margin: 0px 0px 0px 35.4pt; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; font-size: 13px;" class=3D""><span lang=3D"FR" class=3D"">- =
+par mobile banking : Mvola 034 92 210 35 nom de KENTIA-DOMICILIATION =
+sarl</span><br class=3D""><br class=3D""><span lang=3D"FR" =
+class=3D""></span></div><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><p style=3D"margin:0px; font-size:13px; =
+font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif" class=3D""></p><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0px;" class=3D""><span lang=3D"FR" class=3D"">Veuillez nous =
+envoyer une copie de la pi=C3=A8ce justificative du paiement s=E2=80=99il =
+vous pla=C3=AEt.</span><br class=3D""><br class=3D""><span lang=3D"FR" =
+class=3D"">Bien cordialement,</span><br class=3D""><br =
+class=3D""></div></div><div style=3D"font-size: 13px; font-family: =
+&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif; =
+margin: 0cm 0cm 0.0001pt;" class=3D""><span style=3D"font-size:10.0pt; =
+font-family:&quot;Helvetica&quot;,sans-serif" class=3D"">RAZAKARIVONY =
+Faniry Fy Tia Jonah</span></div><div class=3D""><br =
+class=3D"webkit-block-placeholder"></div><div class=3D""><br =
+class=3D"webkit-block-placeholder"></div><div style=3D"font-size: 13px; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; margin: 0cm 0cm 0.0001pt;" class=3D""><span =
+style=3D"font-size:10.0pt; font-family:&quot;Helvetica&quot;,sans-serif" =
+class=3D"">Assistant en cr=C3=A9ation et domiciliation
+d'entreprises</span></div><div class=3D""><br =
+class=3D"webkit-block-placeholder"></div><div class=3D""><br =
+class=3D"webkit-block-placeholder"></div><div style=3D"font-size: 13px; =
+font-family: &quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, =
+sans-serif; margin: 0cm 0cm 0.0001pt;" class=3D""><span =
+style=3D"font-size:10.0pt; font-family:&quot;Helvetica&quot;,sans-serif" =
+class=3D"">+261 32 05 357 42</span></div><div class=3D""><br =
+class=3D"webkit-block-placeholder"></div><div class=3D""><br =
+class=3D"webkit-block-placeholder"></div><p style=3D"margin:0px; =
+font-size:13px; font-family:&quot;Lucida Grande&quot;, Helvetica, =
+Verdana, Arial, sans-serif" class=3D"">
+
+
+
+
+
+</p><div style=3D"font-size: 13px; font-family: &quot;Lucida =
+Grande&quot;, Helvetica, Verdana, Arial, sans-serif; margin: 0cm 0cm =
+0.0001pt;" class=3D""><span style=3D"font-size:10.0pt; =
+font-family:&quot;Helvetica&quot;,sans-serif" =
+class=3D"">KENTIA-DOMICILIATION SARL</span></div><div class=3D""><br =
+class=3D"webkit-block-placeholder"></div><div class=3D""><br =
+class=3D"webkit-block-placeholder"></div>
+</div><p style=3D"color: #555555; margin-top:32px;" class=3D"">
+    Envoy=C3=A9
+    <span class=3D"">
+    par
+   =20
+    <span class=3D"">KENTIA-DOMICILIATION sarl</span>
+    </span>
+    utilisant
+    <a target=3D"_blank" =
+href=3D"https://www.odoo.com/?utm_source=3Ddb&amp;utm_medium=3Demail" =
+style=3D"text-decoration:none; color: #875A7B;" class=3D"">Odoo</a>.
+</p>
+</div>
+        <span =
+id=3D"cid:B99F2876-F225-4B01-9494-3F2AC50E32B3@.home">&lt;Facture_N=C2=B00=
+217_2022_KD.pdf&gt;</span></div></blockquote></div><br =
+class=3D""></div></body></html>=
+
+--Apple-Mail=_AC0646CD-80E5-4191-B836-4492FBC84770--

@@ -1,0 +1,1241 @@
+Return-Path: <msprvs1=190582ffdsdd0=bounces-212927@bounces.zapier.com>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 28 Feb 2022 18:32:19 +0200
+Received: from unknown (HELO output43.mail.ovh.net) (10.108.106.107)
+  by mail681.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 28 Feb 2022 18:32:19 +0200
+Received: from vr45.mail.ovh.net (unknown [10.101.8.45])
+	by out43.mail.ovh.net (Postfix) with ESMTP id 4K6mBC49vhzLZSLbV
+	for <notification@kentia-domiciliation.com>; Mon, 28 Feb 2022 16:32:19 +0000 (UTC)
+Received: from in43.mail.ovh.net (unknown [10.101.4.43])
+	by vr45.mail.ovh.net (Postfix) with ESMTP id 4K6mBC2M3bz2KbDQt
+	for <notification@kentia-domiciliation.com>; Mon, 28 Feb 2022 16:32:19 +0000 (UTC)
+Received-SPF: None (mailfrom) identity=mailfrom; client-ip=192.174.82.152; helo=mta-82-152.sparkpostmail.com; envelope-from=msprvs1=190582ffdsdd0=bounces-212927@bounces.zapier.com; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in43.mail.ovh.net;
+	dkim=pass (1024-bit key; unprotected) header.d=zapier.com header.i=@zapier.com header.b="pOneka6/";
+	dkim-atps=neutral
+Received: from mta-82-152.sparkpostmail.com (mta-82-152.sparkpostmail.com [192.174.82.152])
+	by in43.mail.ovh.net (Postfix) with ESMTPS id 4K6mBB3jGQz1Xy81j
+	for <notification@kentia-domiciliation.com>; Mon, 28 Feb 2022 16:32:18 +0000 (UTC)
+X-MSFBL: fmpoxPp6aAjooetzHBre61fVqOUIXdauZd8Bkqyu4y4=|eyJtZXNzYWdlX2lkIjo
+	iNjIxNjEwZjkxYzYyODEyOTQxMjMiLCJyIjoibm90aWZpY2F0aW9uQGtlbnRpYS1
+	kb21pY2lsaWF0aW9uLmNvbSIsInRlbmFudF9pZCI6InNwYyIsInN1YmFjY291bnR
+	faWQiOiIwIiwiY3VzdG9tZXJfaWQiOiIyMTI5MjcifQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=zapier.com;
+	s=scph0318; t=1646065936; i=@zapier.com;
+	bh=lkVmvgtgvYWYkT8EOO87HttDh3GfszvW7AE/Fr74XaE=;
+	h=To:Message-ID:Date:Content-Type:Subject:From;
+	b=pOneka6/Kf7EYWJcAh1gmxUG9CtQqZn0cdgMnbw+AM4NSQH6gwDyqAL9jqp5HCvmH
+	 Jpk+ZB8doJqzgDk+iIBRnqZn68cUt08uzpzsh7E1rq+6IqoM5Kj+UwXmzOHkwhmdtB
+	 CkmJrhpisRrjcLxI5dryYnQ0pkFk3wqXK3mDAOPo=
+To: notification@kentia-domiciliation.com
+Message-ID: <14.32.00480.019FC126@cc.mta1vrest.cc.prd.sparkpost>
+Date: Mon, 28 Feb 2022 16:32:16 +0000
+Content-Type: multipart/alternative; boundary="_----btC2OMSofVyi0x39wroaRQ===_63/32-00480-019FC126"
+MIME-Version: 1.0
+Reply-To: blog@zapier.com
+Subject: How a social media skeptic uses TikTok to connect with family
+X-Campaign-ID: 3762525
+From: "Deb at Zapier" <blog@zapier.com>
+X-Message-ID: 3633c3e8cfa440199f9680316139ec6f
+X-Feedback-ID: 5128212:3762525:11788:iterable
+Feedback-ID: 5128212:3762525:11788:iterable
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:YNnylLAch7yNZrlKSGOx8iV7uNo7EjNgOdztCWpKutY~|eyAicmNwdF90byI6ICJub3RpZmljYXRpb25Aa2VudGlhLWRvbWljaWxpYXRpb24uY29tIiwgInRlbmFudF9pZCI6ICJzcGMiLCAiY3VzdG9tZXJfaWQiOiAiMjEyOTI3IiwgIm1lc3NhZ2VfaWQiOiAiNjIxNjEwZjkxYzYyODEyOTQxMjMiLCAic3ViYWNjb3VudF9pZCI6ICIwIiB9>
+List-Id: <spc.212927.0.sparkpostmail.com>
+X-OVH-Remote: 192.174.82.152 (mta-82-152.sparkpostmail.com)
+X-Ovh-Tracer-Id: 17947688943783322992
+X-VR-SPAMSTATE: MCE
+X-VR-SPAMSCORE: 17
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvvddruddttddgledtucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuqfggjfdpvefjgfevmfevgfenuceurghilhhouhhtmecuhedttdenucdnofetkffnkffpifculddujedmnecujfgurhepvffkffgtgghruffhjfejsegrtderredttdejnecuhfhrohhmpedfffgvsgcurghtucgkrghpihgvrhdfuceosghlohhgseiirghpihgvrhdrtghomheqnecuggftrfgrthhtvghrnhepvdevffdugfelkeehfefftefhfedttdelhfekleeghffggfefleekgeejheeuffelnecuffhomhgrihhnpeiirghpihgvrhdrtghomhenucfkphepudelvddrudejgedrkedvrdduhedvnecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehmohguvgepshhmthhppdhhvghlohepihhngeefrdhmrghilhdrohhvhhdrnhgvthdpihhnvghtpeduledvrddujeegrdekvddrudehvddpmhgrihhlfhhrohhmpehmshhprhhvshdupeduledtheekvdhffhffufffugdtpegsohhunhgtvghsqddvuddvledvjeessghouhhntggvshdriigrphhivghrrdgtohhmpdhnsggprhgtphhtthhopedupdhrtghpthhtohepnhhothhifhhitggrthhiohhnsehkvghnthhirgdqughomhhitghilhhirghtihhonhdrtghomh
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: MCE
+
+--_----btC2OMSofVyi0x39wroaRQ===_63/32-00480-019FC126
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Asynchronous communication isn't just for work=E2=80=94it makes sense for t=
+he rest of =0Ayour life too. =0A=0A=0A=0A=0A=0A <https://zapier.com/blog=3F=
+utm_content=3Dlogo-header> =0A=0A <https://zapier.com/blog/using-asynchrono=
+us-communication-at-home/> =0AProductivity=0A=0AHow a social media skeptic =
+uses TikTok to connect with family=0A=0A=0A=0A=0AHave you ever tried FaceTi=
+ming with a four-year-old=3F That's how old my =0Afirstborn human child is,=
+ and he could not care less when he sees me on a video =0Acall=E2=80=94he j=
+ust ignores me and moves that little image of his face around the =0Ascreen=
+ instead.=0A=0A=C2=A0=0A=0AAnd it's not just a kid problem. The scheduling =
+hassle and general exhaustion =0Aof synchronous communication is pretty uni=
+versal. That's why Zapier's knowledge =0Amanager, Elise, uses asynchronous =
+communication (read: TikTok) to stay =0Aconnected. Here's how she does it.=
+=0AGo async <https://zapier.com/blog/using-asynchronous-communication-at-ho=
+me/> =0ARecommended reading from the Zapier blog team=0A <https://zapier.co=
+m/blog/automatically-create-contacts-from-forms-or-email/> =0AAutomation=0A=
+=0AAutomatically add leads to your CRM or email app=0A=0AAutomate contact c=
+reation =0A<https://zapier.com/blog/automatically-create-contacts-from-form=
+s-or-email/>=0A=0A=0A <https://zapier.com/blog/moosend-marketing-strategy/>=
+ =0AMarketing tips=0A=0AStartup to acquisition: how Moosend scaled=0A=0ARea=
+d their story <https://zapier.com/blog/moosend-marketing-strategy/>=0A=0A=
+=0A <https://zapier.com/blog/marketing-copy-mistakes/> =0AMarketing tips=0A=
+=0ATreat and prevent marketing copy maladies=0A=0AGet well soon <https://za=
+pier.com/blog/marketing-copy-mistakes/>=0A=0A=0A <https://zapier.com/blog/c=
+areer-river/> =0AProductivity=0A=0ABusting the career ladder myth=0A=0AGet =
+a better framework <https://zapier.com/blog/career-river/>=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A <https://twitter.com/zapier> =0A=0A <https://www.f=
+acebook.com/groups/228632158956270/> =0A=0A <https://www.linkedin.com/compa=
+ny/zapier> =0A=0A <https://www.instagram.com/zapier/> =0A=0A <https://zapie=
+r.com/blog/=3Futm_content=3Dfooter> =0A=0A=0A Got a question=3F Ask in our =
+community =0A<https://community.zapier.com/=3Futm_content=3Dfooter> =0A=C2=
+=A9 2022 Zapier, Inc. All rights reserved.=0A548 Market St #62411, San Fran=
+cisco, CA 94104-5401 <> =0A=0A You received this email because you're subsc=
+ribed to the Zapier Blog & =0ANewsletter. =0AWant to unsubscribe or change =
+which emails your receive from us=3F =0AUpdate your email preferences =0A<h=
+ttps://links.zapier.com/e/eh=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3=
+633c3e8cfa440199f9680316139ec6f&_e=3D7JW639VUVgH1KtGP9F-syYXaypKSJvtkmx5fB_=
+y9mSVvvL4AB3OtiAVw-tq4KfcDc9HmlM0Wt3mdPMgi7wxefFxA3iLknyEsGyC8h_6nCxxeEJ5sD=
+-WUazO0ggQp0gR4dZOaB2j-uxZv0wmsA22kLmbNiFtw8yYyl65xERfryk14_pnoMKgJPqNPoPk4=
+lFPT7yKehX1U9AHMFCRXZwPa-spyZPVP7T3MzmBVCJowqypvdU85mdVLNxqdzSYFk15wqvfkFMK=
+Ch-IlByL2z6XrP-76U4ojjeL70mr_CHYoXjWmMPbugDuJ56XCBQB-quFC1P4nxaI35u2uL9wfPC=
+NlIjACB_8DdObu3GMDDgcoqUm6Xu1fwCEvAnx7cRc_N8HoSm3Mx5tCfCkxu3TYXg694loZTyc8Z=
+7RB3teKQMUIBhA%3D>=0APrivacy policy <https://zapier.com/privacy=3Futm_conte=
+nt=3Dfooter>=C2=A0=C2=A0|=C2=A0=C2=A0Contact us =0A<https://zapier.com/app/=
+contact-us=3Futm_content=3Dfooter>
+--_----btC2OMSofVyi0x39wroaRQ===_63/32-00480-019FC126
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns=3D"http://www.=
+w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn=
+:schemas-microsoft-com:office:office" style=3D"line-height: inherit;"> <hea=
+d> <!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:Pixels=
+PerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--> <=
+meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"> <m=
+eta name=3D"viewport" content=3D"width=3Ddevice-width"> <!--[if !mso]><!-->=
+ <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"> <!--<![endif]-=
+-> <title></title> <!--[if !mso]><!--> <link href=3D"https://fonts.googleap=
+is.com/css=3Ffamily=3DOpen+Sans" rel=3D"stylesheet" type=3D"text/css"> <lin=
+k href=3D"https://fonts.googleapis.com/css2=3Ffamily=3DOpen+Sans:ital,wght@=
+0,400;0,600;0,700;0,800;1,400&amp;display=3Dswap" rel=3D"stylesheet" type=
+=3D"text/css"> <!--<![endif]--> <style type=3D"text/css">body{margin:0;padd=
+ing:0}table,td,tr{vertical-align:top;border-collapse:collapse}*{line-height=
+:inherit}a[x-apple-data-detectors=3Dtrue]{color:inherit!important;text-deco=
+ration:none!important}</style> <style type=3D"text/css" id=3D"media-query">=
+@media(max-width:620px){.block-grid,.col{min-width:320px!important;max-widt=
+h:100%!important;display:block!important}.block-grid{width:100%!important}.=
+col{width:100%!important}.col_cont{margin:0 auto}img.fullwidth,img.fullwidt=
+hOnMobile{width:100%!important}.no-stack .col{min-width:0!important;display=
+:table-cell!important}.no-stack.two-up .col{width:50%!important}.no-stack .=
+col.num2{width:16.6%!important}.no-stack .col.num3{width:25%!important}.no-=
+stack .col.num4{width:33%!important}.no-stack .col.num5{width:41.6%!importa=
+nt}.no-stack .col.num6{width:50%!important}.no-stack .col.num7{width:58.3%!=
+important}.no-stack .col.num8{width:66.6%!important}.no-stack .col.num9{wid=
+th:75%!important}.no-stack .col.num10{width:83.3%!important}.video-block{ma=
+x-width:none!important}.mobile_hide{min-height:0;max-height:0;max-width:0;d=
+isplay:none;overflow:hidden;font-size:0}.desktop_hide{display:block!importa=
+nt;max-height:none!important}.img-container.big img{width:auto!important}}<=
+/style> </head> <body class=3D"clean-body" style=3D"line-height: inherit; m=
+argin: 0; padding: 0; -webkit-text-size-adjust: 100%; background-color: #ff=
+ffff;">=0D=0A<div style=3D"color:transparent;visibility:hidden;opacity:0;fo=
+nt-size:0px;border:0;max-height:1px;width:1px;margin:0px;padding:0px;border=
+-width:0px!important;display:none!important;line-height:0px!important;"><im=
+g border=3D"0" width=3D"1" height=3D"1" src=3D"http://opens.zapier.com/q/s9=
+sM2o0Ikfj3m79WkyxaQg~~/AAM_vwA~/RgRj_34QPVcDc3BjQgpiFhD5HGKBKUEjUiVub3RpZml=
+jYXRpb25Aa2VudGlhLWRvbWljaWxpYXRpb24uY29tWAQAAAAA" alt=3D""/></div>=0D=0A<s=
+pan style=3D"color:transparent;visibility:hidden;display:none;opacity:0;hei=
+ght:0;width:0;font-size:0;">Asynchronous communication isn't just for work=
+=E2=80=94it makes sense for the rest of your life too.</span><img src=3D"ht=
+tps://links.zapier.com/e/eo=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&amp;_m=
+=3D3633c3e8cfa440199f9680316139ec6f&amp;_e=3DJz0WRef9JiOu9l87vNLAeWe5VZTip6=
+2bFNmhRSD_n7rb8mo5VnLbLrl5goZQAa_p33ZsW2kb8Er72AZHd99rA_nYJxaUimCmuiucQEKxE=
+09xnFgRiFUOvdWrtmT5DAlTyGmR-ePINcDF88CU_Co_EXP5XAf-rAEaXJjJTRlNT_QNBXWyklFB=
+KxZ0hJfk4ls-" style=3D"border:0;width:1px;height:1px;border-width:0px!impor=
+tant;display:none!important;line-height:0!important;" width=3D"1" height=3D=
+"1"/> <!--[if IE]><div class=3D"ie-browser"><![endif]--> <table class=3D"nl=
+-container" style=3D"line-height: inherit; table-layout: fixed; vertical-al=
+ign: top; min-width: 320px; border-spacing: 0; border-collapse: collapse; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; wid=
+th: 100%;" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=
+=3D"100%" bgcolor=3D"#ffffff" valign=3D"top"> <tbody style=3D"line-height: =
+inherit;"> <tr style=3D"line-height: inherit; border-collapse: collapse; ve=
+rtical-align: top;" valign=3D"top"> <td style=3D"line-height: inherit; bord=
+er-collapse: collapse; word-break: break-word; vertical-align: top;" valign=
+=3D"top"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0"><tr><td align=3D"center" style=3D"background-colo=
+r:#ffffff"><![endif]--> <div style=3D"line-height: inherit; background-colo=
+r: #ffffff;"> <div class=3D"block-grid " style=3D"line-height: inherit; min=
+-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: brea=
+k-word; word-break: break-word; Margin: 0 auto; background-color: #ffffff;"=
+> <div style=3D"line-height: inherit; border-collapse: collapse; display: t=
+able; width: 100%; background-color: #ffffff;"> <!--[if (mso)|(IE)]><table =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"ba=
+ckground-color:#ffffff;"><tr><td align=3D"center"><table cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"width:600px"><tr class=3D"layout-fu=
+ll-width" style=3D"background-color:#ffffff"><![endif]--> <!--[if (mso)|(IE=
+)]><td align=3D"center" width=3D"600" style=3D"background-color:#ffffff;wid=
+th:600px; border-top: 0px solid transparent; border-left: 0px solid transpa=
+rent; border-bottom: 0px solid transparent; border-right: 0px solid transpa=
+rent;" valign=3D"top"><table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0px;=
+ padding-top:0px; padding-bottom:0px;background-color:#ffffff;"><![endif]--=
+> <div class=3D"col num12" style=3D"line-height: inherit; min-width: 320px;=
+ max-width: 600px; display: table-cell; vertical-align: top; background-col=
+or: #ffffff; width: 600px;"> <div class=3D"col_cont" style=3D"line-height: =
+inherit; width: 100% !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=
+=3D"line-height: inherit; border-top: 0px solid transparent; border-left: 0=
+px solid transparent; border-bottom: 0px solid transparent; border-right: 0=
+px solid transparent; padding-top: 0px; padding-bottom: 0px; padding-right:=
+ 0px; padding-left: 0px;"> <!--<![endif]--> <!--[if mso]><table width=3D"10=
+0%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"paddi=
+ng-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px; fo=
+nt-family: Arial, sans-serif"><![endif]--> <div style=3D"color: #333333; fo=
+nt-family: Open Sans, Helvetica, Arial, sans-serif; line-height: 1.2; paddi=
+ng-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;"> =
+<div class=3D"txtTinyMce-wrapper" style=3D"line-height: 1.2; font-size: 12p=
+x; color: #333333; font-family: Open Sans, Helvetica, Arial, sans-serif; ms=
+o-line-height-alt: 14px;"> <p style=3D"margin: 0; line-height: 1.2; word-br=
+eak: break-word; mso-line-height-alt: 14px; margin-top: 0; margin-bottom: 0=
+;"><style type=3D"text/css">@media all and (max-width:540px){body{padding:1=
+0px!important;background:#f1f4f5!important}.header-logo{width:23%!important=
+}.header-title{width:26%!important}.header-date{width:50%!important}.header=
+-title td,.header-title td div{text-align:left!important;padding:0 0 3px!im=
+portant}.header-date td,.header-date td div{text-align:right!important;padd=
+ing:0 0 3px!important}}@media all and (max-width:540px){.zap-template .icon=
+-container{width:100%!important;max-width:200px!important;text-align:center=
+!important}.zap-template .icon-container div{width:20%!important}.zap-templ=
+ate .text-container{width:100%!important}.zap-template .text-container div{=
+text-align:center!important}.zap-template .text-container .template-text{pa=
+dding:5px 0!important}.zap-template .button-container{width:100%!important;=
+padding-top:15px!important;padding-bottom:10px!important}}@media all and (m=
+ax-width:480px){.header-logo{width:100%!important}.header-title{width:100%!=
+important}.header-date{width:100%!important}.header-title td,.header-title =
+td div{text-align:center!important;padding:0 30px 5px!important}.header-dat=
+e td,.header-date td div{text-align:center!important;padding:0 30px!importa=
+nt}.h1 div{font-size:28px!important}.h2 div{font-size:24px!important}.h3 di=
+v{font-size:18px!important}.h1,.h2,.h3,.h4,.meta,.content-card .text,.conte=
+nt-card .btn,.btn-wrapper .btn,.content-wrapper>table>tbody>tr>td,.zap-wrap=
+per>table>tbody>tr>td,.callout-wrapper>table>tbody>tr>td,.divider-wrapper>t=
+able>tbody>tr>td,.footer td.text{padding-left:10px!important;padding-right:=
+10px!important}.content-wrapper .text{padding-left:0!important;padding-righ=
+t:0!important}.content-card .h1 div,.content-card .h4 div,.content-card .me=
+ta div,.card-wrapper .meta div{text-align:center!important}.btn table{width=
+:100%!important}.btn table a{display:block!important}.btn{padding:10px 0 0!=
+important}.btn-sm-important table a,.btn-sm-secondary table a{padding:20px =
+30px!important}.img-list .image{width:22%!important}.img-list .content{widt=
+h:78%!important}.icon-list .icon{width:17%!important}.icon-list .content{wi=
+dth:80%!important}.img-list>table>tbody>tr>td,.icon-list>table>tbody>tr>td{=
+padding-left:10px!important;padding-right:10px!important}.zap-wrapper>table=
+>tbody>tr>td,.zap-task>table>tbody>tr>td{padding:10px!important}.zap-task .=
+icon-container{width:100%!important;max-width:200px!important;text-align:ce=
+nter!important}.zap-task .icon-container div{width:20%!important}.zap-task =
+.text-container{width:100%!important}.zap-task .text-container div{text-al=
+ign:center!important}.zap-task .text-container .template-text{padding:5px 0=
+ 5px 20px!important}.footer>table>tbody>tr>td{padding:0!important}.unsub-li=
+nks div{text-align:center!important;padding:3px 0!important}}@media all and=
+ (max-width:380px){.zap-task .icon-container{width:100%!important}.zap-task=
+ .text-container .template-text{padding:5px 0!important}}@media all and (ma=
+x-width:540px){.zap-template .icon-container{width:100%!important;max-width=
+:200px!important;text-align:center!important}.zap-template .icon-container =
+div{width:20%!important}.zap-template .text-container{width:100%!important}=
+.zap-template .text-container div{text-align:center!important}.zap-templat=
+e .text-container .template-text{padding:5px 0!important}.zap-template .but=
+ton-container{width:100%!important;padding-top:15px!important;padding-botto=
+m:10px!important}}@media all and (max-width:480px){.zap-task .icon-containe=
+r{width:100%!important;max-width:200px!important;text-align:center!importan=
+t}.zap-task .icon-container div{width:20%!important}.zap-task .text-contain=
+er{width:100%!important}.zap-task .text-container div{text-align:center!imp=
+ortant}.zap-task .text-container .template-text{padding:5px 0 5px 20px!impo=
+rtant}}@media all and (max-width:380px){.zap-task .icon-container{width:100=
+%!important}.zap-task .text-container .template-text{padding:5px 0!importan=
+t}}</style><!-- START HEADER --> <!--[if mso | IE]><table align=3D"center" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"section-outlook" =
+style=3D"width:600px;" width=3D"600"> <tr> <td style=3D"line-height:0px;fon=
+t-size:0px;mso-line-height-rule:exactly;"><![endif]--> <div class=3D"sectio=
+n" style=3D"margin:0px auto;max-width:600px;"> <table align=3D"center" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D=
+"width:100%;"> <tbody> <tr> <td style=3D"direction:ltr;font-size:0px;paddin=
+g:0px 40px;padding-bottom:10px;text-align:center;"> <!--[if mso | IE]><tabl=
+e role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <=
+tr> <td class=3D"" style=3D"vertical-align:top;width:520px;"><![endif]--> <=
+div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0px=
+;text-align:left;direction:ltr;display:inline-block;vertical-align:top;widt=
+h:100%;"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"vertical-align:top;" width=3D"100%"> <tr> <td align=
+=3D"center" style=3D"font-size:0px;padding:25px 0px 20px;word-break:break-w=
+ord;"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pres=
+entation" style=3D"border-collapse:collapse;border-spacing:0px;"> <tbody> <=
+tr> <td style=3D"width:150px;"> <a href=3D"https://links.zapier.com/u/click=
+=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139e=
+c6f&_e=3D7JW639VUVgH1KtGP9F-syZGAAP0YN_BcVu8BuNrd_7i8B6NCShOUfggeBlY0x9xCiE=
+Sch5n5QHUwcNfb_3njyqw1QST1kgSEvMimWWNvbxxb9ra_AxpOCAPwq56Af1GHbp4mo11QNfDvd=
+Q0Ojru2xHd3CYpB2myOL-V-LSHfTLOI6PaBts9ENLbnm8KJ9EEQo-GchZo1nVR_3i5lSO6YC75_=
+si_2wphc9uG4F1Kjs06dd9F16u7k4Q-TEVRdteHruZ40NdBfAemQ1SpY6-tBilPIHWdBHWasCqb=
+Xh9J6bzVt4v1jRxamojWg3MIrVWA4rCY9FwPK5AH1M_yuTM7D2j3Hk1wN28Jd53IQH7ZhW5G0ng=
+NO2qVvDXLZ2R1vMLlznVz7hqqgfINAFzYrlISEfhhEbjkNmm2Fb-VoOsIKHV6Z36KTEi_PBUslr=
+rOxtje58MiFyl6IKCnK6cKug3lajV_OS_pfSLaFDYpAOEaZehY%3D" target=3D"_blank" st=
+yle=3D"font-weight: 600; color: #136BF5; text-decoration: none;"> <img alt=
+=3D"Zapier blog" height=3D"auto" src=3D"https://cdn.zapier.com/storage/phot=
+os/e69823561238d9dad0e422a83e453f18.png" style=3D"border:0;display:block;ou=
+tline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" wid=
+th=3D"150"> </a> </td> </tr> </tbody> </table> </td> </tr> </table> </div> =
+<!--[if mso | IE]></td> </tr> </table><![endif]--> </td> </tr> </tbody> </t=
+able> </div> <!--[if mso | IE]></td> </tr> </table><![endif]--> <!-- END HE=
+ADER --></p> </div> </div> <!--[if mso]></td></tr></table><![endif]--> <!--=
+[if (!mso)&(!IE)]><!--> </div> <!--<![endif]--> </div> </div> <!--[if (mso)=
+|(IE)]></td></tr></table><![endif]--> <!--[if (mso)|(IE)]></td></tr></table=
+></td></tr></table><![endif]--> </div> </div> </div> <div style=3D"line-hei=
+ght: inherit; background-color: #ffffff;"> <div class=3D"block-grid " style=
+=3D"line-height: inherit; min-width: 320px; max-width: 600px; overflow-wrap=
+: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto=
+; background-color: #ffffff;"> <div style=3D"line-height: inherit; border-c=
+ollapse: collapse; display: table; width: 100%; background-color: #ffffff;"=
+> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"background-color:#ffffff;"><tr><td align=3D"ce=
+nter"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"widt=
+h:600px"><tr class=3D"layout-full-width" style=3D"background-color:#ffffff"=
+><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=
+=3D"background-color:#ffffff;width:600px; border-top: 0px solid transparent=
+; border-left: 0px solid transparent; border-bottom: 0px solid transparent;=
+ border-right: 0px solid transparent;" valign=3D"top"><table width=3D"100%"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-=
+right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:10px;backgro=
+und-color:#ffffff;"><![endif]--> <div class=3D"col num12" style=3D"line-hei=
+ght: inherit; min-width: 320px; max-width: 600px; display: table-cell; vert=
+ical-align: top; background-color: #ffffff; width: 600px;"> <div class=3D"c=
+ol_cont" style=3D"line-height: inherit; width: 100% !important;"> <!--[if (=
+!mso)&(!IE)]><!--> <div style=3D"line-height: inherit; border-top: 0px soli=
+d transparent; border-left: 0px solid transparent; border-bottom: 0px solid=
+ transparent; border-right: 0px solid transparent; padding-top: 0px; paddin=
+g-bottom: 10px; padding-right: 0px; padding-left: 0px;"> <!--<![endif]--> <=
+div class=3D"img-container center autowidth fullwidth big" align=3D"center"=
+ style=3D"line-height: inherit; padding-right: 0px; padding-left: 0px;"> <!=
+--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0"><tr style=3D"line-height:0px"><td style=3D"padding-right: 0px;paddin=
+g-left: 0px;" align=3D"center"><![endif]--><a href=3D"https://links.zapier.=
+com/u/click=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f=
+9680316139ec6f&_e=3D7JW639VUVgH1KtGP9F-sye2z69QY_QMyiOx99UOSV150WeVeKeGFUXX=
+4JHJi1A8aUifT18cOGf7RfgWu5vMbcntZWVnV11IDwEZxbe0EEVH2AIX26dpJXqCZY4EI0GeQsw=
+BtGGyMQ0ofR2btzMQyaoiLd_IC1ztW87B9TggEaMeidmfOHDxDsbZPh9Q7bseD_SHEcRNxZ6erE=
+nN8l_PBfWcjSxqnXtuLpTVtwcMpFG8MDvq6v9q9Za9I736uPz_wToLhYDcyGMZoUxvchjbxhstO=
+CPd1jknrcQfbW4Azi3kka-RM9aekLW1q0tRP_mslJw-HpQtdW6p7qAPjEvkbQkQV1jY-1brd_MO=
+za8P66xvsNp6kZMszG5y7801WLvQqQbAllIeg0HHWL4Svs7g-11NtXgxklShiM3DI8srYbDn8Yd=
+SNodVzOt2iTOZ_Oj3EgHUCB7oqq2etJFk-UhEO9pLJCr0sDhu1P8yKncC1HnbTAusuHNeK62AJH=
+D10sNSe" target=3D"_blank" style=3D"line-height: inherit; outline: none;" t=
+abindex=3D"-1"><img class=3D"center autowidth fullwidth" align=3D"center" b=
+order=3D"0" src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integ=
+rators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/e2cfe0ff47af4b66b47d47e6db9ec57=
+a/editor_images/tiktok-marketing-tips-00-hero%20%283%29.jpeg" style=3D"line=
+-height: inherit; text-decoration: none; -ms-interpolation-mode: bicubic; h=
+eight: auto; border: 0; width: 600px; max-width: 100%; display: block;" wid=
+th=3D"600"></a> <!--[if mso]></td></tr></table><![endif]--> </div> <!--[if =
+(!mso)&(!IE)]><!--> </div> <!--<![endif]--> </div> </div> <!--[if (mso)|(IE=
+)]></td></tr></table><![endif]--> <!--[if (mso)|(IE)]></td></tr></table></t=
+d></tr></table><![endif]--> </div> </div> </div> <div style=3D"line-height:=
+ inherit; background-color: #ffffff;"> <div class=3D"block-grid " style=3D"=
+line-height: inherit; min-width: 320px; max-width: 600px; overflow-wrap: br=
+eak-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; ba=
+ckground-color: #ffffff;"> <div style=3D"line-height: inherit; border-colla=
+pse: collapse; display: table; width: 100%; background-color: #ffffff;"> <!=
+--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0" style=3D"background-color:#ffffff;"><tr><td align=3D"center">=
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600p=
+x"><tr class=3D"layout-full-width" style=3D"background-color:#ffffff"><![en=
+dif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"bac=
+kground-color:#ffffff;width:600px; border-top: 0px solid transparent; borde=
+r-left: 0px solid transparent; border-bottom: 0px solid transparent; border=
+-right: 0px solid transparent;" valign=3D"top"><table width=3D"100%" cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: =
+40px; padding-left: 40px; padding-top:0px; padding-bottom:40px;background-c=
+olor:#ffffff;"><![endif]--> <div class=3D"col num12" style=3D"line-height: =
+inherit; min-width: 320px; max-width: 600px; display: table-cell; vertical-=
+align: top; background-color: #ffffff; width: 600px;"> <div class=3D"col_co=
+nt" style=3D"line-height: inherit; width: 100% !important;"> <!--[if (!mso)=
+&(!IE)]><!--> <div style=3D"line-height: inherit; border-top: 0px solid tra=
+nsparent; border-left: 0px solid transparent; border-bottom: 0px solid tran=
+sparent; border-right: 0px solid transparent; padding-top: 0px; padding-bot=
+tom: 40px; padding-right: 40px; padding-left: 40px;"> <!--<![endif]--> <!--=
+[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0px; padding-top:=
+ 20px; padding-bottom: 5px; font-family: Arial, sans-serif"><![endif]--> <d=
+iv style=3D"color: #333333; font-family: Open Sans, Helvetica, Arial, sans-=
+serif; line-height: 1.2; padding-top: 20px; padding-right: 0px; padding-bot=
+tom: 5px; padding-left: 0px;"> <div class=3D"txtTinyMce-wrapper" style=3D"l=
+ine-height: 1.2; font-size: 12px; color: #333333; font-family: Open Sans, H=
+elvetica, Arial, sans-serif; mso-line-height-alt: 14px;"> <p style=3D"margi=
+n: 0; font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-h=
+eight-alt: 17px; margin-top: 0; margin-bottom: 0;"><strong style=3D"line-he=
+ight: inherit;">Productivity</strong></p> </div> </div> <!--[if mso]></td><=
+/tr></table><![endif]--> <!--[if mso]><table width=3D"100%" cellpadding=3D"=
+0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padd=
+ing-left: 0px; padding-top: 0px; padding-bottom: 0px; font-family: Arial, s=
+ans-serif"><![endif]--> <div style=3D"color: #333333; font-family: 'Open Sa=
+ns', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; padd=
+ing-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">=
+ <div class=3D"txtTinyMce-wrapper" style=3D"font-size: 12px; line-height: 1=
+.5; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-ser=
+if; color: #333333; mso-line-height-alt: 18px;"> <p style=3D"margin: 0; fon=
+t-size: 24px; line-height: 1.5; word-break: break-word; text-align: left; m=
+so-line-height-alt: 36px; margin-top: 0; margin-bottom: 0;"><span style=3D"=
+line-height: inherit; font-size: 24px; color: #333333;"><strong style=3D"li=
+ne-height: inherit;">How a social media skeptic uses TikTok to connect with=
+ family<br style=3D"line-height: inherit;"></strong></span></p> </div> </di=
+v> <!--[if mso]></td></tr></table><![endif]--> <table class=3D"divider" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"line-=
+height: inherit; table-layout: fixed; vertical-align: top; border-spacing: =
+0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+ min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100=
+%;" role=3D"presentation" valign=3D"top"> <tbody style=3D"line-height: inhe=
+rit;"> <tr style=3D"line-height: inherit; border-collapse: collapse; vertic=
+al-align: top;" valign=3D"top"> <td class=3D"divider_inner" style=3D"line-h=
+eight: inherit; border-collapse: collapse; word-break: break-word; vertical=
+-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size=
+-adjust: 100%; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; p=
+adding-left: 0px;" valign=3D"top"> <table class=3D"divider_content" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"line-hei=
+ght: inherit; table-layout: fixed; vertical-align: top; border-spacing: 0; =
+border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; bo=
+rder-top: 0px solid transparent; height: 10px; width: 100%;" align=3D"cente=
+r" role=3D"presentation" height=3D"10" valign=3D"top"> <tbody style=3D"line=
+-height: inherit;"> <tr style=3D"line-height: inherit; border-collapse: col=
+lapse; vertical-align: top;" valign=3D"top"> <td style=3D"line-height: inhe=
+rit; border-collapse: collapse; word-break: break-word; vertical-align: top=
+; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" height=3D"10=
+" valign=3D"top"><span style=3D"line-height: inherit;"></span></td> </tr> <=
+/tbody> </table> </td> </tr> </tbody> </table> <!--[if mso]><table width=3D=
+"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pa=
+dding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px;=
+ font-family: Arial, sans-serif"><![endif]--> <div style=3D"color: #333333;=
+ font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; =
+line-height: 1.5; padding-top: 0px; padding-right: 0px; padding-bottom: 0px=
+; padding-left: 0px;"> <div class=3D"txtTinyMce-wrapper" style=3D"line-heig=
+ht: 1.5; font-size: 12px; font-family: 'Open Sans', 'Helvetica Neue', Helve=
+tica, Arial, sans-serif; color: #333333; mso-line-height-alt: 18px;"> <p st=
+yle=3D"margin: 0; line-height: 1.5; word-break: break-word; font-size: 16px=
+; mso-line-height-alt: 24px; margin-top: 0; margin-bottom: 0;"><span style=
+=3D"line-height: inherit; font-size: 16px;">Have you ever tried FaceTiming =
+with a four-year-old=3F That's how old my firstborn human child is, and he =
+could not care less when he sees me on a video call=E2=80=94he just ignores=
+ me and moves that little image of his face around the screen instead.</spa=
+n></p> <p style=3D"margin: 0; line-height: 1.5; word-break: break-word; mso=
+-line-height-alt: 18px; margin-top: 0; margin-bottom: 0;">&nbsp;</p> <p sty=
+le=3D"margin: 0; line-height: 1.5; word-break: break-word; font-size: 16px;=
+ mso-line-height-alt: 24px; margin-top: 0; margin-bottom: 0;"><span style=
+=3D"line-height: inherit; font-size: 16px;">And it's not just a kid problem=
+. The scheduling hassle and general exhaustion of synchronous communicatio=
+n is pretty universal. That's why Zapier's knowledge manager, Elise, uses a=
+synchronous communication (read: TikTok) to stay connected. Here's how she =
+does it.</span></p> </div> </div> <!--[if mso]></td></tr></table><![endif]-=
+-> <div class=3D"button-container" align=3D"left" style=3D"line-height: inh=
+erit; padding-top: 20px; padding-right: 0px; padding-bottom: 20px; padding-=
+left: 0px;"> <!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"border-spacing: 0; border-collapse: collapse=
+; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style=3D"padding-top=
+: 20px; padding-right: 0px; padding-bottom: 20px; padding-left: 0px" align=
+=3D"left"><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D=
+"urn:schemas-microsoft-com:office:word" href=3D"https://links.zapier.com/u/=
+click=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f968031=
+6139ec6f&_e=3D7JW639VUVgH1KtGP9F-sye2z69QY_QMyiOx99UOSV150WeVeKeGFUXX4JHJi1=
+A8aUifT18cOGf7RfgWu5vMbcntZWVnV11IDwEZxbe0EEVH2AIX26dpJXqCZY4EI0GeQswBtGGyM=
+Q0ofR2btzMQyaoiLd_IC1ztW87B9TggEaMeidmfOHDxDsbZPh9Q7bseD_SHEcRNxZ6erEnN8l_P=
+BfWcjSxqnXtuLpTVtwcMpFG8MDvq6v9q9Za9I736uPz_wToLhYDcyGMZoUxvchjbxhqDk-5HvG6=
+G6sXrr1AT4r4cVn2kxVuz8I7llVhNGU5OEEE1X5vQtAvf3SEPkQgwSTWK0B3zCkSZ24IGeQSsoe=
+PzF7QttygIKG7gZtl5HyYtGn-yIYPkHK_v3WFfxJyJmel9aqJo40mZVxx9orcR6J9tJFg7IOnkg=
+joQBcrAOMqLpPZTJexCXwdeZJecC5j1_fyJlDa3aOO_cWRqQjcgjv_YyBIYcaAyBBDuik9tI-yp=
+0" style=3D"height:31.5pt;width:98.25pt;v-text-anchor:middle;" arcsize=3D"2=
+4%" stroke=3D"false" fillcolor=3D"#136bf5"><w:anchorlock/><v:textbox inset=
+=3D"0,0,0,0"><center style=3D"color:#ffffff; font-family:Arial, sans-serif;=
+ font-size:16px"><![endif]--><a href=3D"https://links.zapier.com/u/click=3F=
+_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139ec6f=
+&_e=3D7JW639VUVgH1KtGP9F-sye2z69QY_QMyiOx99UOSV150WeVeKeGFUXX4JHJi1A8aUifT1=
+8cOGf7RfgWu5vMbcntZWVnV11IDwEZxbe0EEVH2AIX26dpJXqCZY4EI0GeQswBtGGyMQ0ofR2bt=
+zMQyaoiLd_IC1ztW87B9TggEaMeidmfOHDxDsbZPh9Q7bseD_SHEcRNxZ6erEnN8l_PBfWcjSxq=
+nXtuLpTVtwcMpFG8MDvq6v9q9Za9I736uPz_wToLhYDcyGMZoUxvchjbxhl92NDFmCOYFygJ8-n=
+86_fYqqSvxM-Fb6F07Fx6uQxmINFNzOIRTOQ2lQqGdWuJqHQ-2Hwuy1166jzQJqnK6MoVjAooFd=
+7hnQwJMB-9RhIkQRUwyN1olaDOUysmdaLWubhCi8qlOFvgwqwqX1ZZwutalwuTkR_saN30XPEC7=
+0-6lYR7OUomcezISvhBQOBTzRfG6NVDSs7hGS7piu1_H26_lYg1m83Zaz1ebDpry63sg" targe=
+t=3D"_blank" style=3D"line-height: inherit; -webkit-text-size-adjust: none;=
+ text-decoration: none; display: inline-block; color: #ffffff; background-c=
+olor: #136bf5; border-radius: 10px; -webkit-border-radius: 10px; -moz-borde=
+r-radius: 10px; width: auto; width: auto; border-top: 1px solid #136bf5; bo=
+rder-right: 1px solid #136bf5; border-bottom: 1px solid #136bf5; border-lef=
+t: 1px solid #136bf5; padding-top: 5px; padding-bottom: 5px; font-family: '=
+Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: cen=
+ter; mso-border-alt: none; word-break: keep-all;"><span style=3D"line-heigh=
+t: inherit; padding-left: 30px; padding-right: 30px; font-size: 16px; displ=
+ay: inline-block; letter-spacing: undefined;"><span style=3D"font-size: 16p=
+x; line-height: 2; word-break: break-word; mso-line-height-alt: 32px;"><str=
+ong style=3D"line-height: inherit;">Go async</strong></span></span></a> <!-=
+-[if mso]></center></v:textbox></v:roundrect></td></tr></table><![endif]-->=
+ </div> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![endif]--> </div> </div> <=
+!--[if (mso)|(IE)]></td></tr></table><![endif]--> <!--[if (mso)|(IE)]></td>=
+</tr></table></td></tr></table><![endif]--> </div> </div> </div> <div style=
+=3D"line-height: inherit; background-color: #ffede6;"> <div class=3D"block-=
+grid " style=3D"line-height: inherit; min-width: 320px; max-width: 600px; o=
+verflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Ma=
+rgin: 0 auto; background-color: #ffede6;"> <div style=3D"line-height: inher=
+it; border-collapse: collapse; display: table; width: 100%; background-colo=
+r: #ffede6;"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0" style=3D"background-color:#ffede6;"><tr><td a=
+lign=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" sty=
+le=3D"width:600px"><tr class=3D"layout-full-width" style=3D"background-colo=
+r:#ffede6"><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"6=
+00" style=3D"background-color:#ffede6;width:600px; border-top: 0px solid tr=
+ansparent; border-left: 0px solid transparent; border-bottom: 0px solid tra=
+nsparent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D=
+"padding-right: 10px; padding-left: 10px; padding-top:20px; padding-bottom:=
+15px;background-color:#ffede6;"><![endif]--> <div class=3D"col num12" style=
+=3D"line-height: inherit; min-width: 320px; max-width: 600px; display: tabl=
+e-cell; vertical-align: top; background-color: #ffede6; width: 600px;"> <di=
+v class=3D"col_cont" style=3D"line-height: inherit; width: 100% !important;=
+"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"line-height: inherit; border-t=
+op: 0px solid transparent; border-left: 0px solid transparent; border-botto=
+m: 0px solid transparent; border-right: 0px solid transparent; padding-top:=
+ 20px; padding-bottom: 15px; padding-right: 10px; padding-left: 10px;"> <!-=
+-<![endif]--> <!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0=
+px; padding-top: 10px; padding-bottom: 0px; font-family: Arial, sans-serif"=
+><![endif]--> <div style=3D"color: #333333; font-family: 'Open Sans', 'Helv=
+etica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; padding-top: 1=
+0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;"> <div cla=
+ss=3D"txtTinyMce-wrapper" style=3D"font-size: 12px; line-height: 1.5; font-=
+family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color:=
+ #333333; mso-line-height-alt: 18px;"> <p style=3D"margin: 0; font-size: 14=
+px; line-height: 1.5; word-break: break-word; text-align: left; mso-line-he=
+ight-alt: 21px; margin-top: 0; margin-bottom: 0;"><strong style=3D"line-hei=
+ght: inherit;"><span style=3D"line-height: inherit; font-size: 16px;"><span=
+ style=3D"line-height: inherit; color: #333333;">Recommended reading from t=
+he Zapier blog team</span></span></strong></p> </div> </div> <!--[if mso]><=
+/td></tr></table><![endif]--> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![end=
+if]--> </div> </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--> <!-=
+-[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]--> </div> </=
+div> </div> <div style=3D"line-height: inherit; background-color: #ffede6;"=
+> <div class=3D"block-grid two-up" style=3D"line-height: inherit; min-width=
+: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word=
+; word-break: break-word; Margin: 0 auto; background-color: #ffede6;"> <div=
+ style=3D"line-height: inherit; border-collapse: collapse; display: table; =
+width: 100%; background-color: #ffede6;"> <!--[if (mso)|(IE)]><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"backgro=
+und-color:#ffede6;"><tr><td align=3D"center"><table cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0" style=3D"width:600px"><tr class=3D"layout-full-wi=
+dth" style=3D"background-color:#ffede6"><![endif]--> <!--[if (mso)|(IE)]><t=
+d align=3D"center" width=3D"300" style=3D"background-color:#ffede6;width:30=
+0px; border-top: 0px solid transparent; border-left: 0px solid transparent;=
+ border-bottom: 0px solid transparent; border-right: 0px solid transparent;=
+" valign=3D"top"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0"><tr><td style=3D"padding-right: 10px; padding-left: 10px; padd=
+ing-top:5px; padding-bottom:30px;background-color:#ffede6;"><![endif]--> <d=
+iv class=3D"col num6" style=3D"line-height: inherit; display: table-cell; v=
+ertical-align: top; max-width: 320px; min-width: 300px; background-color: #=
+ffede6; width: 300px;"> <div class=3D"col_cont" style=3D"line-height: inher=
+it; width: 100% !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"lin=
+e-height: inherit; border-top: 0px solid transparent; border-left: 0px soli=
+d transparent; border-bottom: 0px solid transparent; border-right: 0px soli=
+d transparent; padding-top: 5px; padding-bottom: 30px; padding-right: 10px;=
+ padding-left: 10px;"> <!--<![endif]--> <div class=3D"img-container center =
+autowidth fullwidth" align=3D"center" style=3D"line-height: inherit; paddin=
+g-right: 0px; padding-left: 0px;"> <!--[if mso]><table width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><=
+td style=3D"padding-right: 0px;padding-left: 0px;" align=3D"center"><![endi=
+f]--><a href=3D"https://links.zapier.com/u/click=3F_t=3De2cfe0ff47af4b66b47=
+d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139ec6f&_e=3D7JW639VUVgH1KtGP9F=
+-sye2z69QY_QMyiOx99UOSV17jwpbdSYyuVxbbQNOz2OhziSq5M5COEnd1VNalXGhCsQVsEM2eG=
+GoxQAfY9J1fOXiyRJnMEvZRDRdSf6jQNP8UzlzKrdJpgwNq3A9sqZSBAkstgTJxosB_t3RUHLT4=
+0qPbCTX0FbO4fJ7TU3mwK_HOBgzvegAshPtn1N9_Lvb_oTdNUpNEDAyqy57V3Ty0DcrroOn9ceK=
+rYUX3tE149X7gJ8-axhZV8fVzyP9tgr8LCkMwat_nMVc58TXCgrTWC4oDoI7v7RPN4mR-2rWUuz=
+9qS2-3YI_tsQ3I9UMFuk2N3tQxndmJdNoPLRpkWoeDB3wNL5KeEc-AC0um3_GES8vTJdXDAD0eM=
+Y_J5rc9psPHciCSdk0h_JATeX5cBpAwd8T4yOXJRcx0OIBAx9UX2MuLM61rXo1TNtKYxptuPZZP=
+t0qR-tMXtnye3vP1uSS9VpX345PBz9YnNtDjwd9UBGYJ" target=3D"_blank" style=3D"li=
+ne-height: inherit; outline: none;" tabindex=3D"-1"><img class=3D"center au=
+towidth fullwidth" align=3D"center" border=3D"0" src=3D"https://d15k2d11r6t=
+6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff=
+6dd6a/e2cfe0ff47af4b66b47d47e6db9ec57a/editor_images/automation-inspiration=
+-email-00-hero%20%2817%29.jpeg" style=3D"line-height: inherit; text-decorat=
+ion: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; width:=
+ 280px; max-width: 100%; display: block;" width=3D"280"></a> <!--[if mso]><=
+/td></tr></table><![endif]--> </div> <!--[if mso]><table width=3D"100%" cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-righ=
+t: 0px; padding-left: 0px; padding-top: 20px; padding-bottom: 5px; font-fam=
+ily: Arial, sans-serif"><![endif]--> <div style=3D"color: #333333; font-fam=
+ily: Open Sans, Helvetica, Arial, sans-serif; line-height: 1.2; padding-top=
+: 20px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px;"> <div =
+class=3D"txtTinyMce-wrapper" style=3D"line-height: 1.2; font-size: 12px; co=
+lor: #333333; font-family: Open Sans, Helvetica, Arial, sans-serif; mso-lin=
+e-height-alt: 14px;"> <p style=3D"margin: 0; font-size: 14px; line-height: =
+1.2; word-break: break-word; mso-line-height-alt: 17px; margin-top: 0; marg=
+in-bottom: 0;"><strong style=3D"line-height: inherit;">Automation</strong><=
+/p> </div> </div> <!--[if mso]></td></tr></table><![endif]--> <!--[if mso]>=
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr>=
+<td style=3D"padding-right: 0px; padding-left: 0px; padding-top: 0px; paddi=
+ng-bottom: 0px; font-family: Arial, sans-serif"><![endif]--> <div style=3D"=
+color: #354147; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; line-height: 1.5; padding-top: 0px; padding-right: 0px; padd=
+ing-bottom: 0px; padding-left: 0px;"> <div class=3D"txtTinyMce-wrapper" sty=
+le=3D"font-size: 12px; line-height: 1.5; font-family: 'Open Sans', 'Helveti=
+ca Neue', Helvetica, Arial, sans-serif; color: #354147; mso-line-height-alt=
+: 18px;"> <p style=3D"margin: 0; font-size: 14px; line-height: 1.5; word-br=
+eak: break-word; text-align: left; mso-line-height-alt: 21px; margin-top: 0=
+; margin-bottom: 0;"><span style=3D"line-height: inherit; color: #333333;">=
+<span style=3D"line-height: inherit; font-size: 22px;"><strong style=3D"lin=
+e-height: inherit;">Automatically add leads to your CRM or email app</stron=
+g></span></span></p> </div> </div> <!--[if mso]></td></tr></table><![endif]=
+--> <!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0px; paddin=
+g-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif=
+]--> <div style=3D"color: #555555; font-family: Open Sans, Helvetica, Arial=
+, sans-serif; line-height: 1.2; padding-top: 10px; padding-right: 0px; padd=
+ing-bottom: 10px; padding-left: 0px;"> <div class=3D"txtTinyMce-wrapper" st=
+yle=3D"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 12p=
+x; line-height: 1.2; color: #555555; mso-line-height-alt: 14px;"> <p style=
+=3D"margin: 0; font-size: 14px; line-height: 1.2; word-break: break-word; t=
+ext-align: left; mso-line-height-alt: 17px; margin-top: 0; margin-bottom: 0=
+;"><strong style=3D"line-height: inherit;"><span style=3D"line-height: inhe=
+rit; font-size: 16px;"><a href=3D"https://links.zapier.com/u/click=3F_t=3De=
+2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139ec6f&_e=3D=
+7JW639VUVgH1KtGP9F-sye2z69QY_QMyiOx99UOSV17jwpbdSYyuVxbbQNOz2OhziSq5M5COEnd=
+1VNalXGhCsQVsEM2eGGoxQAfY9J1fOXiyRJnMEvZRDRdSf6jQNP8UzlzKrdJpgwNq3A9sqZSBAk=
+stgTJxosB_t3RUHLT40qPbCTX0FbO4fJ7TU3mwK_HOBgzvegAshPtn1N9_Lvb_oTdNUpNEDAyqy=
+57V3Ty0DcrroOn9ceKrYUX3tE149X7gJ8-axhZV8fVzyP9tgr8LCh011mtEgAUQvGlu9OzyyWBh=
+DiA_ugNOBQzamLN1XFeNQ3lhgUNNVeLH2XWwfrAiHBVdIEPb7e4996cI-m4z8SNzhQxmvoKamjL=
+PyRcFv3WY-2xZA-O0ZRNuPU_8v7V8QrvCoUZ-u9e6SivI5u7h-kT6AQ5z0aaq2S5OkQ9b0mIjyY=
+bUovwOgqlpJyxolyirpYexwcAqxjPqhbeKZ3GEstF8aqI3X3iFh3XD4HTfAu8L" target=3D"_=
+blank" style=3D"line-height: inherit; text-decoration: none; color: #136bf5=
+;" rel=3D"noopener">Automate contact creation</a></span></strong></p> </div=
+> </div> <!--[if mso]></td></tr></table><![endif]--> <table class=3D"divide=
+r" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D=
+"line-height: inherit; table-layout: fixed; vertical-align: top; border-spa=
+cing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjus=
+t: 100%;" role=3D"presentation" valign=3D"top"> <tbody style=3D"line-height=
+: inherit;"> <tr style=3D"line-height: inherit; border-collapse: collapse; =
+vertical-align: top;" valign=3D"top"> <td class=3D"divider_inner" style=3D"=
+line-height: inherit; border-collapse: collapse; word-break: break-word; ve=
+rtical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-tex=
+t-size-adjust: 100%; padding-top: 0px; padding-right: 0px; padding-bottom: =
+0px; padding-left: 0px;" valign=3D"top"> <table class=3D"divider_content" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"lin=
+e-height: inherit; table-layout: fixed; vertical-align: top; border-spacing=
+: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; border-top: 20px solid transparent; height: 30px; width: 100%;" align=3D=
+"center" role=3D"presentation" height=3D"30" valign=3D"top"> <tbody style=
+=3D"line-height: inherit;"> <tr style=3D"line-height: inherit; border-colla=
+pse: collapse; vertical-align: top;" valign=3D"top"> <td style=3D"line-heig=
+ht: inherit; border-collapse: collapse; word-break: break-word; vertical-al=
+ign: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" heig=
+ht=3D"30" valign=3D"top"><span style=3D"line-height: inherit;"></span></td>=
+ </tr> </tbody> </table> </td> </tr> </tbody> </table> <div class=3D"img-co=
+ntainer center autowidth fullwidth" align=3D"center" style=3D"line-height: =
+inherit; padding-right: 0px; padding-left: 0px;"> <!--[if mso]><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr style=3D"lin=
+e-height:0px"><td style=3D"padding-right: 0px;padding-left: 0px;" align=3D"=
+center"><![endif]--><a href=3D"https://links.zapier.com/u/click=3F_t=3De2cf=
+e0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139ec6f&_e=3D7JW=
+639VUVgH1KtGP9F-sye2z69QY_QMyiOx99UOSV14VVqQaUyQHPEaj-8jSngjJJkSKxqgL53bAy_=
+cGH6hVRrpzXzn4DwO7kLoOh264LuoMQEoHs8c1Nj3IAhFN05KlB2Dcql6swAn0kwAnH4r1f8qir=
+NbNzqHt6EhHmB8EHP8YDYeeqfm0Qj61ONSy3xjuDOck-5k63m9bnLwqQ3c_Aa0AFZ2VWLBE4KaF=
+Wdpg2WUPRNMCWCB9QDAY3HnAY_NJCyzr70Uo6lsxy2OYVjp7twuf5vWnVCii9eE07PwpWDNFfHv=
+N_7qKTuOQH-4zjhzNIepy0TX9HArgh_Mi7tOtILfqN4_1NMzrQ9ULQ3_-BuWzbnKrrJ-9vrf3Mr=
+fILkqwNXuYEQS3jDACE2ndDsPxVb8EeEijUqnRbAb7ENT0fSNjS9ij6mvvrNziGl7-qVmkXo28R=
+ZaNFkiBN1nbvFGnRm5fAeUyNgf6Ot6oUQ1h2Pw%3D" target=3D"_blank" style=3D"line-=
+height: inherit; outline: none;" tabindex=3D"-1"><img class=3D"center autow=
+idth fullwidth" align=3D"center" border=3D"0" src=3D"https://d15k2d11r6t6rl=
+.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6d=
+d6a/e2cfe0ff47af4b66b47d47e6db9ec57a/editor_images/app-tips-moosend-00-hero=
+%20%281%29.jpeg" style=3D"line-height: inherit; text-decoration: none; -ms-=
+interpolation-mode: bicubic; height: auto; border: 0; width: 280px; max-wid=
+th: 100%; display: block;" width=3D"280"></a> <!--[if mso]></td></tr></tabl=
+e><![endif]--> </div> <!--[if mso]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding=
+-left: 0px; padding-top: 20px; padding-bottom: 5px; font-family: Arial, san=
+s-serif"><![endif]--> <div style=3D"color: #333333; font-family: Open Sans,=
+ Helvetica, Arial, sans-serif; line-height: 1.2; padding-top: 20px; padding=
+-right: 0px; padding-bottom: 5px; padding-left: 0px;"> <div class=3D"txtTin=
+yMce-wrapper" style=3D"line-height: 1.2; font-size: 12px; color: #333333; f=
+ont-family: Open Sans, Helvetica, Arial, sans-serif; mso-line-height-alt: 1=
+4px;"> <p style=3D"margin: 0; font-size: 14px; line-height: 1.2; word-break=
+: break-word; mso-line-height-alt: 17px; margin-top: 0; margin-bottom: 0;">=
+<strong style=3D"line-height: inherit;">Marketing tips</strong></p> </div> =
+</div> <!--[if mso]></td></tr></table><![endif]--> <!--[if mso]><table widt=
+h=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom=
+: 0px; font-family: Arial, sans-serif"><![endif]--> <div style=3D"color: #3=
+54147; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-s=
+erif; line-height: 1.5; padding-top: 0px; padding-right: 0px; padding-botto=
+m: 0px; padding-left: 0px;"> <div class=3D"txtTinyMce-wrapper" style=3D"fon=
+t-size: 12px; line-height: 1.5; font-family: 'Open Sans', 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif; color: #354147; mso-line-height-alt: 18px;">=
+ <p style=3D"margin: 0; font-size: 14px; line-height: 1.5; word-break: brea=
+k-word; text-align: left; mso-line-height-alt: 21px; margin-top: 0; margin-=
+bottom: 0;"><span style=3D"line-height: inherit; color: #333333;"><span sty=
+le=3D"line-height: inherit; font-size: 22px;"><strong style=3D"line-height:=
+ inherit;">Startup to acquisition: how Moosend scaled</strong></span></span=
+></p> </div> </div> <!--[if mso]></td></tr></table><![endif]--> <!--[if mso=
+]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><t=
+r><td style=3D"padding-right: 0px; padding-left: 0px; padding-top: 10px; pa=
+dding-bottom: 10px; font-family: Arial, sans-serif"><![endif]--> <div style=
+=3D"color: #555555; font-family: Open Sans, Helvetica, Arial, sans-serif; l=
+ine-height: 1.2; padding-top: 10px; padding-right: 0px; padding-bottom: 10p=
+x; padding-left: 0px;"> <div class=3D"txtTinyMce-wrapper" style=3D"font-fam=
+ily: Open Sans, Helvetica, Arial, sans-serif; font-size: 12px; line-height:=
+ 1.2; color: #555555; mso-line-height-alt: 14px;"> <p style=3D"margin: 0; f=
+ont-size: 14px; line-height: 1.2; word-break: break-word; text-align: left;=
+ mso-line-height-alt: 17px; margin-top: 0; margin-bottom: 0;"><strong style=
+=3D"line-height: inherit;"><span style=3D"line-height: inherit; font-size: =
+16px;"><a href=3D"https://links.zapier.com/u/click=3F_t=3De2cfe0ff47af4b66b=
+47d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139ec6f&_e=3D7JW639VUVgH1KtGP=
+9F-sye2z69QY_QMyiOx99UOSV14VVqQaUyQHPEaj-8jSngjJJkSKxqgL53bAy_cGH6hVRrpzXzn=
+4DwO7kLoOh264LuoMQEoHs8c1Nj3IAhFN05KlB2Dcql6swAn0kwAnH4r1f8qirNbNzqHt6EhHmB=
+8EHP8YDYeeqfm0Qj61ONSy3xjuDOck-5k63m9bnLwqQ3c_Aa0AFZ2VWLBE4KaFWdpg2WUPRNMCW=
+CB9QDAY3HnAY_NJZ-kxkTqbzDSrkKnqPoiQBhMMknD_BT2XTdmj8Q92YNnOC9AjCCdFgISVUoND=
+BOz26y5eYAtBNqNA6z01JaB4ifUpN1mVG6AirKwYLsbeeulGXY_kCKFu_hnhbtgmiPZ9lI3fWX7=
+i9dd4WSVNBFVWTAdSgII4E9b_vSL66FyXC_FUh-jiwoLGrMBNtztALCjk8Y0gFW0PTFQKj4v-Sk=
+xX1J6VkDC4OZI93BCxNdNAWzU%3D" target=3D"_blank" style=3D"line-height: inher=
+it; text-decoration: none; color: #136bf5;" rel=3D"noopener">Read their sto=
+ry</a></span></strong></p> </div> </div> <!--[if mso]></td></tr></table><![=
+endif]--> <!--[if !mso]><!--> <div class=3D"desktop_hide" style=3D"line-hei=
+ght: inherit; mso-hide: all; display: none; max-height: 0px; overflow: hidd=
+en;"> <table class=3D"divider" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"line-height: inherit; table-layout: fixed; v=
+ertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust:=
+ 100%; -webkit-text-size-adjust: 100%;" role=3D"presentation" valign=3D"top=
+"> <tbody style=3D"line-height: inherit;"> <tr style=3D"line-height: inheri=
+t; border-collapse: collapse; vertical-align: top;" valign=3D"top"> <td cla=
+ss=3D"divider_inner" style=3D"line-height: inherit; border-collapse: collap=
+se; word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-=
+size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 0px; paddin=
+g-right: 0px; padding-bottom: 0px; padding-left: 0px;" valign=3D"top"> <tab=
+le class=3D"divider_content" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" style=3D"line-height: inherit; table-layout: fixed; verti=
+cal-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lsp=
+ace: 0pt; mso-table-rspace: 0pt; border-top: 20px solid transparent; height=
+: 20px; width: 100%;" align=3D"center" role=3D"presentation" height=3D"20" =
+valign=3D"top"> <tbody style=3D"line-height: inherit;"> <tr style=3D"line-h=
+eight: inherit; border-collapse: collapse; vertical-align: top;" valign=3D"=
+top"> <td style=3D"line-height: inherit; border-collapse: collapse; word-br=
+eak: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-t=
+ext-size-adjust: 100%;" height=3D"20" valign=3D"top"><span style=3D"line-he=
+ight: inherit;"></span></td> </tr> </tbody> </table> </td> </tr> </tbody> <=
+/table> </div> <!--<![endif]--> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![e=
+ndif]--> </div> </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--> <=
+!--[if (mso)|(IE)]></td><td align=3D"center" width=3D"300" style=3D"backgro=
+und-color:#ffede6;width:300px; border-top: 0px solid transparent; border-le=
+ft: 0px solid transparent; border-bottom: 0px solid transparent; border-rig=
+ht: 0px solid transparent;" valign=3D"top"><table width=3D"100%" cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px=
+; padding-left: 10px; padding-top:5px; padding-bottom:0px;background-color:=
+#ffede6;"><![endif]--> <div class=3D"col num6" style=3D"line-height: inheri=
+t; display: table-cell; vertical-align: top; max-width: 320px; min-width: 3=
+00px; background-color: #ffede6; width: 300px;"> <div class=3D"col_cont" st=
+yle=3D"line-height: inherit; width: 100% !important;"> <!--[if (!mso)&(!IE)=
+]><!--> <div style=3D"line-height: inherit; border-top: 0px solid transpare=
+nt; border-left: 0px solid transparent; border-bottom: 0px solid transparen=
+t; border-right: 0px solid transparent; padding-top: 5px; padding-bottom: 0=
+px; padding-right: 10px; padding-left: 10px;"> <!--<![endif]--> <div class=
+=3D"img-container center autowidth fullwidth" align=3D"center" style=3D"lin=
+e-height: inherit; padding-right: 0px; padding-left: 0px;"> <!--[if mso]><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr st=
+yle=3D"line-height:0px"><td style=3D"padding-right: 0px;padding-left: 0px;"=
+ align=3D"center"><![endif]--><a href=3D"https://links.zapier.com/u/click=
+=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139e=
+c6f&_e=3D7JW639VUVgH1KtGP9F-sye2z69QY_QMyiOx99UOSV15RFaclF--a4CGTq9jepsJ5tT=
+Ye9OKFIL_Gna5jP4JWv9evagSqSNzX_86SnaakcpnGsiJydp3oOIZcE5ZL-nIcwuVEH4eV1k3gz=
+xM0dyOvpxrRGdid9eH_ugKKXfuTlJBpPYHUGkgecsFdNsmKwd9Yj0QwVrwjBgX1hTZT-EvJF0GW=
+MDonj0JShQE9BLU4kdwyoXAOJ2f5UflitGZQnLtNldnKOD1gumPXV5fzZYeFpv95TsSCiF0JY7W=
+OS30AXShLFxEPu5PtmvzgjUkBQg9BkUZmx09SuXUBdrLBuQI8NF7MgPhFQ1LiwXepN2vZxwIkFn=
+1VHQRqK7GNIdSwNLXVn0e8U3oHvoWb2Wsu2IwyRECpgQT_o4swVZbHeGJJGt-j8x0B1HlVyDcCb=
+PrIpfIbxrlYoCf0HwBAoeU10LpQCp-G3G5FuSLkXjM8EGr8tCQ%3D" target=3D"_blank" st=
+yle=3D"line-height: inherit; outline: none;" tabindex=3D"-1"><img class=3D"=
+center autowidth fullwidth" align=3D"center" border=3D"0" src=3D"https://d1=
+5k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7=
+e-c542cff6dd6a/e2cfe0ff47af4b66b47d47e6db9ec57a/default1.png" style=3D"line=
+-height: inherit; text-decoration: none; -ms-interpolation-mode: bicubic; h=
+eight: auto; border: 0; width: 280px; max-width: 100%; display: block;" wid=
+th=3D"280"></a> <!--[if mso]></td></tr></table><![endif]--> </div> <!--[if =
+mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+><tr><td style=3D"padding-right: 0px; padding-left: 0px; padding-top: 20px;=
+ padding-bottom: 5px; font-family: Arial, sans-serif"><![endif]--> <div sty=
+le=3D"color: #333333; font-family: Open Sans, Helvetica, Arial, sans-serif;=
+ line-height: 1.2; padding-top: 20px; padding-right: 0px; padding-bottom: 5=
+px; padding-left: 0px;"> <div class=3D"txtTinyMce-wrapper" style=3D"line-he=
+ight: 1.2; font-size: 12px; color: #333333; font-family: Open Sans, Helveti=
+ca, Arial, sans-serif; mso-line-height-alt: 14px;"> <p style=3D"margin: 0; =
+font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-=
+alt: 17px; margin-top: 0; margin-bottom: 0;"><strong style=3D"line-height: =
+inherit;">Marketing tips</strong></p> </div> </div> <!--[if mso]></td></tr>=
+</table><![endif]--> <!--[if mso]><table width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-=
+left: 0px; padding-top: 0px; padding-bottom: 0px; font-family: Arial, sans-=
+serif"><![endif]--> <div style=3D"color: #354147; font-family: 'Open Sans',=
+ 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; padding-=
+top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;"> <di=
+v class=3D"txtTinyMce-wrapper" style=3D"line-height: 1.5; font-size: 12px; =
+font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; c=
+olor: #354147; mso-line-height-alt: 18px;"> <p style=3D"margin: 0; line-hei=
+ght: 1.5; font-size: 12px; word-break: break-word; text-align: left; mso-li=
+ne-height-alt: 18px; margin-top: 0; margin-bottom: 0;"><span style=3D"line-=
+height: inherit; color: #333333;"><span style=3D"line-height: inherit; font=
+-size: 22px;"><strong style=3D"line-height: inherit;">Treat and prevent mar=
+keting copy maladies</strong></span></span></p> </div> </div> <!--[if mso]>=
+</td></tr></table><![endif]--> <!--[if mso]><table width=3D"100%" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px=
+; padding-left: 0px; padding-top: 10px; padding-bottom: 10px; font-family: =
+Arial, sans-serif"><![endif]--> <div style=3D"color: #555555; font-family: =
+Open Sans, Helvetica, Arial, sans-serif; line-height: 1.2; padding-top: 10p=
+x; padding-right: 0px; padding-bottom: 10px; padding-left: 0px;"> <div clas=
+s=3D"txtTinyMce-wrapper" style=3D"font-family: Open Sans, Helvetica, Arial,=
+ sans-serif; font-size: 12px; line-height: 1.2; color: #555555; mso-line-he=
+ight-alt: 14px;"> <p style=3D"margin: 0; font-size: 14px; line-height: 1.2;=
+ word-break: break-word; text-align: left; mso-line-height-alt: 17px; margi=
+n-top: 0; margin-bottom: 0;"><strong style=3D"line-height: inherit;"><span =
+style=3D"line-height: inherit; font-size: 16px;"><a href=3D"https://links.z=
+apier.com/u/click=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa4=
+40199f9680316139ec6f&_e=3D7JW639VUVgH1KtGP9F-sye2z69QY_QMyiOx99UOSV15RFaclF=
+--a4CGTq9jepsJ5tTYe9OKFIL_Gna5jP4JWv9evagSqSNzX_86SnaakcpnGsiJydp3oOIZcE5ZL=
+-nIcwuVEH4eV1k3gzxM0dyOvpxrRGdid9eH_ugKKXfuTlJBpPYHUGkgecsFdNsmKwd9Yj0QwVrw=
+jBgX1hTZT-EvJF0GWMDonj0JShQE9BLU4kdwyoXAOJ2f5UflitGZQnLtNxvKqKpAknbfg75Mhpk=
+mgxJqS6HCHqT619MwciM9TGw_MWxnSCzpGRnPviP9sB10vdx0kubG1pU8uuIj6fxwKB4z5ODPRA=
+i1krXWs6HdYjDvXOBdf3VGEOTyfvuXoZP7x6CpZdiFlEC4_awUB8z18Fpa8FOZSVd-j7968jeZE=
+3E10srhcsrrGRmKTebVa0y3vmy_La0FDNX4EOk2xaYtZwlyI5bAZ4iOmFwdygqbt9nQ%3D" tar=
+get=3D"_blank" style=3D"line-height: inherit; text-decoration: none; color:=
+ #136bf5;" rel=3D"noopener">Get well soon</a></span></strong></p> </div> </=
+div> <!--[if mso]></td></tr></table><![endif]--> <table class=3D"divider" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"lin=
+e-height: inherit; table-layout: fixed; vertical-align: top; border-spacing=
+: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 1=
+00%;" role=3D"presentation" valign=3D"top"> <tbody style=3D"line-height: in=
+herit;"> <tr style=3D"line-height: inherit; border-collapse: collapse; vert=
+ical-align: top;" valign=3D"top"> <td class=3D"divider_inner" style=3D"line=
+-height: inherit; border-collapse: collapse; word-break: break-word; vertic=
+al-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-si=
+ze-adjust: 100%; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;=
+ padding-left: 0px;" valign=3D"top"> <table class=3D"divider_content" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"line-he=
+ight: inherit; table-layout: fixed; vertical-align: top; border-spacing: 0;=
+ border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; b=
+order-top: 20px solid transparent; height: 30px; width: 100%;" align=3D"cen=
+ter" role=3D"presentation" height=3D"30" valign=3D"top"> <tbody style=3D"li=
+ne-height: inherit;"> <tr style=3D"line-height: inherit; border-collapse: c=
+ollapse; vertical-align: top;" valign=3D"top"> <td style=3D"line-height: in=
+herit; border-collapse: collapse; word-break: break-word; vertical-align: t=
+op; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" height=3D"=
+30" valign=3D"top"><span style=3D"line-height: inherit;"></span></td> </tr>=
+ </tbody> </table> </td> </tr> </tbody> </table> <div class=3D"img-containe=
+r center autowidth fullwidth" align=3D"center" style=3D"line-height: inheri=
+t; padding-right: 0px; padding-left: 0px;"> <!--[if mso]><table width=3D"10=
+0%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr style=3D"line-heig=
+ht:0px"><td style=3D"padding-right: 0px;padding-left: 0px;" align=3D"center=
+"><![endif]--><a href=3D"https://links.zapier.com/u/click=3F_t=3De2cfe0ff47=
+af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139ec6f&_e=3D7JW639VUV=
+gH1KtGP9F-sye2z69QY_QMyiOx99UOSV14LirXHRVUJMTbzF4PK35HdiN2bhbBo8MCZwtXJZsKD=
+_mhznlxjCzD5U_C3A7MXx6o_3JO4WDex2J_jgqSV1esNE3VBiygRF38HzHrfD6lT_rPp-zHFqoA=
+ojFQCTYSjI1F5Iem9ITVrOShat5yglyGlaV1iBS_WzIsPKXZ1mV3Pwd6dEsEcPeUVoBSbTMOs0K=
+w8p9NXOrbmJfYoGWnhQ20jTyIXhZLMVxiXmDJfnyaCtX5_FPqREoLhztkwlxdyofmim6S7EjeF1=
+0tlyDdES69LNIgdBWtJ6gfS0i7HyMZNZMwASVPn5weSJEUD48lQxvNiiW3w0REghdolcGRguyoi=
+MDeixjWJpOShhzGCG4ABw6fMBMzCDkXqNUegwafz4P0gwv-wLgUE_-1hxdQePoZL2Ido_J0Y70m=
+h7-bH3FOf2Q%3D%3D" target=3D"_blank" style=3D"line-height: inherit; outline=
+: none;" tabindex=3D"-1"><img class=3D"center autowidth fullwidth" align=3D=
+"center" border=3D"0" src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/u=
+sers/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/e2cfe0ff47af4b66b47d4=
+7e6db9ec57a/editor_images/career-river-00-hero%20%281%29.jpeg" style=3D"lin=
+e-height: inherit; text-decoration: none; -ms-interpolation-mode: bicubic; =
+height: auto; border: 0; width: 280px; max-width: 100%; display: block;" wi=
+dth=3D"280"></a> <!--[if mso]></td></tr></table><![endif]--> </div> <!--[if=
+ mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0=
+"><tr><td style=3D"padding-right: 0px; padding-left: 0px; padding-top: 20px=
+; padding-bottom: 5px; font-family: Arial, sans-serif"><![endif]--> <div st=
+yle=3D"color: #333333; font-family: Open Sans, Helvetica, Arial, sans-serif=
+; line-height: 1.2; padding-top: 20px; padding-right: 0px; padding-bottom: =
+5px; padding-left: 0px;"> <div class=3D"txtTinyMce-wrapper" style=3D"line-h=
+eight: 1.2; font-size: 12px; color: #333333; font-family: Open Sans, Helvet=
+ica, Arial, sans-serif; mso-line-height-alt: 14px;"> <p style=3D"margin: 0;=
+ font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height=
+-alt: 17px; margin-top: 0; margin-bottom: 0;"><strong style=3D"line-height:=
+ inherit;">Productivity</strong></p> </div> </div> <!--[if mso]></td></tr><=
+/table><![endif]--> <!--[if mso]><table width=3D"100%" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-l=
+eft: 0px; padding-top: 0px; padding-bottom: 0px; font-family: Arial, sans-s=
+erif"><![endif]--> <div style=3D"color: #354147; font-family: 'Open Sans', =
+'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; padding-t=
+op: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;"> <div=
+ class=3D"txtTinyMce-wrapper" style=3D"font-size: 12px; line-height: 1.5; f=
+ont-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; co=
+lor: #354147; mso-line-height-alt: 18px;"> <p style=3D"margin: 0; font-size=
+: 14px; line-height: 1.5; word-break: break-word; text-align: left; mso-lin=
+e-height-alt: 21px; margin-top: 0; margin-bottom: 0;"><span style=3D"line-h=
+eight: inherit; color: #333333;"><span style=3D"line-height: inherit; font-=
+size: 22px;"><strong style=3D"line-height: inherit;">Busting the career lad=
+der myth</strong></span></span></p> </div> </div> <!--[if mso]></td></tr></=
+table><![endif]--> <!--[if mso]><table width=3D"100%" cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-le=
+ft: 0px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-=
+serif"><![endif]--> <div style=3D"color: #555555; font-family: Open Sans, H=
+elvetica, Arial, sans-serif; line-height: 1.2; padding-top: 10px; padding-r=
+ight: 0px; padding-bottom: 10px; padding-left: 0px;"> <div class=3D"txtTiny=
+Mce-wrapper" style=3D"font-family: Open Sans, Helvetica, Arial, sans-serif;=
+ font-size: 12px; line-height: 1.2; color: #555555; mso-line-height-alt: 14=
+px;"> <p style=3D"margin: 0; font-size: 14px; line-height: 1.2; word-break:=
+ break-word; text-align: left; mso-line-height-alt: 17px; margin-top: 0; ma=
+rgin-bottom: 0;"><strong style=3D"line-height: inherit;"><span style=3D"lin=
+e-height: inherit; font-size: 16px;"><a href=3D"https://links.zapier.com/u/=
+click=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f968031=
+6139ec6f&_e=3D7JW639VUVgH1KtGP9F-sye2z69QY_QMyiOx99UOSV14LirXHRVUJMTbzF4PK3=
+5HdiN2bhbBo8MCZwtXJZsKD_mhznlxjCzD5U_C3A7MXx6o_3JO4WDex2J_jgqSV1esNE3VBiygR=
+F38HzHrfD6lT_rPp-zHFqoAojFQCTYSjI1F5Iem9ITVrOShat5yglyGlaV1iBS_WzIsPKXZ1mV3=
+Pwd6dEsEcPeUVoBSbTMOs0KxXssMu7ZqksEv6blRBTAqqQs64dxyln-9OloKOCsBDpETbJBI_nn=
+V2Yl6FjIqeCoiTYJ0WnvzTS9zsCCUMU8kOLBM8zWvxrF2mZByQUpONBoacgdkvD8DFm8b8af_Sn=
+QFfH5ey-DK5FwmPWKYbAm0jAbJxaPjXldps-kc2DPxOFzn4t1OtQntQJ0_IHxWupSF64sZ_1zDg=
+RXwRgvBuXF-T7--aeEV53UHtyUxxPd9I6Q%3D%3D" target=3D"_blank" style=3D"line-h=
+eight: inherit; text-decoration: none; color: #136bf5;" rel=3D"noopener">Ge=
+t a better framework</a></span></strong></p> </div> </div> <!--[if mso]></t=
+d></tr></table><![endif]--> <!--[if !mso]><!--> <div class=3D"desktop_hide"=
+ style=3D"line-height: inherit; mso-hide: all; display: none; max-height: 0=
+px; overflow: hidden;"> <table class=3D"divider" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"line-height: inherit; tabl=
+e-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: c=
+ollapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms=
+-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" role=3D"presentat=
+ion" valign=3D"top"> <tbody style=3D"line-height: inherit;"> <tr style=3D"l=
+ine-height: inherit; border-collapse: collapse; vertical-align: top;" valig=
+n=3D"top"> <td class=3D"divider_inner" style=3D"line-height: inherit; borde=
+r-collapse: collapse; word-break: break-word; vertical-align: top; min-widt=
+h: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; paddin=
+g-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;" va=
+lign=3D"top"> <table class=3D"divider_content" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" style=3D"line-height: inherit; table-la=
+yout: fixed; vertical-align: top; border-spacing: 0; border-collapse: colla=
+pse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 0px solid tr=
+ansparent; height: 20px; width: 100%;" align=3D"center" role=3D"presentatio=
+n" height=3D"20" valign=3D"top"> <tbody style=3D"line-height: inherit;"> <t=
+r style=3D"line-height: inherit; border-collapse: collapse; vertical-align:=
+ top;" valign=3D"top"> <td style=3D"line-height: inherit; border-collapse: =
+collapse; word-break: break-word; vertical-align: top; -ms-text-size-adjust=
+: 100%; -webkit-text-size-adjust: 100%;" height=3D"20" valign=3D"top"><span=
+ style=3D"line-height: inherit;"></span></td> </tr> </tbody> </table> </td>=
+ </tr> </tbody> </table> </div> <!--<![endif]--> <!--[if (!mso)&(!IE)]><!--=
+> </div> <!--<![endif]--> </div> </div> <!--[if (mso)|(IE)]></td></tr></tab=
+le><![endif]--> <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]--> </div> </div> </div> <div style=3D"line-height: inherit; backgrou=
+nd-color: #ffffff;"> <div class=3D"block-grid " style=3D"line-height: inher=
+it; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wra=
+p: break-word; word-break: break-word; Margin: 0 auto; background-color: #f=
+fffff;"> <div style=3D"line-height: inherit; border-collapse: collapse; dis=
+play: table; width: 100%; background-color: #ffffff;"> <!--[if (mso)|(IE)]>=
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"background-color:#ffffff;"><tr><td align=3D"center"><table cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px"><tr class=3D"la=
+yout-full-width" style=3D"background-color:#ffffff"><![endif]--> <!--[if (m=
+so)|(IE)]><td align=3D"center" width=3D"600" style=3D"background-color:#fff=
+fff;width:600px; border-top: 0px solid transparent; border-left: 0px solid =
+transparent; border-bottom: 0px solid transparent; border-right: 0px solid =
+transparent;" valign=3D"top"><table width=3D"100%" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left:=
+ 0px; padding-top:0px; padding-bottom:0px;background-color:#ffffff;"><![end=
+if]--> <div class=3D"col num12" style=3D"line-height: inherit; min-width: 3=
+20px; max-width: 600px; display: table-cell; vertical-align: top; backgroun=
+d-color: #ffffff; width: 600px;"> <div class=3D"col_cont" style=3D"line-hei=
+ght: inherit; width: 100% !important;"> <!--[if (!mso)&(!IE)]><!--> <div st=
+yle=3D"line-height: inherit; border-top: 0px solid transparent; border-left=
+: 0px solid transparent; border-bottom: 0px solid transparent; border-right=
+: 0px solid transparent; padding-top: 0px; padding-bottom: 0px; padding-rig=
+ht: 0px; padding-left: 0px;"> <!--<![endif]--> <table class=3D"divider" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"line-=
+height: inherit; table-layout: fixed; vertical-align: top; border-spacing: =
+0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+ min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100=
+%;" role=3D"presentation" valign=3D"top"> <tbody style=3D"line-height: inhe=
+rit;"> <tr style=3D"line-height: inherit; border-collapse: collapse; vertic=
+al-align: top;" valign=3D"top"> <td class=3D"divider_inner" style=3D"line-h=
+eight: inherit; border-collapse: collapse; word-break: break-word; vertical=
+-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size=
+-adjust: 100%; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; p=
+adding-left: 5px;" valign=3D"top"> <table class=3D"divider_content" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"line-hei=
+ght: inherit; table-layout: fixed; vertical-align: top; border-spacing: 0; =
+border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; bo=
+rder-top: 0px solid transparent; height: 5px; width: 100%;" align=3D"center=
+" role=3D"presentation" height=3D"5" valign=3D"top"> <tbody style=3D"line-h=
+eight: inherit;"> <tr style=3D"line-height: inherit; border-collapse: colla=
+pse; vertical-align: top;" valign=3D"top"> <td style=3D"line-height: inheri=
+t; border-collapse: collapse; word-break: break-word; vertical-align: top; =
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" height=3D"5" v=
+align=3D"top"><span style=3D"line-height: inherit;"></span></td> </tr> </tb=
+ody> </table> </td> </tr> </tbody> </table> <table class=3D"divider" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"line-hei=
+ght: inherit; table-layout: fixed; vertical-align: top; border-spacing: 0; =
+border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mi=
+n-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"=
+ role=3D"presentation" valign=3D"top"> <tbody style=3D"line-height: inherit=
+;"> <tr style=3D"line-height: inherit; border-collapse: collapse; vertical-=
+align: top;" valign=3D"top"> <td class=3D"divider_inner" style=3D"line-heig=
+ht: inherit; border-collapse: collapse; word-break: break-word; vertical-al=
+ign: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padd=
+ing-left: 5px;" valign=3D"top"> <table class=3D"divider_content" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"line-height:=
+ inherit; table-layout: fixed; vertical-align: top; border-spacing: 0; bord=
+er-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border=
+-top: 0px solid transparent; height: 5px; width: 100%;" align=3D"center" ro=
+le=3D"presentation" height=3D"5" valign=3D"top"> <tbody style=3D"line-heigh=
+t: inherit;"> <tr style=3D"line-height: inherit; border-collapse: collapse;=
+ vertical-align: top;" valign=3D"top"> <td style=3D"line-height: inherit; b=
+order-collapse: collapse; word-break: break-word; vertical-align: top; -ms-=
+text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" height=3D"5" valig=
+n=3D"top"><span style=3D"line-height: inherit;"></span></td> </tr> </tbody>=
+ </table> </td> </tr> </tbody> </table> <!--[if (!mso)&(!IE)]><!--> </div> =
+<!--<![endif]--> </div> </div> <!--[if (mso)|(IE)]></td></tr></table><![end=
+if]--> <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->=
+ </div> </div> </div> <div style=3D"line-height: inherit; background-color:=
+ #ffffff;"> <div class=3D"block-grid " style=3D"line-height: inherit; min-w=
+idth: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-=
+word; word-break: break-word; Margin: 0 auto; background-color: #ffffff;"> =
+<div style=3D"line-height: inherit; border-collapse: collapse; display: tab=
+le; width: 100%; background-color: #ffffff;"> <!--[if (mso)|(IE)]><table wi=
+dth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"back=
+ground-color:#ffffff;"><tr><td align=3D"center"><table cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" style=3D"width:600px"><tr class=3D"layout-full=
+-width" style=3D"background-color:#ffffff"><![endif]--> <!--[if (mso)|(IE)]=
+><td align=3D"center" width=3D"600" style=3D"background-color:#ffffff;width=
+:600px; border-top: 0px solid transparent; border-left: 0px solid transpare=
+nt; border-bottom: 0px solid transparent; border-right: 0px solid transpare=
+nt;" valign=3D"top"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0px; pad=
+ding-top:0px; padding-bottom:0px;background-color:#ffffff;"><![endif]--> <d=
+iv class=3D"col num12" style=3D"line-height: inherit; min-width: 320px; max=
+-width: 600px; display: table-cell; vertical-align: top; background-color: =
+#ffffff; width: 600px;"> <div class=3D"col_cont" style=3D"line-height: inhe=
+rit; width: 100% !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"li=
+ne-height: inherit; border-top: 0px solid transparent; border-left: 0px sol=
+id transparent; border-bottom: 0px solid transparent; border-right: 0px sol=
+id transparent; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; =
+padding-left: 0px;"> <!--<![endif]--> <!--[if mso]><table width=3D"100%" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-rig=
+ht: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px; font-fam=
+ily: Arial, sans-serif"><![endif]--> <div style=3D"color: #333333; font-fam=
+ily: Open Sans, Helvetica, Arial, sans-serif; line-height: 1.2; padding-top=
+: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;"> <div c=
+lass=3D"txtTinyMce-wrapper" style=3D"font-size: 12px; line-height: 1.2; fon=
+t-family: Open Sans, Helvetica, Arial, sans-serif; color: #333333; mso-line=
+-height-alt: 14px;"> <p style=3D"margin: 0; font-size: 14px; line-height: 1=
+.2; word-break: break-word; mso-line-height-alt: 17px; margin-top: 0; marg=
+in-bottom: 0;"><!-- START FOOTER --><!-- Social Icons --> <!--[if mso | IE]=
+><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" c=
+lass=3D"section-outlook" style=3D"width:600px" width=3D"600"> <tr> <td styl=
+e=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly"><![endif]-=
+-> <div class=3D"section" style=3D"margin:0 auto;max-width:600px"> <table a=
+lign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+esentation" style=3D"width:100%"> <tbody> <tr> <td style=3D"direction:ltr;f=
+ont-size:0;padding:30px 0 0 0;text-align:center"> <!--[if mso | IE]><table =
+role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr=
+> <td class=3D"column-outlook" style=3D"vertical-align:top;width:600px"><![=
+endif]--> <div class=3D"mj-column-per-100 mj-outlook-group-fix column" styl=
+e=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;verti=
+cal-align:top;width:100%"> <table border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation" style=3D"vertical-align:top" width=3D"100%"> =
+<tr> <td align=3D"center" style=3D"font-size:0;padding:10px 25px;word-break=
+:break-word"> <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation"> <tr> <td><![endif]--> =
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"float:none;display:inline-table"> <tr> <td sty=
+le=3D"padding:0 10px"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" style=3D"border-radius:3px;width:30px"> <tr> <td =
+style=3D"font-size:0;height:30px;vertical-align:middle;width:30px"> <a href=
+=3D"https://links.zapier.com/u/click=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57=
+a&_m=3D3633c3e8cfa440199f9680316139ec6f&_e=3D7JW639VUVgH1KtGP9F-sySxsX5o6_z=
+hcQV8dntwzt9l2NDJpRTUQBBwTveMOo6FoRpU0Mz2I1RxmNlcJm2bbtSjkxl9wFgh6e3jDeb0NR=
+1SHF1HgeE9mc2ikGEHMKEwaz-KD4YTPipaW1en0rhTFXyJ-SHOzjHfXrJsQp4c3VHW5JclLQzc3=
+eJb0eeI5Dpq2V-eVm0xVfAldnrhZwTc2vDf0HKxhExcs2KxS8I7jDVL9oOgJgpAKd2Cu3FHnbXt=
+4DpZtUabni2ZnIAOFjax1Gd7xqyNQgK7rLdjSjlWnhGjUaNF_pc10Z0l8mQxOdr1tCXL6y2L5Af=
+OOuyNnxUhQsdT2LCvtUQD2JIWHUptKtQKm9NTBlC2cov2_tzmn3X4bXS-CG-TAqo7k8fdvvj-GC=
+3wLLt5xZG5WX7GF1Ka2eDQWwRSrE5WbRlqy6vEJMyNl" target=3D"_blank" style=3D"fon=
+t-weight:600;color:#136bf5;text-decoration:none"> <img height=3D"30" src=3D=
+"https://cdn.zapier.com/storage/photos/fa3665ee28f2c7b497885739a023e748.png=
+" style=3D"border-radius:3px;display:block" width=3D"30"> </a></td> </tr> <=
+/table> </td> </tr> </table> <!--[if mso | IE]></td> <td><![endif]--> <tabl=
+e align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"presentation" style=3D"float:none;display:inline-table"> <tr> <td style=3D=
+"padding:0 10px"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"border-radius:3px;width:30px"> <tr> <td style=
+=3D"font-size:0;height:30px;vertical-align:middle;width:30px"> <a href=3D"h=
+ttps://links.zapier.com/u/click=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=
+=3D3633c3e8cfa440199f9680316139ec6f&_e=3D7JW639VUVgH1KtGP9F-syQADE_cdmkFFxV=
+C7saiA0zqbPYmd57sKSALZ1P3VEb8yQIcamJaIzCBsUvxMr0LLNZFX4N3PRxm2W-FGBZlEQq_ce=
+LRFHg7MdnQUE5VZ90cNCOMx-lSgvfLN8VX0N-Myq0UZnTE8_2x1rMYdWLUZP3AIhD8s3u0Rng76=
+DLJmWhInuh_tYojNvKelEU3U3kJMfokL4jQfh0rXdmuCn8C67PmJb_yetSeK8jiZAfRxT4sbrku=
+WMLv0mgGYr4KSTbd-OXeR7e83SvWhIUuwzqOmFoPr0O9EZmgDnkyIwzCCvmUjSaZxLAHwRG7jxw=
+etixnvfYJKeI0PLiIE3yo5kwBN7wBqunEOiHqo70g3_0R-MeCrTgPxnpLtJ2fukVNhv587QHQji=
+_XsJHwnEfUszQfe08SquGCwy77sasWRq-PjRcN6SbPbk4eLIWCeKWYeCS1r-tjjDmKzEqwiQ55j=
+T3MTP4Q%3D" target=3D"_blank" style=3D"font-weight:600;color:#136bf5;text-d=
+ecoration:none"> <img height=3D"30" src=3D"https://cdn.zapier.com/storage/p=
+hotos/1e4135b2dba28b0a8b2372e450fc2c25.png" style=3D"border-radius:3px;disp=
+lay:block" width=3D"30"> </a></td> </tr> </table> </td> </tr> </table> <!--=
+[if mso | IE]></td> <td><![endif]--> <table align=3D"center" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"float:non=
+e;display:inline-table"> <tr> <td style=3D"padding:0 10px"> <table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+order-radius:3px;width:30px"> <tr> <td style=3D"font-size:0;height:30px;ver=
+tical-align:middle;width:30px"> <a href=3D"https://links.zapier.com/u/click=
+=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139e=
+c6f&_e=3D7JW639VUVgH1KtGP9F-syTUsAGus-552Awq0U5v-YUjCotVPNdOdkdoFMtmvuwMsvU=
+oJWGNyk42oLKMOz1JlSoWOcKQQrZVLNulb0ovtscHFflcF6aMwNUqq0frNH1N4oQL43Mbztd6r9=
+W-wy_CcLJWYT6sjLh7XaEKBNWvV6uyl3ELu2FZUO3kZljo45iDsKqvisgpDJE1MpHkEvVNb2zvF=
+lSu-NtBO0kJEDt_DTOQaUm2yTVLKEV5MmnrRK-0LYHUEzB44FoyNBAtDUm3jmuVVLG6kUcLSizM=
+eWAOjVnuyh2tKtw_anBtfNfbmGmkkVI1Z8zJSAR0lHrTu8LjHgBMMpCGZ5sWgyNri1hUh3tsQWs=
+1KRXBpbtqFS_VjItGGIx90Q4_A45R64QyOJCTE2sofTB8_KflIfiQOPJJ4qdTPupRv_XTLcoHf_=
+pXG3Uxl76_b73rzqUuzn6VKKRb_rw%3D%3D" target=3D"_blank" style=3D"font-weight=
+:600;color:#136bf5;text-decoration:none"> <img height=3D"30" src=3D"https:/=
+/cdn.zapier.com/storage/photos/d5073b22813bade66d0f7865d0175686.png" style=
+=3D"border-radius:3px;display:block" width=3D"30"> </a></td> </tr> </table>=
+ </td> </tr> </table> <!--[if mso | IE]></td> <td><![endif]--> <table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"float:none;display:inline-table"> <tr> <td style=3D"paddin=
+g:0 10px"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation" style=3D"border-radius:3px;width:30px"> <tr> <td style=3D"fon=
+t-size:0;height:30px;vertical-align:middle;width:30px"> <a href=3D"https://=
+links.zapier.com/u/click=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c=
+3e8cfa440199f9680316139ec6f&_e=3D7JW639VUVgH1KtGP9F-syZcRfusTuIKNVx7Tc3_8RS=
+VPvlWcdwOPTxo04eea9-salsNQD9Bfe7kubyOE2ffXCw2L_xRKBnK9tsn_3zmsnTIGgwpNq0zb0=
+tUgG8dFyX3mW7scQUG_gx9ZH2fd1P-OHf0_imb5o8aQ7IxpO7Gf1mAZKGWk2XpNEsVqd6fhiE3_=
+CbzJDMJ2XNqXi7xIKO1J2te_gbsJ-EQ__NX_eb1VuEcF8mYE5PwvaX3CRT77wvhBbjuWXAVbLCr=
+zKShJiSMrHwXpciLuhuljOy6K0zekQU6CHZLjmd9NuU75cgg3wPVpehdI1dDOivmT5pn3-U5y1F=
+PFM2mFpMXL79tizusxXWmZClI-7mYzQmCbNJ9zS6gj2Zzi0GppoJOtlEkLp0Z75PMx8OdOAFicC=
+t6JVcHuJhyC24uK06hkT5V4oBoJn2JIR4u0i2l1wF8FMattoEriug%3D%3D" target=3D"_bla=
+nk" style=3D"font-weight:600;color:#136bf5;text-decoration:none"> <img heig=
+ht=3D"30" src=3D"https://cdn.zapier.com/storage/photos/d1b6de9c3059007c1516=
+f4dd9683fa75.png" style=3D"border-radius:3px;display:block" width=3D"30"> <=
+/a></td> </tr> </table> </td> </tr> </table> <!--[if mso | IE]></td> <td><!=
+[endif]--> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" style=3D"float:none;display:inline-table"> <=
+tr> <td style=3D"padding:0 10px"> <table border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"presentation" style=3D"border-radius:3px;width:30px"=
+> <tr> <td style=3D"font-size:0;height:30px;vertical-align:middle;width:30p=
+x"> <a href=3D"https://links.zapier.com/u/click=3F_t=3De2cfe0ff47af4b66b47d=
+47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139ec6f&_e=3D7JW639VUVgH1KtGP9F-=
+sye2z69QY_QMyiOx99UOSV151xqFJGEgraxw32CHdWL4-VH2CxzFkTVRWbY9rkZxLJhDswjaI3s=
+HjnR1OWoKhpI_nY5P-gOaEdb5m8-ocFny9LPst5Zqoa0Mu1e5OKnMRdqjW5PET8mNgqmthA_inL=
+Lo0D41zlTM8y9UFwr97QFEhA48nMXOYw3lRDAeeZ4j2kV7tstGu9WEALYAUQFw_44db1u0vkwwL=
+bracpqP7epO64x6QUJ4WSjFL1hu5DzS9WkC1cbzC4hYv2u5pWsViTXJHJUtzHGW999FPcFnfh44=
+pcNRv4aL-kjn8p-9HNzTsOekVomNYcOomUeVHIWDq9sYSL3rNnuGiim49mitOTqRQQyVd_92Jq2=
+1fZ2G5cTJwjDcZbPMj6bD42DFQ5RKSe0DHN_pkcVyHGZqvw7CYP4MYGqf-iY8ndjw2Ya8gXuOpi=
+LNrXgwunSCWRlKb73YZGnk%3D" target=3D"_blank" style=3D"font-weight:600;color=
+:#136bf5;text-decoration:none"> <img height=3D"30" src=3D"https://cdn.zapie=
+r.com/storage/photos/e79880fa7972a6a9996b73a71be44a02.png" style=3D"border-=
+radius:3px;display:block" width=3D"30"> </a></td> </tr> </table> </td> </tr=
+> </table> <!--[if mso | IE]></td> </tr> </table><![endif]--> </td> </tr> <=
+/table> </div> <!--[if mso | IE]></td> </tr> </table><![endif]--> </td> </t=
+r> </tbody> </table> </div> <!--[if mso | IE]></td> </tr> </table> <table a=
+lign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"f=
+ooter-outlook" style=3D"width:600px" width=3D"600"> <tr> <td style=3D"line-=
+height:0px;font-size:0px;mso-line-height-rule:exactly"><![endif]--> <div cl=
+ass=3D"footer" style=3D"margin:0 auto;max-width:600px"> <table align=3D"cen=
+ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"=
+ style=3D"width:100%"> <tbody> <tr> <td style=3D"direction:ltr;font-size:0p=
+x;padding:0px;text-align:center"> <!--[if mso | IE]><table role=3D"presenta=
+tion" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><![endif]--> <!-- Su=
+pport Info --> <!--[if mso | IE]><tr> <td class=3D"section-outlook" width=
+=3D"600px"> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"section-outlook" style=3D"width:600px" width=3D"600"> <t=
+r> <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly"=
+><![endif]--> <div class=3D"section" style=3D"margin:0 auto;max-width:600px=
+"> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"width:100%"> <tbody> <tr> <td style=3D"dire=
+ction:ltr;font-size:0;padding:0 40px;text-align:center"> <!--[if mso | IE]>=
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"> <tr> <td class=3D"column-outlook" style=3D"vertical-align:top;width:520=
+px"><![endif]--> <div class=3D"mj-column-per-100 mj-outlook-group-fix colum=
+n" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-bloc=
+k;vertical-align:top;width:100%"> <table border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"presentation" style=3D"vertical-align:top" width=3D"=
+100%"> <tr> <td align=3D"center" class=3D"text" style=3D"font-size:0;paddin=
+g:10px 0;word-break:break-word"> <div style=3D"font-family:'Open Sans',Helv=
+etica,Arial,sans-serif;font-size:13.33px;font-weight:600;line-height:150%;t=
+ext-align:center;color:#333"> Got a question=3F <a href=3D"https://links.za=
+pier.com/u/click=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa44=
+0199f9680316139ec6f&_e=3D7JW639VUVgH1KtGP9F-syWcBq6lk_WiJGcdLuj9coa2WuV0mU0=
+35X66QjnR7Kr1gEHoKXudKa_NPbLwmXI4k1KgQgccA7UPUlAdn5FrFmNdjbI21rqq4WIkV0i6cv=
+3OXxpV-1txe0WUfGOALy-6OUNWJKHiOVqQ-huNIHLc21IAtTq6MCZKW2NwE7FK00oZImsEKDM_l=
+tVgXgA0e1zsb26GVLqpUuGjhSWX6vSCrn7XAYCPI9F2VhMwGmwFqdJqhEPJwCflPnbgzF6t3MSv=
+Omca9KOgejGaZTp7hHjUD-5Dxm3eKU4q68soc7srjKzA3CzMya4K6r6eEJqunUfA_uwqPcj67af=
+y2J2Z2g4AmGBOphdRnkNiR6CRziS7RzLqozJ6C10BZvSHT23xCnUPtMLmfyACA41CFICDu4mbYK=
+SC_ri_Grhl7W2h3-gQvz649-nOKdQDaZmH0CD7fk-bHvp43QTyfq_8xZDVyzaDUhJg%3D" styl=
+e=3D"color:#136bf5;text-decoration:none;font-weight:600">Ask in our communi=
+ty</a> </div> </td> </tr> <tr> <td align=3D"center" class=3D"text" style=3D=
+"font-size:0;padding:10px 0;word-break:break-word"> <div style=3D"font-fami=
+ly:'Open Sans',Helvetica,Arial,sans-serif;font-size:13.33px;line-height:150=
+%;text-align:center;color:#333">&copy; 2022 Zapier, Inc. All rights reserve=
+d.<br> <a style=3D"font-weight:400;text-decoration:none;pointer-events:none=
+;color:#333">548 Market St #62411, San Francisco, CA <span style=3D"white-s=
+pace:nowrap">94104-5401</span></a></div> </td> </tr> </table> </div> <!--[i=
+f mso | IE]></td> </tr> </table><![endif]--> </td> </tr> </tbody> </table> =
+</div> <!--[if mso | IE]></td> </tr> </table> </td> </tr><![endif]--> <!-- =
+Unsubscribe Links --> <!--[if mso | IE]><tr> <td class=3D"unsub-links-outlo=
+ok" width=3D"600px"> <table align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"unsub-links-outlook" style=3D"width:600px" widt=
+h=3D"600"> <tr> <td style=3D"line-height:0px;font-size:0px;mso-line-height-=
+rule:exactly"><![endif]--> <div class=3D"unsub-links" style=3D"margin:0 aut=
+o;max-width:600px"> <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"width:100%"> <tbody> <tr> =
+<td style=3D"direction:ltr;font-size:0;padding:0 40px;text-align:center"> <=
+!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0"> <tr> <td class=3D"column-outlook" style=3D"vertical-al=
+ign:top;width:520px"><![endif]--> <div class=3D"mj-column-per-100 mj-outloo=
+k-group-fix column" style=3D"font-size:0px;text-align:left;direction:ltr;di=
+splay:inline-block;vertical-align:top;width:100%"> <table border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"vertical-ali=
+gn:top" width=3D"100%"> <tr> <td align=3D"center" class=3D"text" style=3D"f=
+ont-size:0;padding:10px 0;padding-bottom:0;word-break:break-word"> <div sty=
+le=3D"font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:13.33px;=
+line-height:150%;text-align:center;color:#333"> You received this email bec=
+ause you're subscribed to the <em>Zapier Blog &amp; Newsletter</em>. </div>=
+ </td> </tr> <tr> <td align=3D"center" class=3D"text" style=3D"font-size:0;=
+padding:10px 0;padding-top:0;padding-bottom:30px;word-break:break-word"> <d=
+iv style=3D"font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:13=
+.33px;line-height:150%;text-align:center;color:#333">Want to unsubscribe o=
+r change which emails your receive from us=3F <br><a href=3D"https://links.=
+zapier.com/e/eh=3F_t=3De2cfe0ff47af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440=
+199f9680316139ec6f&_e=3D7JW639VUVgH1KtGP9F-syYXaypKSJvtkmx5fB_y9mSVvvL4AB3O=
+tiAVw-tq4KfcDc9HmlM0Wt3mdPMgi7wxefFxA3iLknyEsGyC8h_6nCxyV5zFWWRK9Izc6RznRwL=
+OfDMyWNy3ZKjul7mUz5D6qO77RPd1F76Xw0PWDT2vraxjbmOkrgth3abX13pH4Q7YZJaFB2mxlB=
+pw9bB2KtXLEF6PX4Q4LBCBg80Iy5RhiSpBrw0Wf7X17VFpKM_hTiHg0YcqM3qKIa-NOe9X9DL85=
+Qtbx4Pmf7L6vTj3U_H0jwwo4fjE63cE3LSo-lBlBtkWFjJvbCRv3Gg7xxEywFJx_uAhLtODdvXP=
+k7gU_YFv549kg7KrpG5YrKdUOrYKeDfZiZzLRiqb37QAXUyjXDoFkYdyPFtLvRRYqgJ7tudYtNi=
+sCe6SRWkLd7j0-bJRr7WimMCl03hR9GPAkpjkUblbHrpNT5U8qSaUZ8nbVteatqmF9F05-BHaFD=
+z1QPyvIdAL-Z8OGRY5PmGh6D0-VDxsmK-0LjmzcEbQ0YvevOdxfmGHrl8DeOuw_vyIogv-ZkPGr=
+" id=3D"unsubscribe-link" style=3D"color:#136bf5;text-decoration:none;font-=
+weight:400">Update your email preferences</a></div> </td> </tr> <tr> <td al=
+ign=3D"center" class=3D"text" style=3D"font-size:0;padding:10px 0;padding-b=
+ottom:30px;word-break:break-word"> <div style=3D"font-family:'Open Sans',He=
+lvetica,Arial,sans-serif;font-size:13.33px;line-height:150%;text-align:cent=
+er;color:#333"><a href=3D"https://links.zapier.com/u/click=3F_t=3De2cfe0ff4=
+7af4b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139ec6f&_e=3D7JW639VU=
+VgH1KtGP9F-syYj7GWjwKdBMKeU_uf-hBcfeEFqbTCe7IbpehKuyM3uG2E9Nd1RSREOHYAxJXGN=
+zv0Grp8Hl9mCFy5cBFAEtJTK5kOuB8SMa5alK7Dg82EyhgXygNQfitUwa7UEJXqev3bhERHnJhh=
+bYUHH2FEyBQ_IZMCB9COmf8iaWQJrt1NHGFfNXxj8zIIuto2faVNlEAA-WW7VpshMCSJyMn13Np=
+FzPqtVB0ClhT7mEo_NGDYycNLG1QNj_co5AmL2xCbcV_UK1kD1keTsdOZ892LHlZfLwrEVBAU1b=
+d5sqsWHy5mVpO9fv3G1c9eMmu5C4d88LnIxi5PFlKM1XThW0t7BuwRb1sfdgEZ2rwQ_w2pPmmdi=
+DpI5bo0QN7G7HQoO_sy7-bds49LAdCzoT9mz0H2hUZxfhGN1twlLSUQmEtgBbN5Z9W_pzSyEuoZ=
+8wLO3ENlw8Wcao7kniWPfdnkib40Oqzwg%3D" style=3D"color:#136bf5;text-decoratio=
+n:none;font-weight:400;white-space:nowrap">Privacy policy</a>&nbsp;&nbsp;|&=
+nbsp;&nbsp;<a href=3D"https://links.zapier.com/u/click=3F_t=3De2cfe0ff47af4=
+b66b47d47e6db9ec57a&_m=3D3633c3e8cfa440199f9680316139ec6f&_e=3D7JW639VUVgH1=
+KtGP9F-syXltGVz21LXp5JHKtlb8JMh7WhEK8b-8WH8vVYhrODJvSWWVT_O1SLd5D4_mO5SKFxB=
+irAprhspm5yhEsiiKcdQal8d8XCbVa9KQtKIh7XoRQ6BoBkn25QaTyHq9oOb4QnlqTfyvHN5ixK=
+ZJDXJ9vK0xyiQYLQzQREpzS7474iTrH_DEjk3m-bxEwbVuhNXUezPcWqvu1hKA8bblFzA8f8oja=
+1NJ2oKP-iVFydc_X3JedWW0kTujCB2D9ubrMmJp8ieWS3vxfHSa4GdZDj5x8OjWM96lArvkzQAM=
+D_-X8R29QKuFrtCIs7yJl89vSzU-pzcMjIuJmHTcOyJeZO3sl_-fE0f605Rv9VPOwFvVsWVRwK4=
+OVoZhxOiwYa6SuEaQob0pCB2cPkR0YNQERJNTepWwn6k6lv2OIrgd9AR1S2u6JGtzuzwYeCUsn7=
+RLplPniMnNXbjCTD-Z3t8RFU9YoJ0%3D" style=3D"color:#136bf5;text-decoration:no=
+ne;font-weight:400;white-space:nowrap">Contact us</a></div> </td> </tr> </t=
+able> </div> <!--[if mso | IE]></td> </tr> </table><![endif]--> </td> </tr>=
+ </tbody> </table> </div> <!--[if mso | IE]></td> </tr> </table> </td> </tr=
+><![endif]--> <!-- END FOOTER --></p> </div> </div> <!--[if mso]></td></tr>=
+</table><![endif]--> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![endif]--> </=
+div> </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--> <!--[if (mso=
+)|(IE)]></td></tr></table></td></tr></table><![endif]--> </div> </div> </di=
+v> <!--[if (mso)|(IE)]></td></tr></table><![endif]--> </td> </tr> </tbody> =
+</table> <!--[if (IE)]></div><![endif]--> </body> </html>=0D=0A<img border=
+=3D"0" width=3D"1" height=3D"1" alt=3D"" src=3D"http://opens.zapier.com/q/v=
+IVRNr5JsQfkDxmG9WmrZQ~~/AAM_vwA~/RgRj_34QPlcDc3BjQgpiFhD5HGKBKUEjUiVub3RpZm=
+ljYXRpb25Aa2VudGlhLWRvbWljaWxpYXRpb24uY29tWAQAAAAA">=0D=0A
+--_----btC2OMSofVyi0x39wroaRQ===_63/32-00480-019FC126--
+

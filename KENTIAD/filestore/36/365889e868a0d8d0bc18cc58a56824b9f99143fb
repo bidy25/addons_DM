@@ -1,0 +1,510 @@
+Return-Path: <office@kentia-domiciliation.com>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 17 May 2022 08:16:36 +0200
+Received: from unknown (HELO output31.mail.ovh.net) (10.108.115.65)
+  by mail328.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 17 May 2022 08:16:36 +0200
+Received: from vr42.mail.ovh.net (unknown [10.101.8.42])
+	by out31.mail.ovh.net (Postfix) with ESMTP id 4L2Qqm5jdpzMpS83y
+	for <notification@kentia-domiciliation.com>; Tue, 17 May 2022 06:16:36 +0000 (UTC)
+Received: from in64.mail.ovh.net (unknown [10.101.4.64])
+	by vr42.mail.ovh.net (Postfix) with ESMTP id 4L2Qqm40zTz2WLy7h
+	for <notification@kentia-domiciliation.com>; Tue, 17 May 2022 06:16:36 +0000 (UTC)
+X-Comment: SPF check N/A for local connections - client-ip=213.251.189.206; helo=player758.ha.ovh.net; envelope-from=office@kentia-domiciliation.com; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in64.mail.ovh.net; dkim=none; dkim-atps=neutral
+Received: from player758.ha.ovh.net (gw6.ovh.net [213.251.189.206])
+	by in64.mail.ovh.net (Postfix) with ESMTP id 4L2Qqm3LD0z1kgHMd
+	for <notification@kentia-domiciliation.com>; Tue, 17 May 2022 06:16:36 +0000 (UTC)
+Received: from kentia-domiciliation.com (167.142.120.154-ip-dyn.orange.mg [154.120.142.167])
+	(Authenticated sender: office@kentia-domiciliation.com)
+	by player758.ha.ovh.net (Postfix) with ESMTPSA id A6C742A8E97EB;
+	Tue, 17 May 2022 06:16:29 +0000 (UTC)
+Authentication-Results: garm.ovh; auth=pass (GARM-110S0040ee4c100-9d94-4332-af13-a093e02a34e0,
+                    FCE6E9C896E874189FAF77127B98D74D2B46DBDF) smtp.auth=office@kentia-domiciliation.com
+X-OVh-ClientIp: 154.120.142.167
+From: "Faniry Fy Tia Jonah RAZAKARIVONY" <office@kentia-domiciliation.com>
+To: "'Ammar Abdealy'" <ammarabdealy@gmail.com>,
+	<notification@kentia-domiciliation.com>,
+	"'Team'" <team@kentia-domiciliation.com>
+References: <032378551080008.1650370199.208439826965332-openerp-2247-account.move@kentia-domiciliation-1> <931378780354991.1652709411.944870233535767-openerp-2247-account.move@kentia-domiciliation-1> <CAMJLd10j4MSoCLPbxLjPSOEphLY-2aeD3n_qBGKJHbgnLS91zg@mail.gmail.com>
+In-Reply-To: <CAMJLd10j4MSoCLPbxLjPSOEphLY-2aeD3n_qBGKJHbgnLS91zg@mail.gmail.com>
+Subject: =?utf-8?Q?RE:_Facture_N=C2=B00259/2022/KD_|_AMI?=
+	=?utf-8?Q?LA_-_KENTIA-DOMICILIATION_sarl?=
+Date: Tue, 17 May 2022 09:16:54 +0300
+Message-ID: <018301d869b5$b89725a0$29c570e0$@kentia-domiciliation.com>
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0184_01D869CE.DDE59620"
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AQHh9efGfKiry70LWQZugYoNgv27/gExxjx7Az8Va9as6/h2UA==
+Content-Language: fr
+X-Antivirus: Avast (VPS 220516-8, 16/5/2022), Outbound message
+X-Antivirus-Status: Clean
+X-Ovh-Tracer-Id: 4450682335133993928
+X-OVH-Remote: 213.251.189.206 (gw6.ovh.net)
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: -51
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvfedrheeigddutdeiucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuqfggjfdpvefjgfevmfevgfenuceurghilhhouhhtmecuhedttdenucesvcftvggtihhpihgvnhhtshculddquddttddmnegoufhushhpvggtthffohhmrghinhculdegledmnecujfgurhephffvfhgjufffkfggtgfothesrhdtghepvddtjeenucfhrhhomhepfdfhrghnihhrhicuhfihucfvihgrucflohhnrghhucfttegktefmteftkfggqffpjgdfuceoohhffhhitggvsehkvghnthhirgdqughomhhitghilhhirghtihhonhdrtghomheqnecuggftrfgrthhtvghrnhepffduffffhfevuefhjeevgfdujeehveekgffffeefgfevledtiedvjeefffeugeevnecuffhomhgrihhnpehkvghnthhirgdqughomhhitghilhhirghtihhonhdrtghomhdplhhinhhkvgguihhnrdgtohhmpdhoughoohdrtghomhdprghvrghsthdrtghomhenucfkpheptddrtddrtddrtddpudehgedruddvtddrudegvddrudeijeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepmhhouggvpehsmhhtphdphhgvlhhopehnihhlpdhinhgvtheptddrtddrtddrtddpmhgrihhlfhhrohhmpehofhhfihgtvgeskhgvnhhtihgrqdguohhmihgtihhlihgrthhiohhnrdgtohhmpdhnsggprhgtphhtthhopedupdhrtghpthhtohepnhhothhifhhitggrthhiohhnsehkvghnthhirgdqughomhhitghilh
+ hirghtihhonhdrtghomhdpshhpfhepnhhilhdpughkihhmpehnohhnvgdpghgvohfkrfepnhhilhdpoffvtefjohhsthepvhhrgedv
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0184_01D869CE.DDE59620
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_0185_01D869CE.DDE59620"
+
+
+------=_NextPart_001_0185_01D869CE.DDE59620
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour Monsieur Ammar,
+
+ 
+
+Nous avons besoins d=E2=80=99un exemplaire de plus pour les PV, statuts et =
+le contrat de domiciliation.
+
+ 
+
+Restant =C3=A0 votre disposition,
+
+Bien cordialement,
+
+ 
+
+Faniry Fy Tia Jonah RAZAKARIVONY
+
+Assistant en Cr=C3=A9ation et Domiciliation
+
+KENTIA-DOMICILIATION sarl
+
++261 32 05 357 42
+
+Immeuble Jacaranda Ambatonakanga
+101 Antananarivo MADAGASCAR
+
+
+
+Service de cr=C3=A9ation de soci=C3=A9t=C3=A9s | Domiciliation de soci=C3=
+=A9t=C3=A9s | Demande
+de visa, permis et licences | R=C3=A9daction de business plan |Repr=C3=A9se=
+ntation
+de soci=C3=A9t=C3=A9s | Etudes de march=C3=A9 et marketing.
+www.kentia-domiciliation.com <https://www.linkedin.com/redir/redirect?url=
+=3Dwww%2Ekentia-domiciliation%2Ecom&urlhash=3Dtvmu> 
+
+ 
+
+ 
+
+ 
+
+De : Ammar Abdealy [mailto:ammarabdealy@gmail.com] 
+Envoy=C3=A9 : mardi 17 mai 2022 09:13
+=C3=80 : notification@kentia-domiciliation.com; Team <team@kentia-domicilia=
+tion.com>
+Objet : Re: Facture N=C2=B00259/2022/KD | AMILA - KENTIA-DOMICILIATION sarl=
+
+
+ 
+
+Faniry,
+
+ 
+
+Quels sont les docs dont vous avez besoin en plusieurs exemplaires ?
+
+Merci de pr=C3=A9ciser la prochaine fois pour =C3=A9viter les vas et viens.=
+
+
+ 
+
+Cordialement
+
+ 
+
+Le lun. 16 mai 2022 =C3=A0 16:56, Faniry R. <office@kentia-domiciliation.co=
+m <mailto:office@kentia-domiciliation.com> > a =C3=A9crit :
+
+Monsieur Ammar,
+
+ 
+
+Vous pouvez trouver en attach=C3=A9 la facture avec la date modifi=C3=A9e.
+
+ 
+
+Restant =C3=A0 votre disposition,
+
+Bien cordialement,
+
+ 
+
+Faniry RAZAKARIVONY
+
++261 32 05 357 42
+
+Assistant en cr=C3=A9ation et domiciliation   
+
+KENTIA-DOMICILIATION SARL
+
+Envoy=C3=A9 par KENTIA-DOMICILIATION sarl utilisant  <https://www.odoo.com?=
+utm_source=3Ddb&utm_medium=3Demail> Odoo. 
+
+
+
+
+ 
+
+-- 
+
+Cordialement / Regards
+
+ 
+
+Ammar ABDEALY
+
+Tel/Whatsapp : +261341141426
+
+Email : ammarabdealy@gmail.com <mailto:ammarabdealy@gmail.com>  
+
+ 
+
+ 
+
+
+
+-- 
+L'absence de virus dans ce courrier =C3=A9lectronique a =C3=A9t=C3=A9 v=C3=
+=A9rifi=C3=A9e par le logiciel antivirus Avast.
+https://www.avast.com/antivirus
+
+------=_NextPart_001_0185_01D869CE.DDE59620
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head><meta http-equiv=3DContent-Type content=
+=3D"text/html; charset=3Dutf-8"><meta name=3DGenerator content=3D"Microsoft=
+ Word 15 (filtered medium)"><!--[if !mso]><style>v\:* {behavior:url(#defaul=
+t#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+=2Eshape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.EmailStyle19
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:#1F497D;}
+=2EMsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DFR link=3Dblue vlink=
+=3Dpurple><div class=3DWordSection1><p class=3DMsoNormal><span style=3D'fon=
+t-size:11.0pt;font-family:"Calibri",sans-serif;color:#1F497D;mso-fareast-la=
+nguage:EN-US'>Bonjour Monsieur Ammar,<o:p></o:p></span></p><p class=3DMsoNo=
+rmal><span style=3D'font-size:11.0pt;font-family:"Calibri",sans-serif;color=
+:#1F497D;mso-fareast-language:EN-US'><o:p>&nbsp;</o:p></span></p><p class=
+=3DMsoNormal><span style=3D'font-size:11.0pt;font-family:"Calibri",sans-ser=
+if;color:#1F497D;mso-fareast-language:EN-US'>Nous avons besoins d=E2=80=99u=
+n exemplaire de plus pour les PV, statuts et le contrat de domiciliation.<o=
+:p></o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:11.0pt;fo=
+nt-family:"Calibri",sans-serif;color:#1F497D;mso-fareast-language:EN-US'><o=
+:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:11.=
+0pt;font-family:"Calibri",sans-serif;color:#1F497D;mso-fareast-language:EN-=
+US'>Restant =C3=A0 votre disposition,<o:p></o:p></span></p><p class=3DMsoNo=
+rmal><span style=3D'font-size:11.0pt;font-family:"Calibri",sans-serif;color=
+:#1F497D;mso-fareast-language:EN-US'>Bien cordialement,<o:p></o:p></span></=
+p><p class=3DMsoNormal><span style=3D'font-size:11.0pt;font-family:"Calibri=
+",sans-serif;color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNorma=
+l><b><span style=3D'font-family:"Arial",sans-serif;color:#1F3864'>Faniry Fy=
+ Tia Jonah RAZAKARIVONY<o:p></o:p></span></b></p><p class=3DMsoNormal><span=
+ style=3D'font-size:8.0pt;font-family:"Arial",sans-serif;color:#1F497D'>Ass=
+istant en Cr=C3=A9ation et Domiciliation</span><b><span style=3D'font-famil=
+y:"Arial",sans-serif;color:#1F3864'><o:p></o:p></span></b></p><p class=3DMs=
+oNormal><span style=3D'font-size:8.0pt;font-family:"Arial",sans-serif;color=
+:#1F497D'>KENTIA-DOMICILIATION sarl<o:p></o:p></span></p><p class=3DMsoNorm=
+al><span style=3D'font-size:8.0pt;font-family:"Arial",sans-serif;color:#1F4=
+97D'>+261 32 05&nbsp;357 42<o:p></o:p></span></p><p class=3DMsoNormal><span=
+ style=3D'font-size:8.0pt;font-family:"Arial",sans-serif;color:#1F497D'>Imm=
+euble Jacaranda Ambatonakanga<br>101 Antananarivo MADAGASCAR<o:p></o:p></sp=
+an></p><p class=3DMsoNormal><span style=3D'font-size:8.0pt;font-family:"Ari=
+al",sans-serif;color:#1F497D'><img width=3D315 height=3D55 style=3D'width:3=
+=2E2812in;height:.5729in' id=3D"Image_x0020_1" src=3D"cid:image001.png@01D8=
+69CE.D935F0C0" alt=3Dimage001><o:p></o:p></span></p><p class=3DMsoNormal><i=
+><span style=3D'font-size:8.0pt;font-family:"Arial",sans-serif;color:black;=
+background:white'>Service de cr=C3=A9ation de soci=C3=A9t=C3=A9s | Domicili=
+ation de soci=C3=A9t=C3=A9s&nbsp;| Demande<br>de visa, permis et licences&n=
+bsp;| R=C3=A9daction de business plan |Repr=C3=A9sentation<br>de soci=C3=A9=
+t=C3=A9s&nbsp;| Etudes de march=C3=A9 et marketing</span></i><span style=3D=
+'font-size:8.0pt;font-family:"Arial",sans-serif;color:black;background:whit=
+e'>.<br><a href=3D"https://www.linkedin.com/redir/redirect?url=3Dwww%2Ekent=
+ia-domiciliation%2Ecom&amp;urlhash=3Dtvmu" target=3D"_blank">www.kentia-dom=
+iciliation.com</a><o:p></o:p></span></p><p class=3DMsoNormal><span style=3D=
+'font-size:11.0pt;font-family:"Calibri",sans-serif;color:#1F497D'><o:p>&nbs=
+p;</o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:11.0pt;fon=
+t-family:"Calibri",sans-serif;color:#1F497D;mso-fareast-language:EN-US'><o:=
+p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:11.0=
+pt;font-family:"Calibri",sans-serif;color:#1F497D;mso-fareast-language:EN-U=
+S'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><b><span style=3D'font-=
+size:11.0pt;font-family:"Calibri",sans-serif'>De&nbsp;:</span></b><span sty=
+le=3D'font-size:11.0pt;font-family:"Calibri",sans-serif'> Ammar Abdealy [ma=
+ilto:ammarabdealy@gmail.com] <br><b>Envoy=C3=A9&nbsp;:</b> mardi 17 mai 202=
+2 09:13<br><b>=C3=80&nbsp;:</b> notification@kentia-domiciliation.com; Team=
+ &lt;team@kentia-domiciliation.com&gt;<br><b>Objet&nbsp;:</b> Re: Facture N=
+=C2=B00259/2022/KD | AMILA - KENTIA-DOMICILIATION sarl<o:p></o:p></span></p=
+><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><div><p class=3DMsoNormal>Faniry=
+,<o:p></o:p></p><div><p class=3DMsoNormal><o:p>&nbsp;</o:p></p></div><div><=
+p class=3DMsoNormal>Quels sont les docs dont vous avez besoin en plusieurs&=
+nbsp;exemplaires ?<o:p></o:p></p></div><div><p class=3DMsoNormal>Merci de p=
+r=C3=A9ciser la prochaine fois pour =C3=A9viter les vas et viens.<o:p></o:p=
+></p></div><div><p class=3DMsoNormal><o:p>&nbsp;</o:p></p></div><div><p cla=
+ss=3DMsoNormal>Cordialement<o:p></o:p></p></div></div><p class=3DMsoNormal>=
+<o:p>&nbsp;</o:p></p><div><div><p class=3DMsoNormal>Le&nbsp;lun. 16 mai 202=
+2 =C3=A0&nbsp;16:56, Faniry R. &lt;<a href=3D"mailto:office@kentia-domicili=
+ation.com">office@kentia-domiciliation.com</a>&gt; a =C3=A9crit&nbsp;:<o:p>=
+</o:p></p></div><blockquote style=3D'border:none;border-left:solid #CCCCCC =
+1.0pt;padding:0cm 0cm 0cm 6.0pt;margin-left:4.8pt;margin-right:0cm'><div><d=
+iv><div><p class=3DMsoNormal><span style=3D'font-size:10.0pt;font-family:"H=
+elvetica",sans-serif'>Monsieur Ammar,<o:p></o:p></span></p><p class=3DMsoNo=
+rmal><span style=3D'font-size:10.0pt;font-family:"Helvetica",sans-serif'><o=
+:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:10.=
+0pt;font-family:"Helvetica",sans-serif'>Vous pouvez trouver en attach=C3=A9=
+ la facture avec la date modifi=C3=A9e.<o:p></o:p></span></p><p class=3DMso=
+Normal><span style=3D'font-size:10.0pt;font-family:"Helvetica",sans-serif'>=
+<o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:1=
+0.0pt;font-family:"Helvetica",sans-serif'>Restant =C3=A0 votre disposition,=
+<o:p></o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:10.0pt;=
+font-family:"Helvetica",sans-serif'>Bien cordialement,<o:p></o:p></span></p=
+><p class=3DMsoNormal><span style=3D'font-size:10.0pt;font-family:"Helvetic=
+a",sans-serif'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span style=
+=3D'font-size:10.0pt;font-family:"Helvetica",sans-serif'>Faniry RAZAKARIVON=
+Y<o:p></o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:10.0pt=
+;font-family:"Helvetica",sans-serif'>+261 32 05 357 42<o:p></o:p></span></p=
+><p class=3DMsoNormal><span style=3D'font-size:10.0pt;font-family:"Helvetic=
+a",sans-serif'>Assistant en cr=C3=A9ation et domiciliation&nbsp; &nbsp;<o:p=
+></o:p></span></p><p class=3DMsoNormal><span style=3D'font-size:10.0pt;font=
+-family:"Helvetica",sans-serif'>KENTIA-DOMICILIATION SARL<o:p></o:p></span>=
+</p></div></div><p style=3D'margin-top:24.0pt'><span style=3D'color:#555555=
+'>Envoy=C3=A9 par KENTIA-DOMICILIATION sarl utilisant <a href=3D"https://ww=
+w.odoo.com?utm_source=3Ddb&amp;utm_medium=3Demail" target=3D"_blank"><span =
+style=3D'color:#875A7B;text-decoration:none'>Odoo</span></a>. <o:p></o:p></=
+span></p></div></blockquote></div><p class=3DMsoNormal><br clear=3Dall><o:p=
+></o:p></p><div><p class=3DMsoNormal><o:p>&nbsp;</o:p></p></div><p class=3D=
+MsoNormal>-- <o:p></o:p></p><div><div><div><div><div><div><div><div><p clas=
+s=3DMsoNormal><span style=3D'font-size:10.0pt;font-family:"Arial",sans-seri=
+f;color:black'>Cordialement / Regards</span><o:p></o:p></p></div><div><p cl=
+ass=3DMsoNormal><o:p>&nbsp;</o:p></p><div><p class=3DMsoNormal>Ammar ABDEAL=
+Y<o:p></o:p></p></div><div><p class=3DMsoNormal><span style=3D'font-family:=
+"Arial",sans-serif;color:black'>Tel/Whatsapp : +261341141426</span><o:p></o=
+:p></p></div><div><p class=3DMsoNormal><span style=3D'font-family:"Arial",s=
+ans-serif;color:black'>Email : <a href=3D"mailto:ammarabdealy@gmail.com" ta=
+rget=3D"_blank">ammarabdealy@gmail.com</a>&nbsp;</span><o:p></o:p></p></div=
+><div><p><o:p>&nbsp;</o:p></p></div></div></div><div><p><o:p>&nbsp;</o:p></=
+p></div></div></div></div></div></div></div></div><div id=3D"DAB4FAD8-2DD7-=
+40BB-A1B8-4E2AA1F9FDF2"><br /> <table style=3D"border-top: 1px solid #D3D4D=
+E;">
+	<tr>
+      <td style=3D"width: 55px; padding-top: 18px;"><a href=3D"https://www.=
+avast.com/sig-email?utm_medium=3Demail&utm_source=3Dlink&utm_campaign=3Dsig=
+-email&utm_content=3Demailclient" target=3D"_blank"><img src=3D"https://ipm=
+cdn.avast.com/images/icons/icon-envelope-tick-round-orange-animated-no-repe=
+at-v1.gif" alt=3D"" width=3D"46" height=3D"29" style=3D"width: 46px; height=
+: 29px;" /></a></td>
+		<td style=3D"width: 470px; padding-top: 17px; color: #41424e; font-size: =
+13px; font-family: Arial, Helvetica, sans-serif; line-height: 18px;">Garant=
+i sans virus. <a href=3D"https://www.avast.com/sig-email?utm_medium=3Demail=
+&utm_source=3Dlink&utm_campaign=3Dsig-email&utm_content=3Demailclient" targ=
+et=3D"_blank" style=3D"color: #4453ea;">www.avast.com</a> 		</td>
+	</tr>
+</table>
+<a href=3D"#DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2" width=3D"1" height=3D"1">=
+ </a></div></body></html>
+------=_NextPart_001_0185_01D869CE.DDE59620--
+
+------=_NextPart_000_0184_01D869CE.DDE59620
+Content-Type: image/png;
+	name="image001.png"
+Content-Transfer-Encoding: base64
+Content-ID: <image001.png@01D869CE.D935F0C0>
+
+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
+
+------=_NextPart_000_0184_01D869CE.DDE59620--
+

@@ -1,0 +1,261 @@
+Return-Path: <ste.capmada@gmail.com>
+Delivered-To: notification@kentia-domiciliation.com
+Received: from localhost (HELO queue) (127.0.0.1)
+	by localhost with SMTP; 16 Jun 2022 11:57:39 +0200
+Received: from unknown (HELO output40.mail.ovh.net) (10.108.98.62)
+  by mail350.ha.ovh.net with AES256-GCM-SHA384 encrypted SMTP; 16 Jun 2022 11:57:39 +0200
+Received: from vr48.mail.ovh.net (unknown [10.101.8.48])
+	by out40.mail.ovh.net (Postfix) with ESMTP id 4LNyJz1DXPzMvQgqC
+	for <notification@kentia-domiciliation.com>; Thu, 16 Jun 2022 09:57:39 +0000 (UTC)
+Received: from in76.mail.ovh.net (unknown [10.101.4.76])
+	by vr48.mail.ovh.net (Postfix) with ESMTP id 4LNyJy6GX6z2Y7GDq
+	for <notification@kentia-domiciliation.com>; Thu, 16 Jun 2022 09:57:38 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=209.85.218.46; helo=mail-ej1-f46.google.com; envelope-from=ste.capmada@gmail.com; receiver=notification@kentia-domiciliation.com 
+Authentication-Results: in76.mail.ovh.net;
+	dkim=pass (2048-bit key; unprotected) header.d=gmail.com header.i=@gmail.com header.b="O7K40OHS";
+	dkim-atps=neutral
+Received: from mail-ej1-f46.google.com (mail-ej1-f46.google.com [209.85.218.46])
+	by in76.mail.ovh.net (Postfix) with ESMTPS id 4LNyJy4fVcz1jMRlG;
+	Thu, 16 Jun 2022 09:57:38 +0000 (UTC)
+Received: by mail-ej1-f46.google.com with SMTP id y19so1782756ejq.6;
+        Thu, 16 Jun 2022 02:57:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=7JAHEBg9loi+XwGeTkdjZ1QxAWItQ3qDCOzNpD526i4=;
+        b=O7K40OHSDbGGhTwXAaYF6MX+90DBotZVkacxDmJtRs8m5rEuVjRChY+FEgMp42WID3
+         E4vxUUYbn6x6l8gnjFbOqHcpU9RB655xKiiSyQvYqyEfpHU1EJFw37p/D4bONqv2Q5hd
+         K+Ig1hrXHNyDoEGU0IQWLvu0MNYqWoi7aod7AvMWETjBlvf+idJ4tWj9mlK8vc9ZlBbA
+         lBFcsfF+sQwDZbshTSOH9iOQr9QrtWcx6Iuxq5j0Yy8OqxzzzVEH878M1FNMIMTcSHAQ
+         Oi7/xY+FUp4/9GULQYggmtoeDbE8H9pM56KLicsOK5RTGn56tmNMfh0DwjkrmFm8qA+n
+         fp/w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=7JAHEBg9loi+XwGeTkdjZ1QxAWItQ3qDCOzNpD526i4=;
+        b=dIjP3wfifDcOBdxnoqGMC5GOZ+6zXYCWIFS0KrDZPEdgDubpCV/vqX9ONUanWuK2FU
+         WIhArLAbFnS2OpW98mCD3D3HpnZsDe2Y4InjiBdU0kiQ5mPWy5qMrASA0o5tg5a4MUTU
+         Zbw2Z06YvQUe2eHvqSMLycNROfPXDZmrTDzS7BoiQ+JqIUwh1gqqMXl8DqIvj19yDYZy
+         jJ3aIX9SptZdMgAwOOcpphuQO4RuevttWXzGza5Eqzf0gX47y4TaVdwhXqy7iZIXNURf
+         iGJLE3MEELZJ7LLFAPdeOwCGe88mX0+TlMf04ATRuKjDBaMeTX2b1PggADIQ03PCx/Fo
+         FuxQ==
+X-Gm-Message-State: AJIora9PoyO7bBNOrSp3jlfvac14SD5WxKYsgCEU7P9kcygw4QRN7CV4
+	HOrM65rCjMINLovidytpz6nNz4xszjGWsaaxQKHcxcFV
+X-Google-Smtp-Source: AGRyM1vNjvRkxHP2pKdrXVlCEM3gZ34vR2PBx4rcQlb48sFLgA3k356iobmh3sJ+xRVq+DMlftk4Ky6qziQCfPEm2SY=
+X-Received: by 2002:a17:906:9c82:b0:6e1:2c94:1616 with SMTP id
+ fj2-20020a1709069c8200b006e12c941616mr3755792ejc.64.1655373457774; Thu, 16
+ Jun 2022 02:57:37 -0700 (PDT)
+MIME-Version: 1.0
+References: <938134237265494.1655364896.109394788742065-openerp-2516-account.move@kentia-domiciliation-1>
+ <823646547337791.1655365129.919806957244873-openerp-2516-account.move@kentia-domiciliation-1>
+In-Reply-To: <823646547337791.1655365129.919806957244873-openerp-2516-account.move@kentia-domiciliation-1>
+From: Ste CAPMADA <ste.capmada@gmail.com>
+Date: Thu, 16 Jun 2022 12:57:23 +0300
+Message-ID: <CAH7VC30qoO249muDOK1uc7ud49xtAJ5HVm_XgzsZ5NEWkiXE5w@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Facture_N=C2=B00383=2F2022=2FKD_=7C_CAPMADA_=2D_KENTIA=2DDOMIC?=
+	=?UTF-8?Q?ILIATION_sarl?=
+To: notification@kentia-domiciliation.com, team@kentia-domiciliation.com
+Content-Type: multipart/alternative; boundary="000000000000ebdb3305e18daa11"
+X-OVH-Remote: 209.85.218.46 (mail-ej1-f46.google.com)
+X-Ovh-Tracer-Id: 18343724235292522184
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 49
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedvfedruddvfedgudejucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuqfggjfdpvefjgfevmfevgfenuceurghilhhouhhtmecuhedttdenucgoufhushhpvggtthffohhmrghinhculdegledmnecujfgurhepgghfjgfhfffkuffvtgesrgdtreertddtjeenucfhrhhomhepufhtvgcuveetrffotefftecuoehsthgvrdgtrghpmhgruggrsehgmhgrihhlrdgtohhmqeenucggtffrrghtthgvrhhnpeethefhieeggeeftefgheeluedvkeekueeiieeuieegjeefledvgefgtdfgkedvleenucffohhmrghinhepohguohhordgtohhmnecukfhppedvtdelrdekhedrvddukedrgeeinecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehmohguvgepshhmthhppdhhvghlohepmhgrihhlqdgvjhduqdhfgeeirdhgohhoghhlvgdrtghomhdpihhnvghtpedvtdelrdekhedrvddukedrgeeipdhmrghilhhfrhhomhepshhtvgdrtggrphhmrggurgesghhmrghilhdrtghomhdpnhgspghrtghpthhtohepuddprhgtphhtthhopehnohhtihhfihgtrghtihhonheskhgvnhhtihgrqdguohhmihgtihhlihgrthhiohhnrdgtohhmpdhsphhfpehprghsshdpughkihhmpehprghsshdpghgvohfkrfepfgfupdfovfetjfhoshhtpehvrhegke
+X-Ovh-Spam-Status: OK
+X-Ovh-Spam-Reason: vr: OK; dkim: disabled; spf: disabled
+X-Ovh-Message-Type: OK
+
+--000000000000ebdb3305e18daa11
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour,
+
+J'accuse bonne r=C3=A9ception de votre mail sur la facture mois du 16 juin =
+-16
+juillet 2022.
+
+Je vais vous r=C3=A9gler le plus vite possible et vous envoyer les pi=C3=A8=
+ces
+justificatives.
+
+Bien cordialement
+
+Ratsimbazafy Heriniaina Lovasoa
+G=C3=A9rante Soci=C3=A9t=C3=A9 CAPMADA
+Tel:261329170591
+
+Le jeu. 16 juin 2022 =C3=A0 10:38, Faniry R. <office@kentia-domiciliation.c=
+om> a
+=C3=A9crit :
+
+> Bonjour madame,
+>
+> Nous vous prions de trouver ci-joint votre facture N=C2=B00383/2022/KD de
+> domiciliation pour la p=C3=A9riode du 16 Juin 2022 au 16 Juillet 2022 au =
+nom de
+> la soci=C3=A9t=C3=A9 CAPMADA pour un montant de 118 800,00 Ar Ar TTC.
+>
+>
+> Nous vous invitons =C3=A0 privil=C3=A9gier les modalit=C3=A9s de paiement=
+ sans contact
+> afin de limiter la propagation du COVID-19. Ainsi, vous pri=C3=A9s d=E2=
+=80=99effectuer
+> vos paiements par :
+>
+> - virement bancaire : 00008 00005 05003011573 19 SG ANTANINARENINA, au no=
+m
+> de KENTIA-DOMICILIATION sarl
+>
+> - par mobile banking : Mvola 034 92 210 35 nom de KENTIA-DOMICILIATION sa=
+rl
+>
+> Nous vous rappelons que l=E2=80=99acc=C3=A8s dans nos locaux est actuelle=
+ment tr=C3=A8s
+> limit=C3=A9, d=E2=80=99autant plus qu=E2=80=99une majeure partie de l=E2=
+=80=99=C3=A9quipe est partie en
+> t=C3=A9l=C3=A9travail, ainsi vous =C3=AAtes pri=C3=A9s d=E2=80=99appeler =
+avant de venir si le
+> d=C3=A9placement est vraiment n=C3=A9cessaire.
+>
+>
+> Veuillez nous envoyer une copie de la pi=C3=A8ce justificative du paiemen=
+t, la
+> copie de votre carte fiscale et celle du contrat de domiciliation
+> enregistr=C3=A9 s=E2=80=99il vous pla=C3=AEt.
+>
+> Bien cordialement,
+>
+> Faniry RAZAKARIVONY
+>
+> Assistant en cr=C3=A9ation et domiciliation d'entreprises
+>
+> +261 32 05 357 42
+>
+> KENTIA DOMICILIATION SARL
+>
+> Envoy=C3=A9 par KENTIA-DOMICILIATION sarl utilisant Odoo
+> <https://www.odoo.com?utm_source=3Ddb&utm_medium=3Demail>.
+>
+
+
+--=20
+RATSIMBAZAFY Heriniaina Lovasoa
+G=C3=A9rante de la soci=C3=A9t=C3=A9 CAPMADA
+T=C3=A9l:+261 32 91 705 91
+
+--000000000000ebdb3305e18daa11
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Bonjour,<div><br></div><div>J&#39;accuse bonne r=C3=A9cept=
+ion de votre mail sur la facture mois du 16 juin=C2=A0-16 juillet 2022.</di=
+v><div><br></div><div>Je vais vous r=C3=A9gler le plus vite possible et vou=
+s envoyer les pi=C3=A8ces justificatives.=C2=A0</div><div><br></div><div>Bi=
+en cordialement</div><div><br></div><div>Ratsimbazafy Heriniaina Lovasoa</d=
+iv><div>G=C3=A9rante Soci=C3=A9t=C3=A9 CAPMADA</div><div>Tel:261329170591</=
+div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_at=
+tr">Le=C2=A0jeu. 16 juin 2022 =C3=A0=C2=A010:38, Faniry R. &lt;<a href=3D"m=
+ailto:office@kentia-domiciliation.com">office@kentia-domiciliation.com</a>&=
+gt; a =C3=A9crit=C2=A0:<br></div><blockquote class=3D"gmail_quote" style=3D=
+"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-le=
+ft:1ex">
+<div>
+
+
+<div><div style=3D"font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,=
+Arial,sans-serif;font-size:13px;margin:0px;padding:0px">
+    <p class=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lucida=
+ Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px"><span lang=3D"=
+FR">Bonjour madame,</span><br><br><span lang=3D"FR"></span></p><p style=3D"=
+margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,V=
+erdana,Arial,sans-serif"></p><p style=3D"margin:0px;font-size:13px;font-fam=
+ily:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p cl=
+ass=3D"MsoNormal" style=3D"font-size:13px;font-family:&quot;Lucida Grande&q=
+uot;,Helvetica,Verdana,Arial,sans-serif;margin:0px"><span lang=3D"FR">Nous =
+vous prions de trouver ci-joint votre facture=C2=A0<span style=3D"font-weig=
+ht:bolder">N=C2=B00383/2022/KD</span>=C2=A0de domiciliation pour la p=C3=A9=
+riode du 16 Juin 2022 au 16 Juillet 2022 au nom de la soci=C3=A9t=C3=A9=C2=
+=A0<span style=3D"font-weight:bolder">CAPMADA=C2=A0</span>pour un montant d=
+e=C2=A0<span style=3D"font-weight:bolder">118=C2=A0800,00=C2=A0Ar=C2=A0</sp=
+an>Ar TTC.</span></p><p style=3D"margin:0px;font-size:13px;font-family:&quo=
+t;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p style=3D"m=
+argin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Ve=
+rdana,Arial,sans-serif"></p><p class=3D"MsoNormal" style=3D"font-size:13px;=
+font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;ma=
+rgin:0px"><br><span lang=3D"FR"></span></p><p style=3D"margin:0px;font-size=
+:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-se=
+rif"></p><p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Gra=
+nde&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p class=3D"MsoNormal" st=
+yle=3D"font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verda=
+na,Arial,sans-serif;margin:0px"><span lang=3D"FR">Nous vous invitons =C3=A0=
+ privil=C3=A9gier les modalit=C3=A9s de paiement sans contact afin de limit=
+er la propagation du COVID-19. Ainsi, vous pri=C3=A9s d=E2=80=99effectuer v=
+os paiements par :</span></p><p style=3D"margin:0px;font-size:13px;font-fam=
+ily:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p st=
+yle=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helv=
+etica,Verdana,Arial,sans-serif"></p><p class=3D"MsoNormal" style=3D"margin:=
+0px 0px 0px 35.4pt;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,=
+Arial,sans-serif;font-size:13px"><span lang=3D"FR">- virement bancaire : 00=
+008 00005 05003011573 19 SG ANTANINARENINA, au nom de KENTIA-DOMICILIATION =
+sarl</span></p><p style=3D"margin:0px;font-size:13px;font-family:&quot;Luci=
+da Grande&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p style=3D"margin:=
+0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,=
+Arial,sans-serif"></p><p class=3D"MsoNormal" style=3D"margin:0px 0px 0px 35=
+.4pt;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-ser=
+if;font-size:13px"><span lang=3D"FR">- par mobile banking : Mvola 034 92 21=
+0 35 nom de KENTIA-DOMICILIATION sarl</span><br><br><span lang=3D"FR"></spa=
+n></p><p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande=
+&quot;,Helvetica,Verdana,Arial,sans-serif"></p><p style=3D"margin:0px;font-=
+size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,san=
+s-serif"></p><p style=3D"font-size:13px;font-family:&quot;Lucida Grande&quo=
+t;,Helvetica,Verdana,Arial,sans-serif;margin:0px;line-height:normal">Nous v=
+ous rappelons que l=E2=80=99acc=C3=A8s dans nos locaux est actuellement tr=
+=C3=A8s limit=C3=A9, d=E2=80=99autant plus qu=E2=80=99une majeure partie de=
+ l=E2=80=99=C3=A9quipe est partie en t=C3=A9l=C3=A9travail, ainsi vous =C3=
+=AAtes pri=C3=A9s d=E2=80=99appeler avant de venir si le d=C3=A9placement e=
+st vraiment n=C3=A9cessaire.</p><p style=3D"font-size:13px;font-family:&quo=
+t;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0px;line-he=
+ight:normal"><br></p><p class=3D"MsoNormal" style=3D"font-size:13px;font-fa=
+mily:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;margin:0p=
+x"><span lang=3D"FR">Veuillez nous envoyer une copie de la pi=C3=A8ce justi=
+ficative du paiement, la copie de votre carte fiscale et celle du contrat d=
+e domiciliation enregistr=C3=A9 s=E2=80=99il vous pla=C3=AEt.</span><br><br=
+><span lang=3D"FR">Bien cordialement,</span><br><br></p></div>
+           =20
+<p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;=
+,Helvetica,Verdana,Arial,sans-serif">Faniry RAZAKARIVONY</p><p style=3D"mar=
+gin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verd=
+ana,Arial,sans-serif">Assistant en cr=C3=A9ation et domiciliation d&#39;ent=
+reprises</p><p style=3D"margin:0px;font-size:13px;font-family:&quot;Lucida =
+Grande&quot;,Helvetica,Verdana,Arial,sans-serif">+261 32 05 357 42</p><p st=
+yle=3D"margin:0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helv=
+etica,Verdana,Arial,sans-serif">KENTIA DOMICILIATION SARL</p><div style=3D"=
+font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Aria=
+l,sans-serif"><br></div>
+</div>
+
+
+<p style=3D"color:rgb(85,85,85);margin-top:32px">
+    Envoy=C3=A9
+    <span>
+    par
+   =20
+    <span>KENTIA-DOMICILIATION sarl</span>
+    </span>
+    utilisant
+    <a href=3D"https://www.odoo.com?utm_source=3Ddb&amp;utm_medium=3Demail"=
+ style=3D"text-decoration:none;color:rgb(135,90,123)" target=3D"_blank">Odo=
+o</a>.
+</p>
+</div>
+        </blockquote></div><br clear=3D"all"><div><br></div>-- <br><div dir=
+=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"auto"><font=
+ face=3D"tahoma, sans-serif" color=3D"#0b5394">RATSIMBAZAFY Heriniaina Lova=
+soa</font></div><div dir=3D"auto"><font face=3D"tahoma, sans-serif" color=
+=3D"#0b5394">G=C3=A9rante de la soci=C3=A9t=C3=A9 CAPMADA</font></div><div =
+dir=3D"auto"><font face=3D"tahoma, sans-serif" color=3D"#0b5394">T=C3=A9l:+=
+261 32 91 705 91</font></div></div></div>
+
+--000000000000ebdb3305e18daa11--
